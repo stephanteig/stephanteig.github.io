@@ -32,6 +32,16 @@ footer {
     height: 60px; /* Height of the footer */
 }
 
+.mainbutton {
+    width: 40%;
+    height: 10%;
+    color: antiquewhite;
+    background-color: #727070;
+    border: 0;
+    font-weight: bold;
+    font-size: 70;
+}
+
 header {
     display: flex;
     position: fixed;
@@ -46,6 +56,16 @@ header {
 
 h1 {
     padding: 50;
+}
+
+.favphoto {
+    width: 40%;
+    border: 0;
+}
+
+.favfilm {
+    width: 40%;
+    border: 0;
 }
 
     header * {

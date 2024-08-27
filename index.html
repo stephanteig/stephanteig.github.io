@@ -21,8 +21,23 @@
 
     <h1>Stephan Teig's Portfolio</h1>
 
-    <button onclick="window.location.href = 'photo.html';">Photo</button>
-    <button onclick="window.location.href = 'film.html';">Film</button>
+    <button class="mainbutton" onclick="window.location.href = 'photo.html';">Photo</button>
+    <button class="mainbutton" onclick="window.location.href = 'film.html';">Film</button>
+
+    <br/>
+
+    <div class="fav">
+        <h2>My Favorite Works</h2>
+
+        <div>
+            <img src="img/IMG_0022.jpg" alt="My Favorite Image" class="favphoto"/>
+
+            <video class="favfilm"
+                   controls="controls">
+                <source src="img/Hvem_er_Dealeren_Stephan-Abdi-Daniel-Aron.mp4" type="video/mp4"/>
+            </video>
+        </div>
+    </div>
 
     </body>
 </html>
