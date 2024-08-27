@@ -22,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -38,8 +34,7 @@
               "RelativeToolTip": "film.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-27T12:27:17.433Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T12:27:17.433Z"
             },
             {
               "$type": "Document",
@@ -51,8 +46,7 @@
               "RelativeToolTip": "photo.html",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-08-27T12:27:12.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-27T12:27:12.75Z"
             },
             {
               "$type": "Document",
