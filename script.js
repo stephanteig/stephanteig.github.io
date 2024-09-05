@@ -1,4 +1,4 @@
-var slidePosition = 1;
+var slidePosition = 0;
 SlideShow(slidePosition);
 
 // forward/Back controls
