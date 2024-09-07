@@ -271,3 +271,7 @@ button.open {
         opacity: 2
     }
 }
+
+.insta {
+    display: inline-flex;
+}
