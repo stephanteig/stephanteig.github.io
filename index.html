@@ -1,36 +1,189 @@
-<html>
+<!DOCTYPE html>
+<html lang="no">
 <head>
-    <title>Kampsport</title>
-    <link rel="icon" type="image/x-icon" href="Media/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Stephan Teig</title>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --bg-soft: #121318;
+      --text: #e8e8ea;
+      --muted: #a6a8ad;
+      --card: #171923;
+      --brand: #8ab4ff;
+      --shadow: 0 6px 28px rgba(0,0,0,.25);
+      --radius: 16px;
+    }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    header {
+      background: rgba(11,12,16,0.85);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 16px 0;
+      text-align: center;
+    }
+    header a img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      margin-bottom: 12px;
+    }
+    header h1 { margin: 0; font-size: 28px; }
+    header .contact-top { margin: 8px 0; font-size: 16px; color: var(--muted); font-weight: 600; }
+    section { padding: 28px 0; }
+    .card { background: var(--card); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); margin-bottom: 16px; }
+    h2 { margin-top: 0; }
+    ul { margin: 0; padding-left: 20px; }
+    .project-item { display: flex; gap: 12px; align-items: center; }
+    .project-item img { width: 200px; border-radius: 12px; box-shadow: var(--shadow); object-fit: cover; }
+    /* Video embeds */
+    .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .video { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid rgba(255,255,255,0.06); }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    footer { padding: 28px 0; color: var(--muted); font-size: 14px; text-align: center; }
+    footer .contact-bottom { margin-top: 8px; font-size: 15px; color: var(--muted); }
+  </style>
 </head>
 <body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#" class="selected">Hjem</a></li>
-                <li><a href="#Video">Video</a></li>
-                <li><a href="#Info">Info</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="hero-section">
-        <h1 id="Video">Kampsport Interview</h1>        
-        <iframe width="66.67%" height="62.5%" src="https://www.youtube.com/embed/Ejsk4irUX_k" title="Kampsport Interview" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <header>
+    <div class="container">
+      <div class="contact-top">Telefon: <a href="tel:+4792124207">+47 92124207</a> | E-post: <a href="mailto:teig.stephan@gmail.com">teig.stephan@gmail.com</a></div>
+      <a href="Media/IMG_CV1234.jpg" target="_blank"><img src="Media/IMG_CV1234.jpg" alt="Portrett av Stephan Teig"></a>
+      <h1>Stephan Teig</h1>
+      <p>Engasjert, strukturert og målrettet. Leverer alltid kvalitet og ferdigstiller prosjekter innen avtalt tid.</p>
     </div>
-
-    <section id="Info">
-        <h2>Om Meg og Medieyrket</h2>
-        <p>Hei, jeg heter Stephan Teig og jeg er en medieprodusent og entusiast av kampsport. Jeg har jobbet med mediebransjen i snart ett år, der jeg har produsert innhold i skolen for både film og TV.</p>
-        <p>Gjennom mitt arbeid prøver jeg å formidle historier om hva som driver kampsportutøvere, både fysisk og mentalt. Det er ikke bare en sport, men en livsstil og filosofi. Jeg ønsker å vise hvordan hardt arbeid og disiplin kan føre til personlig vekst og suksess, både på og utenfor matta.</p>
+  </header>
+  <main class="container">
+    <section id="profil">
+      <h2>Profil</h2>
+      <div class="card">
+        <p>Jeg er en kreativ og engasjerende person som kombinerer teknisk forståelse med visuell sans. Som en naturlig perfeksjonist søker jeg høy kvalitet, men jeg evner å balansere dette med en praktisk tilnærming når leveranser krever tempo og presisjon. Med solid rutinearbeidserfaring og aktiv deltakelse i sport er jeg vant til disiplin, lagarbeid og kontinuerlig utvikling.</p>
+        <p>For tiden er jeg elev ved Glemmen videregående skole, VG2 Medieproduksjon, og trives med både teoretiske og praktiske utfordringer.</p>
+      </div>
     </section>
+    <section id="nokkelkompetanse">
+      <h2>Nøkkelkompetanse</h2>
+      <div class="card">
+        <ul>
+          <li>Jobber godt med andre og holder hodet kaldt under press</li>
+          <li>Unge og nye kreative ideer</li>
+          <li>Høy kompetanse i norsk og engelsk</li>
+        </ul>
+      </div>
+    </section>
+    <section id="kompetansefelt">
+      <h2>Kompetansefelt</h2>
+      <div class="card">
+        <ul>
+          <li>Videoproduksjon</li>
+          <li>Programmering</li>
+          <li>Fotografi</li>
+          <li>Videoredigering</li>
+        </ul>
+      </div>
+    </section>
+    <section id="erfaring">
+      <h2>Erfaring</h2>
+      <div class="card">
+        <h3>Kultur og Restaurant – Hvaler Kommune</h3>
+        <p>Jobbet ett år i kultur og restaurant. Vant til stress og kundeservice.</p>
+      </div>
+      <div class="card">
+        <h3>Freelance for Hvaler Kommune</h3>
+        <p>Laget nettsider for kommunen som freelancer.</p>
+      </div>
+      <div class="card">
+        <h3>Video- og fotoarbeid</h3>
+        <ul>
+          <li>Redigert videoer på YouTube siden 2018</li>
+        </ul>
+      </div>
+    </section>
+    <section id="utdanning">
+      <h2>Utdanning</h2>
+      <div class="card">
+        <ul>
+          <li>1 år IT og Medieproduksjon – Glemmen VGS</li>
+          <li>2 år Programmering som valgfag – Ungdomsskole</li>
+          <li>Pågående – Glemmen videregående skole, VG2 Medieproduksjon</li>
+          <li>Avsluttet VG1 med 5,3 i snitt. Høy kompetanse i norsk og engelsk samt 5/6 i alle programfag.</li>
+        </ul>
+      </div>
+    </section>
+    <section id="tidligere-prosjekter">
+      <h2>Tidligere prosjekter</h2>
 
-    <footer>
-        <p>Copyright © 2025 Stephan Teig®. All rights reserved.</p>
-    </footer>
+      <!-- Illustrasjonsbilde utenfor kortet -->
+      <a href="Bilder/IMG_VIDEOOP.png" target="_blank">
+        <img src="Bilder/IMG_VIDEOOP.pngg" alt="Prosjektbilde" style="width:200px; border-radius:12px; box-shadow:0 6px 28px rgba(0,0,0,.25); margin:12px 0;">
+      </a>
 
+      <!-- Innebygde videoer -->
+      <div class="video-grid">
+        <div class="card">
+          <h3>Kolberg volleyball video laget på en dag</h3>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/nuwHRSA4-o4" title="Kolberg volleyball video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Den ene delen – prosjektvideo</h3>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/mLBB0WslV5M" title="Den ene delen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Red Bull mock reklame</h3>
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/BPkzgGB8xXQ" title="Red Bull mock reklame" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tekstprosjekter som ikke er publisert -->
+      <div class="card" style="margin-top:16px;">
+        <ul>
+          <li><strong>TEDx Fredrikstad</strong> – Deltok med kamera og stillbilder (video ikke publisert enda)</li>
+          <li><strong>Musikkvideo for MÆD</strong> – Bidro med film og planlegging (video ikke publisert enda)</li>
+        </ul>
+      </div>
+    </section>
+    <section id="sprak">
+      <h2>Språk</h2>
+      <div class="card">
+        <ul>
+          <li>Norsk (skandinaviske språk)</li>
+          <li>Engelsk</li>
+          <li>Spansk</li>
+        </ul>
+      </div>
+    </section>
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <div class="card">
+        <p>Nettside: <a href="https://AronBMF.github.io" target="_blank">AronBMF.github.io</a></p>
+        <p>Telefon: <a href="tel:+4799128292">+47 99128292</a></p>
+        <p>E-post: <a href="mailto:aron.b.folk@gmail.com">aron.b.folk@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="year"></span> Aron Benedict Magnus Folkestad</p>
+    <div class="contact-bottom">Telefon: <a href="tel:+4799128292">+47 99128292</a> | E-post: <a href="mailto:aron.b.folk@gmail.com">aron.b.folk@gmail.com</a></div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
