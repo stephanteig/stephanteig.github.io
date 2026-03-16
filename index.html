@@ -21,10 +21,14 @@
     epost:    "teig.stephan@gmail.com",
     telefon:  "+47 921 24 207",
     nettside: "stephanteig.github.io",
-    fodt:     "9. juni 2008",
 
-    bilde: "Media/IMG_3340.JPG",   // null = vis initialer
+    bilde: "Media/IMG_3340.JPG",
     cvPdf: "Media/StephanTeigCV.pdf",
+
+    // Kontaktskjema — se guide nedenfor for å sette opp Formspree.
+    // Lim inn din Formspree-ID her, f.eks. "xpwzgkla"
+    // Sett til null for å skjule skjemaet.
+    formspreeId: null,
 
     bio: {
       no: "17 år gammel medieelev ved Glemmen VGS. Aktiv med kampsport, ungdomstrener, styreleder og kreativ produsent. Trives i felt med kameraet og liker å omsette visjoner til levende historier.",
@@ -32,14 +36,14 @@
     },
 
     fraser: {
-      no: [ "kortfilmer.", "innhold som engasjerer.", "historier med kameraet."],
-      en: [ "short films.", "engaging content.", "stories through the lens."],
+      no: [ "kortfilmer.", "innhold som engasjerer.", "historier med kameraet." ],
+      en: [ "short films.", "engaging content.", "stories through the lens." ],
     },
 
     stats: [
-      { tall: "7+",  label: { no: "Års jobb erfaring",   en: "Years work experience" } },
-      { tall: "10+", label: { no: "Prosjekter",      en: "Projects"         } },
-      { tall: "1.dan", label: { no: "Jiu-Jitsu",    en: "Jiu-Jitsu"        } },
+      { tall: "7+",    label: { no: "Års jobberfaring", en: "Years work experience" } },
+      { tall: "10+",   label: { no: "Prosjekter",       en: "Projects"              } },
+      { tall: "1.dan", label: { no: "Jiu-Jitsu",        en: "Jiu-Jitsu"            } },
     ],
 
     // ── NAVIGASJON ───────────────────────────────────────────────
@@ -68,15 +72,15 @@
 
     // ── SOSIALE ──────────────────────────────────────────────────
     sosiale: [
-      { label: "Youtube",    url: "https://www.youtube.com/@StephanTeig" },
-      { label: "Instagram", url: "https://www.instagram.com/stephanteig" },
-      { label: "Tiktok",  url: "https://www.tiktok.com/@stephan.teig" },
+      { label: "YouTube",   url: "https://www.youtube.com/@StephanTeig"                },
+      { label: "Instagram", url: "https://www.instagram.com/stephanteig"               },
+      { label: "TikTok",    url: "https://www.tiktok.com/@stephan.teig"                },
       { label: "LinkedIn",  url: "https://www.linkedin.com/in/stephan-teig-727a8428b/" },
     ],
 
     // ── ERFARING ─────────────────────────────────────────────────
     erfaring: [
-            {
+      {
         aar:    "2025 –",
         tittel: { no: "Sosiale medier & innholdsproduksjon", en: "Social media & content production" },
         sted:   "Studio Wallin AS · Fredrikstad",
@@ -89,9 +93,10 @@
         tekst:  { no: "Fast trener 2 ganger per uke.", en: "Regular coach twice a week." },
       },
       {
-        aar:    "2026 –",
-        tittel: { no: "Hvaler Ungdomsskole Ballfoto", en: "Hvaler Ungdomsskole Prom Pictures" },
-        tekst:  { no: "Fotograferte under arrangementet.", en: "Photographed during the event." },
+        aar:    "2026",
+        tittel: { no: "Ballfotograf", en: "Prom photographer" },
+        sted:   "Hvaler Ungdomsskole",
+        tekst:  { no: "Fotograferte under ballbildearrangementet.", en: "Photographed during the prom photo event." },
       },
       {
         aar:    "2025–2026",
@@ -138,18 +143,6 @@
         tittel: { no: "Styreleder", en: "Board chair" },
         sted:   { no: "Ungdomsstyret, Sentrum Kampsport", en: "Youth board, Sentrum Kampsport" },
         tekst:  { no: "Leder ungdomsstyret ved Sentrum Kampsport.", en: "Leading the youth board at Sentrum Kampsport." },
-      },
-      {
-        aar:    "2024 –",
-        tittel: { no: "Kamera & stillfoto", en: "Camera & still photography" },
-        sted:   "TEDx Fredrikstad",
-        tekst:  { no: "Fotograferte og filmet under arrangementet.", en: "Photographed and filmed during the event." },
-      },
-      {
-        aar:    "2024",
-        tittel: { no: "Produsent", en: "Producer" },
-        sted:   "Musikkvideo — MÆD",
-        tekst:  { no: "Planlegging, produksjon og gjennomføring.", en: "Planning, production and execution." },
       },
       {
         aar:    "2023",
@@ -200,62 +193,82 @@
     ],
 
     // ── PROSJEKTER ───────────────────────────────────────────────
+    // type: "youtube" | "drive" | "ingen"
+    // embed: YouTube-ID eller Google Drive fil-ID
+    // tekst (valgfri): kort beskrivelse som vises på kortet
     prosjekter: [
-            {
+      {
         tittel: "Et ekko av henne",
         rolle:  { no: "Film", en: "Film" },
-        type:   "drive", embed: "1yNcmU2wehtRTBUR2G7Omvlb3k0rzuXat", filter: "film",
+        type:   "drive",
+        embed:  "1MJ8R-8zVDB3qmyHoAP__SnrmKLm5354Q",
+        filter: "film",
       },
       {
         tittel: "Reshoot",
         rolle:  { no: "Film · Regi", en: "Film · Director" },
-        type:   "youtube", embed: "akvZh0yoCF4", filter: "film",
+        type:   "youtube",
+        embed:  "akvZh0yoCF4",
+        filter: "film",
       },
       {
         tittel: "Reshoot Del 2 — Valg 1",
         rolle:  { no: "Film · Klipp", en: "Film · Edit" },
-        type:   "youtube", embed: "5nsWRqXzUyY", filter: "film",
+        type:   "youtube",
+        embed:  "5nsWRqXzUyY",
+        filter: "film",
       },
       {
         tittel: "Reshoot Del 2 — Valg 2",
         rolle:  { no: "Film · Klipp", en: "Film · Edit" },
-        type:   "youtube", embed: "sajH28yctrw", filter: "film",
+        type:   "youtube",
+        embed:  "sajH28yctrw",
+        filter: "film",
       },
       {
         tittel: "TEDx Fredrikstad",
         rolle:  { no: "Foto · Kamera", en: "Photo · Camera" },
-        tekst:  { no: "En av videoene fra TedX", en: "One of the videoes from TedX" },
-        type:   "youtube", embed: "sfBt5tgo5a8", filter: "foto",
+        tekst:  { no: "En av videoene fra TEDx Fredrikstad", en: "One of the videos from TEDx Fredrikstad" },
+        type:   "youtube",
+        embed:  "sfBt5tgo5a8",
+        filter: "foto",
       },
       {
         tittel: "MÆD Musikkvideo",
         rolle:  { no: "Produsent", en: "Producer" },
-        type:   "youtube", embed: "y0vjikf5EI8", filter: "film",
+        type:   "youtube",
+        embed:  "y0vjikf5EI8",
+        filter: "film",
       },
     ],
 
     // ── UI-TEKSTER ───────────────────────────────────────────────
     ui: {
-      lastNedCV:          { no: "Last ned CV",      en: "Download CV"      },
-      kontaktTittel:      { no: "Kontakt",           en: "Contact"          },
-      ferdigheterTittel:  { no: "Ferdigheter",       en: "Skills"           },
-      sprakTittel:        { no: "Språk",             en: "Languages"        },
-      folgMeg:            { no: "Følg meg",          en: "Follow me"        },
-      heiJegEr:           { no: "Hei, jeg er",       en: "Hi, I'm"          },
-      jegLager:           { no: "Jeg lager",         en: "I create"         },
-      seProsjekter:       { no: "Se prosjekter",     en: "View projects"    },
-      kontaktMeg:         { no: "Kontakt meg",       en: "Contact me"       },
-      erfaring:           { no: "Erfaring",          en: "Experience"       },
-      verv:               { no: "Verv & engasjement",en: "Roles & engagement"},
-      utdanning:          { no: "Utdanning",         en: "Education"        },
-      alle:               { no: "Alle",              en: "All"              },
-      kommerSnart:        { no: "Kommer snart",      en: "Coming soon"      },
-      kontaktSideTittel:  { no: "Send en melding",   en: "Send a message"   },
-      navnPlaceholder:    { no: "Navn",              en: "Name"             },
-      epostPlaceholder:   { no: "E-post",            en: "Email"            },
-      emnePlaceholder:    { no: "Emne",              en: "Subject"          },
-      meldingPlaceholder: { no: "Melding...",        en: "Message..."       },
-      sendKnapp:          { no: "Send melding",      en: "Send message"     },
+      lastNedCV:           { no: "Last ned CV",      en: "Download CV"      },
+      kontaktTittel:       { no: "Kontakt",           en: "Contact"          },
+      ferdigheterTittel:   { no: "Ferdigheter",       en: "Skills"           },
+      sprakTittel:         { no: "Språk",             en: "Languages"        },
+      folgMeg:             { no: "Følg meg",          en: "Follow me"        },
+      heiJegEr:            { no: "Hei, jeg er",       en: "Hi, I'm"          },
+      jegLager:            { no: "Jeg lager",         en: "I create"         },
+      seProsjekter:        { no: "Se prosjekter",     en: "View projects"    },
+      kontaktMeg:          { no: "Kontakt meg",       en: "Contact me"       },
+      erfaring:            { no: "Erfaring",          en: "Experience"       },
+      verv:                { no: "Verv & engasjement",en: "Roles & engagement"},
+      utdanning:           { no: "Utdanning",         en: "Education"        },
+      alle:                { no: "Alle",              en: "All"              },
+      kommerSnart:         { no: "Kommer snart",      en: "Coming soon"      },
+      kontaktSideTittel:   { no: "Send en melding",   en: "Send a message"   },
+      navnPlaceholder:     { no: "Navn",              en: "Name"             },
+      epostPlaceholder:    { no: "E-post",            en: "Email"            },
+      emnePlaceholder:     { no: "Emne",              en: "Subject"          },
+      meldingPlaceholder:  { no: "Melding...",        en: "Message..."       },
+      sendKnapp:           { no: "Send melding",      en: "Send message"     },
+      senderMelding:       { no: "Sender...",         en: "Sending..."       },
+      meldingSendt:        { no: "Melding sendt! Takk.", en: "Message sent! Thanks." },
+      meldingFeil:         { no: "Noe gikk galt. Prøv igjen.", en: "Something went wrong. Please try again." },
+      skjemaMangler:       { no: "Fyll inn alle feltene.", en: "Please fill in all fields." },
+      ingenFormspree:      { no: "Kontaktskjema ikke satt opp ennå.", en: "Contact form not set up yet." },
       kortLabels: {
         epost:    { no: "E-post",   en: "Email"    },
         telefon:  { no: "Telefon",  en: "Phone"    },
@@ -270,9 +283,6 @@
   };
   </script>
 
-  <!-- ============================================================
-       DESIGN — ikke rediger under her
-       ============================================================ -->
   <style>
     :root {
       --bg:      #111111;
@@ -290,63 +300,31 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { height: 100%; }
-
-    body {
-      font-family: var(--font-b);
-      background: var(--bg);
-      color: var(--text);
-      height: 100%;
-      overflow: hidden; /* desktop: scroll inside panes */
-    }
-
+    body { font-family: var(--font-b); background: var(--bg); color: var(--text); height: 100%; overflow: hidden; }
     a { color: inherit; text-decoration: none; }
 
-    /* ── APP SHELL ── */
-    .app {
-      display: flex;
-      height: 100vh;
-      width: 100vw;
-      overflow: hidden;
-    }
+    .app { display: flex; height: 100vh; width: 100vw; overflow: hidden; }
 
-    /* ══════════════════════════════════
-       SIDEBAR
-    ══════════════════════════════════ */
+    /* ── Sidebar ── */
     .sb {
-      width: var(--sb);
-      min-width: var(--sb);
-      background: var(--sidebar);
-      border-right: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      overflow-y: auto;
-      overflow-x: hidden;
-      flex-shrink: 0;
+      width: var(--sb); min-width: var(--sb);
+      background: var(--sidebar); border-right: 1px solid var(--border);
+      display: flex; flex-direction: column;
+      height: 100vh; overflow-y: auto; overflow-x: hidden; flex-shrink: 0;
     }
-
-    .sb-top {
-      padding: 1.75rem 1.5rem 1.25rem;
-      text-align: center;
-      border-bottom: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-
+    .sb-top { padding: 1.75rem 1.5rem 1.25rem; text-align: center; border-bottom: 1px solid var(--border); flex-shrink: 0; }
     .sb-avatar {
-      width: 90px; height: 90px;
-      border-radius: 50%;
-      background: #1a1a1a;
-      border: 2px solid var(--border);
+      width: 90px; height: 90px; border-radius: 50%;
+      background: #1a1a1a; border: 2px solid var(--border);
       margin: 0 auto .85rem;
       display: flex; align-items: center; justify-content: center;
       font-family: var(--font-h); font-size: 26px; font-weight: 700; color: #333;
       overflow: hidden; flex-shrink: 0;
     }
-    .sb-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-
+    /* FIX: object-position 20% from top so face shows correctly in circle */
+    .sb-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
     .sb-name  { font-family: var(--font-h); font-size: 15px; font-weight: 700; color: #f0f0f0; letter-spacing: .02em; margin-bottom: .2rem; }
     .sb-role  { font-size: 8.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: .9rem; }
-
     .sb-download {
       display: inline-block;
       font-family: var(--font-h); font-size: 8.5px; letter-spacing: .14em; text-transform: uppercase;
@@ -354,35 +332,28 @@
       border-radius: 2px; cursor: pointer; transition: background .2s, color .2s;
     }
     .sb-download:hover { background: var(--accent); color: #111; }
-
     .sb-body { padding: 1.25rem 1.5rem; flex: 1; overflow-y: auto; }
-
     .sb-sec { margin-bottom: 1.5rem; }
     .sb-sec-title {
       font-family: var(--font-h); font-size: 8.5px; letter-spacing: .18em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: .75rem; padding-bottom: .35rem;
-      border-bottom: 1px solid var(--border);
+      color: var(--accent); margin-bottom: .75rem; padding-bottom: .35rem; border-bottom: 1px solid var(--border);
     }
-
     .sb-row { display: flex; align-items: flex-start; gap: .55rem; margin-bottom: .5rem; }
     .sb-ico { width: 13px; height: 13px; flex-shrink: 0; margin-top: 2px; opacity: .35; }
     .sb-val { font-size: 10.5px; color: #888; line-height: 1.5; }
     .sb-val a { color: #888; }
     .sb-val a:hover { color: var(--accent); }
-
     .skill-item  { margin-bottom: .7rem; }
     .skill-top   { display: flex; justify-content: space-between; margin-bottom: .3rem; }
     .skill-name  { font-size: 10.5px; color: #999; }
     .skill-pct   { font-size: 9.5px; color: var(--muted); }
     .skill-track { height: 2px; background: #1f1f1f; border-radius: 1px; }
     .skill-bar   { height: 100%; background: var(--accent); border-radius: 1px; opacity: .7; }
-
     .lang-row  { display: flex; justify-content: space-between; align-items: center; margin-bottom: .45rem; }
     .lang-name { font-size: 10.5px; color: #888; }
     .lang-dots { display: flex; gap: 4px; }
     .lang-dot  { width: 6px; height: 6px; border-radius: 50%; background: #1f1f1f; }
     .lang-dot.on { background: var(--accent); }
-
     .social-row { display: flex; gap: 5px; flex-wrap: wrap; }
     .social-btn {
       font-family: var(--font-h); font-size: 8px; letter-spacing: .1em; text-transform: uppercase;
@@ -391,42 +362,24 @@
     }
     .social-btn:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* ══════════════════════════════════
-       MAIN
-    ══════════════════════════════════ */
-    .main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-      height: 100vh;
-      overflow: hidden;
-    }
-
-    /* ── Top nav ── */
+    /* ── Main ── */
+    .main { flex: 1; display: flex; flex-direction: column; min-width: 0; height: 100vh; overflow: hidden; }
     .top-nav {
       display: flex; align-items: stretch;
-      border-bottom: 1px solid var(--border);
-      background: #0f0f0f;
-      flex-shrink: 0;
-      height: var(--nav-h);
-      overflow-x: auto;
-      overflow-y: hidden;
+      border-bottom: 1px solid var(--border); background: #0f0f0f;
+      flex-shrink: 0; height: var(--nav-h);
+      overflow-x: auto; overflow-y: hidden;
     }
     .top-nav::-webkit-scrollbar { display: none; }
-
     .nav-item {
       font-family: var(--font-h); font-size: 8.5px; letter-spacing: .16em; text-transform: uppercase;
       color: var(--muted); padding: 0 1.1rem; cursor: pointer;
       border-bottom: 2px solid transparent; white-space: nowrap; flex-shrink: 0;
-      display: flex; align-items: center;
-      transition: color .2s;
+      display: flex; align-items: center; transition: color .2s;
     }
     .nav-item:hover  { color: var(--text); }
     .nav-item.active { color: var(--accent); border-bottom-color: var(--accent); }
-
     .nav-spacer { flex: 1; min-width: 8px; }
-
     .lang-toggle {
       display: flex; align-items: center;
       margin: 6px 10px 6px 0;
@@ -436,31 +389,25 @@
     .lang-btn {
       font-family: var(--font-h); font-size: 8.5px; letter-spacing: .12em;
       padding: .25rem .55rem; cursor: pointer; color: var(--muted);
-      background: transparent; border: none;
-      transition: background .15s, color .15s;
+      background: transparent; border: none; transition: background .15s, color .15s;
     }
     .lang-btn.active { background: var(--accent); color: #111; }
     .lang-div { width: 1px; height: 12px; background: var(--border); }
-
-    /* ── Pages ── */
     .pages { flex: 1; overflow-y: auto; overflow-x: hidden; }
     .page  { display: none; }
     .page.active { display: block; }
 
-    /* ── HOME ── */
-    .home-hero {
-      padding: 3rem 2.5rem 2rem;
-      border-bottom: 1px solid var(--border);
-    }
+    /* ── Home ── */
+    .home-hero { padding: 3rem 2.5rem 2rem; border-bottom: 1px solid var(--border); }
     .hero-hi   { font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: .6rem; }
     .hero-name { font-family: var(--font-h); font-size: 40px; font-weight: 300; color: #f0f0f0; line-height: 1.05; margin-bottom: .5rem; }
     .hero-name b { font-weight: 700; }
     .hero-typed { font-family: var(--font-h); font-size: 14px; font-weight: 300; color: var(--muted); margin-bottom: 1rem; min-height: 20px; }
-    .tw-text    { color: var(--accent); font-weight: 500; }
-    .tw-cursor  { color: var(--accent); animation: blink 1s step-end infinite; }
+    .tw-text   { color: var(--accent); font-weight: 500; }
+    .tw-cursor { color: var(--accent); animation: blink 1s step-end infinite; }
     @keyframes blink { 0%,100%{opacity:1}50%{opacity:0} }
-    .hero-bio   { font-size: 12.5px; color: var(--muted); line-height: 1.75; max-width: 500px; margin-bottom: 1.75rem; }
-    .hero-btns  { display: flex; gap: .65rem; flex-wrap: wrap; }
+    .hero-bio  { font-size: 12.5px; color: var(--muted); line-height: 1.75; max-width: 500px; margin-bottom: 1.75rem; }
+    .hero-btns { display: flex; gap: .65rem; flex-wrap: wrap; }
     .hero-btn {
       font-family: var(--font-h); font-size: 8.5px; letter-spacing: .16em; text-transform: uppercase;
       padding: .55rem 1.35rem; border-radius: 2px; cursor: pointer;
@@ -470,14 +417,13 @@
     .hero-btn.primary:hover { background: transparent; color: var(--accent); }
     .hero-btn.secondary { background: transparent; color: var(--muted); border: 1px solid var(--border); }
     .hero-btn.secondary:hover { border-color: var(--text); color: var(--text); }
-
     .home-stats { display: grid; }
     .stat { padding: 1.25rem 1.5rem; border-right: 1px solid var(--border); text-align: center; }
     .stat:last-child { border-right: none; }
     .stat-n { font-family: var(--font-h); font-size: 26px; font-weight: 700; color: var(--accent); }
     .stat-l { font-size: 8.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: .25rem; }
 
-    /* ── RESUME ── */
+    /* ── Resume ── */
     .resume-page { padding: 1.75rem 2.25rem; }
     .res-section { margin-bottom: 2rem; }
     .res-head {
@@ -486,7 +432,6 @@
       display: flex; align-items: center; gap: .65rem;
     }
     .res-head::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
     .tl-item { display: flex; gap: 1.1rem; margin-bottom: 1.25rem; }
     .tl-left { display: flex; flex-direction: column; align-items: center; width: 10px; flex-shrink: 0; }
     .tl-dot  { width: 7px; height: 7px; border-radius: 50%; border: 1px solid var(--accent); flex-shrink: 0; margin-top: 4px; }
@@ -497,8 +442,8 @@
     .tl-sted   { font-size: 10.5px; color: var(--accent); margin-bottom: .3rem; }
     .tl-tekst  { font-size: 10.5px; color: var(--muted); line-height: 1.6; }
 
-    /* ── WORKS ── */
-    .works-page { padding: 1.5rem 1.75rem; }
+    /* ── Works ── */
+    .works-page   { padding: 1.5rem 1.75rem; }
     .works-filter { display: flex; gap: .45rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
     .wf-btn {
       font-family: var(--font-h); font-size: 8.5px; letter-spacing: .12em; text-transform: uppercase;
@@ -507,9 +452,7 @@
     }
     .wf-btn:hover  { border-color: #333; color: var(--text); }
     .wf-btn.active { border-color: var(--accent); color: var(--accent); }
-
     .works-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
-
     .work-card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: 4px; overflow: hidden; cursor: pointer;
@@ -518,7 +461,6 @@
     .work-card:hover { border-color: #333; transform: translateY(-1px); }
     .work-card.no-video { cursor: default; }
     .work-card.no-video:hover { transform: none; }
-
     .work-thumb { aspect-ratio: 16/9; background: #161616; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
     .work-thumb img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.6); transition: filter .3s; }
     .work-card:hover .work-thumb img { filter: brightness(.4); }
@@ -532,9 +474,11 @@
     .work-info  { padding: .55rem .75rem; }
     .work-title { font-family: var(--font-h); font-size: 10.5px; font-weight: 600; color: #ccc; }
     .work-role  { font-size: 8.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-top: .18rem; }
+    /* FIX: tekst under rolle på prosjektkort */
+    .work-tekst { font-size: 9.5px; color: var(--muted); line-height: 1.5; margin-top: .3rem; opacity: .8; }
     .work-badge { display: inline-block; font-size: 7.5px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 5px; border-radius: 2px; margin-top: .25rem; background: rgba(200,169,110,.1); color: var(--accent); }
 
-    /* ── LIGHTBOX ── */
+    /* ── Lightbox ── */
     .lb { display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; }
     .lb.open { display: flex; }
     .lb-bd { position: absolute; inset: 0; background: rgba(0,0,0,.9); cursor: pointer; }
@@ -548,8 +492,8 @@
     }
     .lb-close:hover { opacity: 1; }
 
-    /* ── CONTACT ── */
-    .contact-page { padding: 1.75rem 2.25rem; }
+    /* ── Contact ── */
+    .contact-page  { padding: 1.75rem 2.25rem; }
     .contact-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 1.75rem; }
     .cc { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1rem; text-align: center; }
     .cc-ico   { width: 32px; height: 32px; background: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto .6rem; }
@@ -557,20 +501,17 @@
     .cc-val   { font-size: 10.5px; color: #888; }
     .cc-val a { color: #888; transition: color .2s; }
     .cc-val a:hover { color: var(--accent); }
-
     .form-sec-title {
       font-family: var(--font-h); font-size: 9.5px; letter-spacing: .18em; text-transform: uppercase;
       color: var(--accent); margin-bottom: 1rem;
       display: flex; align-items: center; gap: .65rem;
     }
     .form-sec-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
     .form-row  { display: flex; gap: 8px; margin-bottom: 8px; }
     .form-in {
       flex: 1; background: #161616; border: 1px solid var(--border);
       color: var(--text); padding: .58rem .8rem; border-radius: 2px;
-      font-size: 10.5px; font-family: var(--font-b); outline: none;
-      transition: border-color .2s;
+      font-size: 10.5px; font-family: var(--font-b); outline: none; transition: border-color .2s;
     }
     .form-in:focus { border-color: #333; }
     textarea.form-in { resize: none; height: 85px; width: 100%; margin-bottom: 8px; }
@@ -580,117 +521,68 @@
       border-radius: 2px; cursor: pointer; transition: background .2s, color .2s;
     }
     .form-submit:hover { background: transparent; color: var(--accent); }
+    .form-submit:disabled { opacity: .5; cursor: not-allowed; }
+    .form-msg {
+      margin-top: .75rem; font-size: 11px; padding: .5rem .75rem;
+      border-radius: 2px; display: none;
+    }
+    .form-msg.ok  { display: block; background: rgba(100,200,100,.1); color: #7ec87e; border: 1px solid rgba(100,200,100,.2); }
+    .form-msg.err { display: block; background: rgba(200,80,80,.1);  color: #e07878; border: 1px solid rgba(200,80,80,.2); }
+    .form-no-setup { font-size: 11px; color: var(--muted); font-style: italic; margin-top: .5rem; }
 
-    /* ══════════════════════════════════
-       MOBILE NAV BAR (bottom)
-    ══════════════════════════════════ */
-    .mob-nav {
-      display: none;
-      position: fixed; bottom: 0; left: 0; right: 0;
-      background: #0a0a0a;
-      border-top: 1px solid var(--border);
-      z-index: 200;
-      height: 56px;
-    }
-    .mob-nav-inner {
-      display: flex; height: 100%;
-    }
+    /* ── Mobile nav ── */
+    .mob-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: #0a0a0a; border-top: 1px solid var(--border); z-index: 200; height: 56px; }
+    .mob-nav-inner { display: flex; height: 100%; }
     .mob-nav-item {
       flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
       gap: 3px; cursor: pointer; color: var(--muted);
-      font-family: var(--font-h); font-size: 8px; letter-spacing: .1em; text-transform: uppercase;
-      transition: color .2s;
+      font-family: var(--font-h); font-size: 8px; letter-spacing: .1em; text-transform: uppercase; transition: color .2s;
     }
     .mob-nav-item.active { color: var(--accent); }
     .mob-nav-item svg { width: 18px; height: 18px; }
 
-    /* ══════════════════════════════════
-       RESPONSIVE
-    ══════════════════════════════════ */
+    /* ── Responsive ── */
+    @media (max-width: 900px) { :root { --sb: 220px; } }
 
-    /* ── Tablet landscape / small desktop ── */
-    @media (max-width: 900px) {
-      :root { --sb: 220px; }
-    }
-
-    /* ── Mobile (portrait + landscape) ── */
     @media (max-width: 680px) {
       body { overflow: auto; }
-
-      .app {
-        flex-direction: column;
-        height: auto;
-        min-height: 100vh;
-        overflow: visible;
-      }
-
-      /* Hide sidebar entirely on mobile */
+      .app { flex-direction: column; height: auto; min-height: 100vh; overflow: visible; }
       .sb { display: none; }
-
-      .main {
-        height: auto;
-        overflow: visible;
-      }
-
+      .main { height: auto; overflow: visible; }
       .top-nav { display: none; }
-
-      /* Show bottom nav */
       .mob-nav { display: block; }
-
-      .pages {
-        overflow: visible;
-        padding-bottom: 64px; /* room for bottom nav */
-      }
-
-      .page { display: none; }
-      .page.active { display: block; }
-
-      .home-hero {
-        padding: 2rem 1.25rem 1.5rem;
-      }
+      .pages { overflow: visible; padding-bottom: 64px; }
+      .home-hero { padding: 2rem 1.25rem 1.5rem; }
       .hero-name { font-size: 32px; }
       .hero-bio  { font-size: 12px; }
-
       .home-stats .stat { padding: 1rem .75rem; }
       .stat-n { font-size: 22px; }
       .stat-l { font-size: 8px; }
-
       .resume-page  { padding: 1.25rem; }
       .works-page   { padding: 1.25rem; }
       .contact-page { padding: 1.25rem; }
-
       .works-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
       .contact-cards { grid-template-columns: 1fr 1fr; gap: 8px; }
-
       .tl-tittel { font-size: 12px; }
       .tl-sted   { font-size: 10px; }
       .tl-tekst  { font-size: 10px; }
     }
-
-    /* ── Mobile portrait narrow ── */
     @media (max-width: 420px) {
       .works-grid    { grid-template-columns: 1fr; }
       .contact-cards { grid-template-columns: 1fr; }
       .hero-name     { font-size: 28px; }
     }
-
-    /* ── Landscape phone: show sidebar as top strip ── */
     @media (max-width: 680px) and (orientation: landscape) {
       .mob-nav { display: none; }
       .top-nav { display: flex; }
-
       .pages { padding-bottom: 0; }
-
-      /* Compact hero for landscape */
       .home-hero { padding: 1.5rem 1.5rem 1.25rem; }
       .hero-name { font-size: 28px; }
       .hero-bio  { display: none; }
-
       .home-stats .stat { padding: .85rem 1rem; }
       .stat-n { font-size: 20px; }
     }
 
-    /* ── Scrollbar ── */
     ::-webkit-scrollbar { width: 4px; height: 4px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
@@ -699,7 +591,6 @@
 </head>
 <body>
 
-  <!-- Lightbox -->
   <div class="lb" id="lightbox">
     <div class="lb-bd" id="lbBd"></div>
     <div class="lb-box">
@@ -710,8 +601,7 @@
 
   <div class="app">
 
-    <!-- SIDEBAR -->
-    <aside class="sb" id="sidebar">
+    <aside class="sb">
       <div class="sb-top">
         <div class="sb-avatar" id="sbAvatar"></div>
         <div class="sb-name"   id="sbNavn"></div>
@@ -719,29 +609,14 @@
         <a class="sb-download" id="sbCvLink"></a>
       </div>
       <div class="sb-body">
-        <div class="sb-sec">
-          <div class="sb-sec-title" id="sbKontaktTittel"></div>
-          <div id="sbKontakt"></div>
-        </div>
-        <div class="sb-sec">
-          <div class="sb-sec-title" id="sbFerdigheterTittel"></div>
-          <div id="sbFerdigheter"></div>
-        </div>
-        <div class="sb-sec">
-          <div class="sb-sec-title" id="sbSprakTittel"></div>
-          <div id="sbSprak"></div>
-        </div>
-        <div class="sb-sec" id="sbSosialeSek">
-          <div class="sb-sec-title" id="sbFolgMeg"></div>
-          <div class="social-row" id="sbSosiale"></div>
-        </div>
+        <div class="sb-sec"><div class="sb-sec-title" id="sbKontaktTittel"></div><div id="sbKontakt"></div></div>
+        <div class="sb-sec"><div class="sb-sec-title" id="sbFerdigheterTittel"></div><div id="sbFerdigheter"></div></div>
+        <div class="sb-sec"><div class="sb-sec-title" id="sbSprakTittel"></div><div id="sbSprak"></div></div>
+        <div class="sb-sec" id="sbSosialeSek"><div class="sb-sec-title" id="sbFolgMeg"></div><div class="social-row" id="sbSosiale"></div></div>
       </div>
     </aside>
 
-    <!-- MAIN -->
     <div class="main">
-
-      <!-- Desktop nav -->
       <nav class="top-nav" id="topNav">
         <div class="nav-spacer"></div>
         <div class="lang-toggle">
@@ -751,7 +626,6 @@
         </div>
       </nav>
 
-      <!-- Pages -->
       <div class="pages">
 
         <div class="page active" id="page-home">
@@ -772,18 +646,9 @@
 
         <div class="page" id="page-resume">
           <div class="resume-page">
-            <div class="res-section">
-              <div class="res-head" id="resErfaring"></div>
-              <div id="erfaringListe"></div>
-            </div>
-            <div class="res-section">
-              <div class="res-head" id="resVerv"></div>
-              <div id="vervListe"></div>
-            </div>
-            <div class="res-section">
-              <div class="res-head" id="resUtdanning"></div>
-              <div id="utdanningListe"></div>
-            </div>
+            <div class="res-section"><div class="res-head" id="resErfaring"></div><div id="erfaringListe"></div></div>
+            <div class="res-section"><div class="res-head" id="resVerv"></div><div id="vervListe"></div></div>
+            <div class="res-section"><div class="res-head" id="resUtdanning"></div><div id="utdanningListe"></div></div>
           </div>
         </div>
 
@@ -798,108 +663,88 @@
           <div class="contact-page">
             <div class="contact-cards" id="contactCards"></div>
             <div class="form-sec-title" id="formTittel"></div>
-            <div class="form-row">
-              <input class="form-in" id="fNavn"  type="text" />
-              <input class="form-in" id="fEpost" type="email" />
+            <div id="formWrap">
+              <div class="form-row">
+                <input class="form-in" id="fNavn"  type="text" />
+                <input class="form-in" id="fEpost" type="email" />
+              </div>
+              <input    class="form-in" id="fEmne"    type="text" style="width:100%;margin-bottom:8px;" />
+              <textarea class="form-in" id="fMelding"></textarea>
+              <button   class="form-submit" id="fSend"></button>
+              <div class="form-msg" id="formMsg"></div>
             </div>
-            <input    class="form-in" id="fEmne"    type="text" style="width:100%;margin-bottom:8px;" />
-            <textarea class="form-in" id="fMelding"></textarea>
-            <button   class="form-submit" id="fSend"></button>
           </div>
         </div>
 
-      </div><!-- .pages -->
-    </div><!-- .main -->
+      </div>
+    </div>
 
-    <!-- Mobile bottom nav -->
-    <nav class="mob-nav" id="mobNav">
-      <div class="mob-nav-inner" id="mobNavInner"></div>
-    </nav>
-
-  </div><!-- .app -->
+    <nav class="mob-nav"><div class="mob-nav-inner" id="mobNavInner"></div></nav>
+  </div>
 
   <script>
   (function () {
-
-    /* ── Lang helper ── */
     let lang = 'no';
-    function t(v) {
-      if (!v) return '';
-      if (typeof v === 'string') return v;
-      return v[lang] || v['no'] || '';
-    }
-
-    /* ── DOM helpers ── */
+    function t(v) { if (!v) return ''; if (typeof v === 'string') return v; return v[lang] || v['no'] || ''; }
     const $ = id => document.getElementById(id);
     const mk = tag => document.createElement(tag);
     function set(id, txt) { const e=$(id); if(e) e.textContent=txt; }
     function htm(id, h)   { const e=$(id); if(e) e.innerHTML=h; }
     function initials(n)  { return n.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase(); }
 
-    /* ── Accent ── */
     document.documentElement.style.setProperty('--accent', CV.aksent||'#c8a96e');
 
-    /* ── ONE-TIME: Avatar ── */
-    const avEl = $('sbAvatar');
+    // Avatar
+    const avEl=$('sbAvatar');
     if (CV.bilde) {
-      const img = mk('img');
-      img.src=CV.bilde; img.alt=CV.navn;
+      const img=mk('img'); img.src=CV.bilde; img.alt=CV.navn;
       img.onerror=()=>{ img.remove(); avEl.textContent=initials(CV.navn); };
       avEl.appendChild(img);
     } else { avEl.textContent=initials(CV.navn); }
 
     set('sbNavn', CV.navn);
     if (CV.cvPdf) $('sbCvLink').href=CV.cvPdf;
-    else          $('sbCvLink').style.display='none';
+    else $('sbCvLink').style.display='none';
 
-    /* ── ONE-TIME: Sosiale ── */
-    const aktSos = (CV.sosiale||[]).filter(s=>s.url);
+    // Sosiale
+    const aktSos=(CV.sosiale||[]).filter(s=>s.url);
     if (aktSos.length) {
-      aktSos.forEach(s=>{
-        $('sbSosiale').insertAdjacentHTML('beforeend',
-          `<a class="social-btn" href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`);
-      });
+      aktSos.forEach(s=>{ $('sbSosiale').insertAdjacentHTML('beforeend',
+        `<a class="social-btn" href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`); });
     } else { $('sbSosialeSek').style.display='none'; }
 
-    /* ── ONE-TIME: Skill bars ── */
+    // Skill bars
     (CV.ferdigheter||[]).forEach(f=>{
       $('sbFerdigheter').insertAdjacentHTML('beforeend',`
         <div class="skill-item">
-          <div class="skill-top">
-            <span class="skill-name" data-sk></span>
-            <span class="skill-pct">${f.prosent}%</span>
-          </div>
+          <div class="skill-top"><span class="skill-name" data-sk></span><span class="skill-pct">${f.prosent}%</span></div>
           <div class="skill-track"><div class="skill-bar" style="width:${f.prosent}%"></div></div>
         </div>`);
     });
 
-    /* ── ONE-TIME: Lang dots ── */
+    // Lang dots
     (CV.sprak||[]).forEach(s=>{
       let dots='';
       for(let i=1;i<=5;i++) dots+=`<div class="lang-dot${i<=s.nivaa?' on':''}"></div>`;
       $('sbSprak').insertAdjacentHTML('beforeend',`
-        <div class="lang-row">
-          <span class="lang-name" data-ln></span>
-          <div class="lang-dots">${dots}</div>
-        </div>`);
+        <div class="lang-row"><span class="lang-name" data-ln></span><div class="lang-dots">${dots}</div></div>`);
     });
 
-    /* ── ONE-TIME: Stats ── */
-    const statsEl=$('homeStats');
-    statsEl.style.gridTemplateColumns=`repeat(${CV.stats.length},1fr)`;
+    // Stats
+    const sEl=$('homeStats');
+    sEl.style.gridTemplateColumns=`repeat(${CV.stats.length},1fr)`;
     CV.stats.forEach((s,i)=>{
       const d=mk('div'); d.className='stat';
       if(i===CV.stats.length-1) d.style.borderRight='none';
       d.innerHTML=`<div class="stat-n">${s.tall}</div><div class="stat-l" data-stl></div>`;
-      statsEl.appendChild(d);
+      sEl.appendChild(d);
     });
 
-    /* ── ONE-TIME: Prosjekt-kort ── */
+    // Prosjekt-kort
     const kortRefs=[];
     const alleKat=['alle',...new Set((CV.prosjekter||[]).map(p=>p.filter))];
     alleKat.forEach(f=>{
-      const btn=mk('div'); btn.className='wf-btn'+(f==='alle'?' active':'');
-      btn.dataset.fv=f;
+      const btn=mk('div'); btn.className='wf-btn'+(f==='alle'?' active':''); btn.dataset.fv=f;
       btn.addEventListener('click',()=>{
         document.querySelectorAll('.wf-btn').forEach(b=>b.classList.remove('active'));
         btn.classList.add('active');
@@ -909,7 +754,6 @@
       });
       $('worksFilter').appendChild(btn);
     });
-
     (CV.prosjekter||[]).forEach(p=>{
       const hv=p.type==='youtube'||p.type==='drive';
       const card=mk('div');
@@ -919,10 +763,12 @@
       if(p.type==='youtube') th=`<img src="https://img.youtube.com/vi/${p.embed}/mqdefault.jpg" alt="${p.tittel}"/><div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#ccc"/></svg></div>`;
       else if(hv)            th=`<div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#ccc"/></svg></div>`;
       if(p.thumbnail)        th=`<img src="${p.thumbnail}" alt="${p.tittel}"/>`+(hv?`<div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#ccc"/></svg></div>`:'');
+      // FIX: vis tekst-felt under rolle hvis det finnes
       card.innerHTML=`<div class="work-thumb">${th}</div>
         <div class="work-info">
           <div class="work-title">${p.tittel}</div>
           <div class="work-role" data-wr></div>
+          ${p.tekst?'<div class="work-tekst" data-wtekst></div>':''}
           ${!hv?'<div class="work-badge" data-wb></div>':''}
         </div>`;
       if(hv) card.addEventListener('click',()=>openLb(p));
@@ -930,18 +776,17 @@
       kortRefs.push({el:card,data:p});
     });
 
-    /* ── ONE-TIME: Kontakt-kort ── */
+    // Kontakt-kort
     const ccSvg={
       epost:'<rect x="1" y="3" width="14" height="10" rx="1" stroke="#888" stroke-width="1.2"/><path d="M1 4l7 5 7-5" stroke="#888" stroke-width="1.2"/>',
       telefon:'<rect x="3" y="1" width="10" height="14" rx="2" stroke="#888" stroke-width="1.2"/><circle cx="8" cy="12" r="1" fill="#888"/>',
       sted:'<path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="#888" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="#888" stroke-width="1.2"/>',
       nettside:'<circle cx="8" cy="8" r="6" stroke="#888" stroke-width="1.2"/><path d="M8 2c0 0-2 3-2 6s2 6 2 6M8 2c0 0 2 3 2 6s-2 6-2 6M2 8h12" stroke="#888" stroke-width="1.2"/>',
     };
-    [
-      {key:'epost',   val:CV.epost,    href:'mailto:'+CV.epost},
-      {key:'telefon', val:CV.telefon,  href:'tel:'+(CV.telefon||'').replace(/\s/g,'')},
-      {key:'sted',    val:CV.sted,     href:null},
-      {key:'nettside',val:CV.nettside, href:'https://'+CV.nettside},
+    [{key:'epost',val:CV.epost,href:'mailto:'+CV.epost},
+     {key:'telefon',val:CV.telefon,href:'tel:'+(CV.telefon||'').replace(/\s/g,'')},
+     {key:'sted',val:CV.sted,href:null},
+     {key:'nettside',val:CV.nettside,href:'https://'+CV.nettside},
     ].forEach(k=>{
       if(!k.val) return;
       $('contactCards').insertAdjacentHTML('beforeend',`
@@ -952,7 +797,7 @@
         </div>`);
     });
 
-    /* ── Typewriter ── */
+    // Typewriter
     let twPi=0,twCi=0,twDel=false,twTimer=null,twFr=[];
     function twStart(fr){ clearTimeout(twTimer); twFr=fr; twPi=0; twCi=0; twDel=false; $('twText').textContent=''; twStep(); }
     function twStep(){
@@ -962,40 +807,77 @@
       twTimer=setTimeout(twStep,twDel?40:80);
     }
 
-    /* ══════════════════════════════════
-       RENDER — all translatable text
-    ══════════════════════════════════ */
+    // Kontaktskjema med Formspree
+    $('fSend').addEventListener('click', async () => {
+      const u=CV.ui;
+      const navn=$('fNavn').value.trim();
+      const epost=$('fEpost').value.trim();
+      const emne=$('fEmne').value.trim();
+      const melding=$('fMelding').value.trim();
+      const msg=$('formMsg');
+
+      if (!CV.formspreeId) {
+        msg.className='form-msg err';
+        msg.textContent=t(u.ingenFormspree);
+        return;
+      }
+      if (!navn||!epost||!emne||!melding) {
+        msg.className='form-msg err';
+        msg.textContent=t(u.skjemaMangler);
+        return;
+      }
+
+      $('fSend').disabled=true;
+      $('fSend').textContent=t(u.senderMelding);
+      msg.className='form-msg';
+
+      try {
+        const res=await fetch(`https://formspree.io/f/${CV.formspreeId}`,{
+          method:'POST',
+          headers:{'Content-Type':'application/json','Accept':'application/json'},
+          body:JSON.stringify({name:navn,email:epost,subject:emne,message:melding}),
+        });
+        if(res.ok){
+          msg.className='form-msg ok';
+          msg.textContent=t(u.meldingSendt);
+          $('fNavn').value=''; $('fEpost').value=''; $('fEmne').value=''; $('fMelding').value='';
+        } else {
+          throw new Error('server error');
+        }
+      } catch {
+        msg.className='form-msg err';
+        msg.textContent=t(u.meldingFeil);
+      }
+      $('fSend').disabled=false;
+      set('fSend',t(u.sendKnapp));
+    });
+
+    /* ── RENDER ── */
     function render(){
       document.documentElement.lang=lang;
       document.title='CV – '+CV.navn;
       const u=CV.ui;
 
-      // Sidebar
-      set('sbRolle',           t(CV.tittel));
-      set('sbCvLink',          t(u.lastNedCV));
-      set('sbKontaktTittel',   t(u.kontaktTittel));
+      set('sbRolle',            t(CV.tittel));
+      set('sbCvLink',           t(u.lastNedCV));
+      set('sbKontaktTittel',    t(u.kontaktTittel));
       set('sbFerdigheterTittel',t(u.ferdigheterTittel));
-      set('sbSprakTittel',     t(u.sprakTittel));
-      set('sbFolgMeg',         t(u.folgMeg));
+      set('sbSprakTittel',      t(u.sprakTittel));
+      set('sbFolgMeg',          t(u.folgMeg));
 
-      // Sidebar kontakt
       htm('sbKontakt','');
-      [
-        {svg:'<rect x="1" y="3" width="14" height="10" rx="1" stroke="#aaa" stroke-width="1.2"/><path d="M1 4l7 5 7-5" stroke="#aaa" stroke-width="1.2"/>',val:CV.epost,href:'mailto:'+CV.epost},
-        {svg:'<rect x="3" y="1" width="10" height="14" rx="2" stroke="#aaa" stroke-width="1.2"/><circle cx="8" cy="12" r="1" fill="#aaa"/>',val:CV.telefon,href:'tel:'+(CV.telefon||'').replace(/\s/g,'')},
-        {svg:'<path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="#aaa" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="#aaa" stroke-width="1.2"/>',val:CV.sted,href:null},
+      [{svg:'<rect x="1" y="3" width="14" height="10" rx="1" stroke="#aaa" stroke-width="1.2"/><path d="M1 4l7 5 7-5" stroke="#aaa" stroke-width="1.2"/>',val:CV.epost,href:'mailto:'+CV.epost},
+       {svg:'<rect x="3" y="1" width="10" height="14" rx="2" stroke="#aaa" stroke-width="1.2"/><circle cx="8" cy="12" r="1" fill="#aaa"/>',val:CV.telefon,href:'tel:'+(CV.telefon||'').replace(/\s/g,'')},
+       {svg:'<path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="#aaa" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="#aaa" stroke-width="1.2"/>',val:CV.sted,href:null},
       ].forEach(k=>{ if(!k.val) return;
         $('sbKontakt').insertAdjacentHTML('beforeend',`<div class="sb-row"><svg class="sb-ico" viewBox="0 0 16 16" fill="none">${k.svg}</svg><div class="sb-val">${k.href?`<a href="${k.href}">${k.val}</a>`:k.val}</div></div>`);
       });
 
-      // Skill names
       document.querySelectorAll('[data-sk]').forEach((el,i)=>{ if(CV.ferdigheter[i]) el.textContent=t(CV.ferdigheter[i].navn); });
-      // Lang names
       document.querySelectorAll('[data-ln]').forEach((el,i)=>{ const s=CV.sprak[i]; if(s) el.textContent=t(s.namn||s.navn); });
-      // Stat labels
       document.querySelectorAll('[data-stl]').forEach((el,i)=>{ if(CV.stats[i]) el.textContent=t(CV.stats[i].label); });
 
-      // Nav tabs
+      // Nav
       const nav=$('topNav');
       nav.querySelectorAll('.nav-item').forEach(e=>e.remove());
       const spacer=nav.querySelector('.nav-spacer');
@@ -1007,7 +889,7 @@
         nav.insertBefore(btn,spacer);
       });
 
-      // Mobile nav
+      // Mob nav
       htm('mobNavInner','');
       const mobIcons={
         home:'<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L10 3l7 6.5V17a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M7 18v-6h6v6"/></svg>',
@@ -1023,31 +905,31 @@
       });
 
       // Hero
-      set('heroHi',       t(u.heiJegEr));
+      set('heroHi',     t(u.heiJegEr));
       const parts=CV.navn.split(' '); const en=parts.pop();
       $('heroNavn').innerHTML=parts.join(' ')+' <b>'+en+'</b>';
-      set('jegLager',     t(u.jegLager));
-      set('heroBio',      t(CV.bio));
-      set('btnSeProsj',   t(u.seProsjekter));
-      set('btnKontakt',   t(u.kontaktMeg));
+      set('jegLager',   t(u.jegLager));
+      set('heroBio',    t(CV.bio));
+      set('btnSeProsj', t(u.seProsjekter));
+      set('btnKontakt', t(u.kontaktMeg));
 
-      // Resume sections
       set('resErfaring',  t(u.erfaring));
       set('resVerv',      t(u.verv));
       set('resUtdanning', t(u.utdanning));
 
-      function buildTl(items, cid){
+      function buildTl(items,cid){
         htm(cid,'');
         items.forEach((item,i)=>{
           const last=i===items.length-1;
           const tekst=t(item.tekst);
+          const sted=t(item.sted);
           $(cid).insertAdjacentHTML('beforeend',`
             <div class="tl-item">
               <div class="tl-left"><div class="tl-dot"></div>${last?'':'<div class="tl-line"></div>'}</div>
               <div class="tl-body">
                 <div class="tl-aar">${item.aar}</div>
                 <div class="tl-tittel">${t(item.tittel)}</div>
-                <div class="tl-sted">${t(item.sted)}</div>
+                ${sted?`<div class="tl-sted">${sted}</div>`:''}
                 ${tekst?`<div class="tl-tekst">${tekst}</div>`:''}
               </div>
             </div>`);
@@ -1057,52 +939,41 @@
       buildTl(CV.verv,      'vervListe');
       buildTl(CV.utdanning, 'utdanningListe');
 
-      // Project cards text
+      // Prosjekt-kort tekst
       kortRefs.forEach(({el,data:p})=>{
         const rEl=el.querySelector('[data-wr]'); if(rEl) rEl.textContent=t(p.rolle);
+        const tEl=el.querySelector('[data-wtekst]'); if(tEl) tEl.textContent=t(p.tekst);
         const bEl=el.querySelector('[data-wb]'); if(bEl) bEl.textContent=t(u.kommerSnart);
       });
-      // Filter btns
       document.querySelectorAll('.wf-btn').forEach(btn=>{
         const f=btn.dataset.fv;
         btn.textContent=f==='alle'?t(u.alle):f.charAt(0).toUpperCase()+f.slice(1);
       });
 
-      // Contact labels
       document.querySelectorAll('[data-ccl]').forEach(el=>{ el.textContent=t(u.kortLabels[el.dataset.ccl]); });
 
-      // Contact form
-      set('formTittel',       t(u.kontaktSideTittel));
+      set('formTittel',        t(u.kontaktSideTittel));
       $('fNavn').placeholder   =t(u.navnPlaceholder);
       $('fEpost').placeholder  =t(u.epostPlaceholder);
       $('fEmne').placeholder   =t(u.emnePlaceholder);
       $('fMelding').placeholder=t(u.meldingPlaceholder);
-      set('fSend',            t(u.sendKnapp));
+      set('fSend',             t(u.sendKnapp));
+      set('lbClose',           t(u.lukk));
 
-      // Lightbox close
-      set('lbClose', t(u.lukk));
-
-      // Typewriter restart
       twStart(CV.fraser[lang]||CV.fraser['no']||[]);
     }
 
-    /* ── Navigation ── */
     function goPage(name){
-      document.querySelectorAll('.nav-item, .mob-nav-item').forEach(n=>
-        n.classList.toggle('active', n.dataset.page===name));
-      document.querySelectorAll('.page').forEach(p=>
-        p.classList.toggle('active', p.id==='page-'+name));
-      const pagesEl=document.querySelector('.pages');
-      if(pagesEl) pagesEl.scrollTop=0;
+      document.querySelectorAll('.nav-item,.mob-nav-item').forEach(n=>n.classList.toggle('active',n.dataset.page===name));
+      document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+name));
+      const pe=document.querySelector('.pages'); if(pe) pe.scrollTop=0;
       window.scrollTo(0,0);
     }
     window.goPage=goPage;
 
-    /* ── Language toggle ── */
     $('btnNo').addEventListener('click',()=>{ if(lang==='no') return; lang='no'; $('btnNo').classList.add('active'); $('btnEn').classList.remove('active'); render(); });
     $('btnEn').addEventListener('click',()=>{ if(lang==='en') return; lang='en'; $('btnEn').classList.add('active'); $('btnNo').classList.remove('active'); render(); });
 
-    /* ── Lightbox ── */
     function openLb(p){
       let src='';
       if(p.type==='youtube') src=`https://www.youtube.com/embed/${p.embed}?autoplay=1`;
@@ -1114,9 +985,7 @@
     $('lbClose').addEventListener('click',closeLb);
     document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLb(); });
 
-    /* ── Init ── */
     render();
-
   })();
   </script>
 
