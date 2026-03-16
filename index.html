@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- ✏️  REDIGER INNHOLD HER — eller i data.js på GitHub -->
+  <script>
+// ============================================================
+//  data.js — Alt innhold på stephanteig.github.io
+//  Dette er den eneste filen du trenger å redigere!
+//
+//  SPRÅK: Alle tekstfelt støtter to språk.
+//  Skriv  { no: "Norsk tekst", en: "English text" }
+//  eller bare en vanlig streng hvis teksten er lik på begge språk,
+//  f.eks. stedsnavn, tall og egennavn.
+// ============================================================
+
+const CV = {
+
+  // ----------------------------------------------------------
+  //  PERSONLIG INFO
+  // ----------------------------------------------------------
+  navn:     "Stephan Teig",
+  tittel:   { no: "Film & Medieproduksjon",   en: "Film & Media Production"  },
+  sted:     "Fredrikstad, Norway",
+  epost:    "teig.stephan@gmail.com",
+  telefon:  "+47 921 24 207",
+  nettside: "stephanteig.github.io",
+
+  // Portrettbilde — legg bildet i Media-mappen og skriv filnavnet.
+  // Sett til null for å vise initialer (ST) istedenfor.
+  bilde: "Media/IMG_3340.JPG",
+
+  // PDF-versjon av CV.
+  // Sett til null for å skjule knappen.
+  cvPdf: "Media/StephanTeigCV.pdf",
+
+  // Bio på forsiden
+  bio: {
+    no: "Kreativ medieelev med sterk interesse for film og innholdsproduksjon. Trives i felt med kameraet og liker å omsette visjoner til levende historier.",
+    en: "Creative media student with a strong interest in film and content production. Thrives in the field with a camera and loves turning visions into living stories.",
+  },
+
+  // Typewriter-fraser
+  fraser: {
+    no: [ "kortfilmer.", "innhold som engasjerer.", "historier med kameraet.", "musikk­videoer." ],
+    en: [ "short films.", "engaging content.",      "stories through the lens.", "music videos." ],
+  },
+
+  // Fakta-tall under hero
+  stats: [
+    { tall: "3+",  label: { no: "Års erfaring",   en: "Years experience" } },
+    { tall: "10+", label: { no: "Prosjekter",      en: "Projects"         } },
+    { tall: "VG2", label: { no: "Medieproduksjon", en: "Media Production" } },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  NAVIGASJON  (legg til/fjern faner etter behov)
+  // ----------------------------------------------------------
+  nav: [
+    { id: "home",    label: { no: "Hjem",      en: "Home"     } },
+    { id: "resume",  label: { no: "CV",         en: "Resume"   } },
+    { id: "works",   label: { no: "Prosjekter", en: "Projects" } },
+    { id: "contact", label: { no: "Kontakt",    en: "Contact"  } },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  FERDIGHETER  (prosent: 0–100)
+  // ----------------------------------------------------------
+  ferdigheter: [
+    { navn: { no: "Videoredigering",  en: "Video editing"    }, prosent: 90 },
+    { navn: { no: "Kamera & filming", en: "Camera & filming" }, prosent: 85 },
+    { navn: "Premiere Pro",                                     prosent: 80 },
+    { navn: "DaVinci Resolve",                                  prosent: 75 },
+    { navn: { no: "Fotografi",        en: "Photography"      }, prosent: 80 },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  SPRÅK  (nivaa: 1–5 prikker)
+  // ----------------------------------------------------------
+  sprak: [
+    { namn: { no: "Norsk",   en: "Norwegian" }, nivaa: 5 },
+    { namn: { no: "Engelsk", en: "English"   }, nivaa: 4 },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  SOSIALE LENKER  (sett url: null for å skjule)
+  // ----------------------------------------------------------
+  sosiale: [
+    { label: "GitHub",    url: "https://github.com/stephanteig" },
+    { label: "Instagram", url: null },
+    { label: "LinkedIn",  url: null },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  ERFARING
+  // ----------------------------------------------------------
+  erfaring: [
+    {
+      aar:    "2024 –",
+      tittel: { no: "Sosiale medier & innholdsproduksjon", en: "Social media & content production" },
+      sted:   "Studio Wallin AS · Fredrikstad",
+      tekst:  {
+        no: "Produksjon og publisering av innhold for Instagram og andre plattformer.",
+        en: "Producing and publishing content for Instagram and other social media platforms.",
+      },
+    },
+    {
+      aar:    "2024",
+      tittel: { no: "Kamera & stillfoto",  en: "Camera & still photography" },
+      sted:   "TEDx Fredrikstad",
+      tekst:  {
+        no: "Fotograferte og filmet under arrangementet.",
+        en: "Photographed and filmed during the event.",
+      },
+    },
+    {
+      aar:    "2024",
+      tittel: { no: "Produsent", en: "Producer" },
+      sted:   "Musikkvideo — MÆD",
+      tekst:  {
+        no: "Planlegging, produksjon og gjennomføring av musikkvideo.",
+        en: "Planning, production and execution of a music video.",
+      },
+    },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  UTDANNING
+  // ----------------------------------------------------------
+  utdanning: [
+    {
+      aar:    "2024 –",
+      tittel: { no: "VG2 Medieproduksjon",       en: "VG2 Media Production"          },
+      sted:   "Glemmen videregående skole",
+      tekst:  {
+        no: "Filming og redigering i Premiere Pro og DaVinci Resolve. Produserer nå en egen film.",
+        en: "Filming and editing in Premiere Pro and DaVinci Resolve. Currently producing an original short film.",
+      },
+    },
+    {
+      aar:    "2023 – 2024",
+      tittel: { no: "VG1 IT og Medieproduksjon", en: "VG1 IT and Media Production"   },
+      sted:   "Glemmen videregående skole",
+      tekst:  {
+        no: "Avsluttet med høyt snitt. Høy kompetanse i alle programfag.",
+        en: "Completed with a high GPA. Strong skills across all programme subjects.",
+      },
+    },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  PROSJEKTER
+  //
+  //  type:  "youtube" | "drive" | "bilde" | "ingen"
+  //  embed: YouTube-ID, Drive-ID, eller bildesti (avhengig av type)
+  //  filter: kategori-knapp — nye kategorier dukker opp automatisk
+  //  thumbnail (valgfri): overstyrer auto-thumbnail
+  // ----------------------------------------------------------
+  prosjekter: [
+    {
+      tittel: "Reshoot",
+      rolle:  { no: "Film · Regi",  en: "Film · Director" },
+      type:   "youtube",
+      embed:  "akvZh0yoCF4",
+      filter: "film",
+    },
+    {
+      tittel: "Reshoot Del 2 — Valg 1",
+      rolle:  { no: "Film · Klipp", en: "Film · Edit" },
+      type:   "youtube",
+      embed:  "5nsWRqXzUyY",
+      filter: "film",
+    },
+    {
+      tittel: "Reshoot Del 2 — Valg 2",
+      rolle:  { no: "Film · Klipp", en: "Film · Edit" },
+      type:   "youtube",
+      embed:  "sajH28yctrw",
+      filter: "film",
+    },
+    {
+      tittel: "Et ekko av henne",
+      rolle:  { no: "Film", en: "Film" },
+      type:   "drive",
+      embed:  "1yNcmU2wehtRTBUR2G7Omvlb3k0rzuXat",
+      filter: "film",
+    },
+    {
+      tittel: "TEDx Fredrikstad",
+      rolle:  { no: "Foto · Kamera", en: "Photo · Camera" },
+      type:   "ingen",
+      embed:  null,
+      filter: "foto",
+    },
+    {
+      tittel: "MÆD Musikkvideo",
+      rolle:  { no: "Produsent", en: "Producer" },
+      type:   "ingen",
+      embed:  null,
+      filter: "film",
+    },
+  ],
+
+
+  // ----------------------------------------------------------
+  //  UI-TEKSTER  (alle knapper, labels og overskrifter)
+  // ----------------------------------------------------------
+  ui: {
+    // Sidebar
+    lastNedCV:       { no: "Last ned CV",    en: "Download CV"    },
+    kontaktTittel:   { no: "Kontakt",        en: "Contact"        },
+    ferdigheterTittel: { no: "Ferdigheter",  en: "Skills"         },
+    sprakTittel:     { no: "Språk",          en: "Languages"      },
+    folgMeg:         { no: "Følg meg",       en: "Follow me"      },
+
+    // Hero
+    heiJegEr:        { no: "Hei, jeg er",   en: "Hi, I'm"        },
+    jegLager:        { no: "Jeg lager",      en: "I create"       },
+    seProsjekter:    { no: "Se prosjekter",  en: "View projects"  },
+    kontaktMeg:      { no: "Kontakt meg",    en: "Contact me"     },
+
+    // CV-side
+    erfaring:        { no: "Erfaring",       en: "Experience"     },
+    utdanning:       { no: "Utdanning",      en: "Education"      },
+
+    // Prosjekter
+    alle:            { no: "Alle",           en: "All"            },
+    kommerSnart:     { no: "Kommer snart",   en: "Coming soon"    },
+
+    // Kontakt-side
+    kontaktSideTittel: { no: "Send en melding", en: "Send a message" },
+    navnPlaceholder:   { no: "Navn",            en: "Name"           },
+    epostPlaceholder:  { no: "E-post",           en: "Email"          },
+    emnePlaceholder:   { no: "Emne",             en: "Subject"        },
+    meldingPlaceholder:{ no: "Melding...",        en: "Message..."     },
+    sendKnapp:         { no: "Send melding",      en: "Send message"   },
+    kortLabels: {
+      epost:   { no: "E-post",   en: "Email"    },
+      telefon: { no: "Telefon",  en: "Phone"    },
+      sted:    { no: "Sted",     en: "Location" },
+      nettside:{ no: "Nettside", en: "Website"  },
+    },
+
+    // Lightbox
+    lukk:            { no: "✕ LUKK",         en: "✕ CLOSE"        },
+  },
+
+
+  // ----------------------------------------------------------
+  //  DESIGN
+  // ----------------------------------------------------------
+  aksent: "#c8a96e",
+
+};
+
+  </script>
+
+  <style>
+    :root {
+      --bg:       #111111;
+      --sidebar:  #0d0d0d;
+      --card:     #161616;
+      --border:   #1f1f1f;
+      --text:     #dddddd;
+      --muted:    #666666;
+      --accent:   #c8a96e;
+      --font-h:   'Montserrat', sans-serif;
+      --font-b:   'Open Sans', sans-serif;
+      --sb-width: 260px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font-family: var(--font-b);
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ── Layout ── */
+    .layout { display: flex; flex: 1; min-height: 0; }
+
+    /* ── Sidebar ── */
+    .sb {
+      width: var(--sb-width);
+      min-width: var(--sb-width);
+      background: var(--sidebar);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .sb-top {
+      padding: 2rem 1.75rem 1.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sb-avatar {
+      width: 104px; height: 104px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      border: 2px solid var(--border);
+      margin: 0 auto 1rem;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-h); font-size: 30px; font-weight: 700; color: #333;
+      overflow: hidden;
+    }
+    .sb-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+
+    .sb-name  { font-family: var(--font-h); font-size: 16px; font-weight: 700; color: #f0f0f0; letter-spacing: .03em; margin-bottom: .3rem; }
+    .sb-role  { font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.1rem; }
+
+    .sb-download {
+      display: inline-block;
+      font-family: var(--font-h); font-size: 9px; letter-spacing: .16em; text-transform: uppercase;
+      padding: .45rem 1.1rem; border: 1px solid var(--accent); color: var(--accent);
+      border-radius: 2px; cursor: pointer; transition: background .2s, color .2s;
+    }
+    .sb-download:hover { background: var(--accent); color: #111; }
+
+    .sb-body { padding: 1.5rem 1.75rem; flex: 1; }
+
+    .sb-section { margin-bottom: 1.75rem; }
+    .sb-section-title {
+      font-family: var(--font-h); font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: .85rem; padding-bottom: .4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sb-row { display: flex; align-items: flex-start; gap: .6rem; margin-bottom: .6rem; }
+    .sb-icon { width: 14px; height: 14px; flex-shrink: 0; margin-top: 2px; opacity: .35; }
+    .sb-val  { font-size: 11px; color: #888; line-height: 1.55; }
+    .sb-val a { color: #888; }
+    .sb-val a:hover { color: var(--accent); }
+
+    .skill-item  { margin-bottom: .8rem; }
+    .skill-top   { display: flex; justify-content: space-between; margin-bottom: .35rem; }
+    .skill-name  { font-size: 11px; color: #999; }
+    .skill-pct   { font-size: 10px; color: var(--muted); }
+    .skill-track { height: 2px; background: #1f1f1f; border-radius: 1px; }
+    .skill-bar   { height: 100%; background: var(--accent); border-radius: 1px; opacity: .7; }
+
+    .lang-row  { display: flex; justify-content: space-between; align-items: center; margin-bottom: .5rem; }
+    .lang-name { font-size: 11px; color: #888; }
+    .lang-dots { display: flex; gap: 4px; }
+    .lang-dot  { width: 7px; height: 7px; border-radius: 50%; background: #1f1f1f; }
+    .lang-dot.on { background: var(--accent); }
+
+    .social-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .social-btn {
+      font-family: var(--font-h); font-size: 8px; letter-spacing: .12em; text-transform: uppercase;
+      padding: .3rem .65rem; border: 1px solid var(--border); color: var(--muted);
+      border-radius: 2px; transition: border-color .2s, color .2s;
+    }
+    .social-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Top nav ── */
+    .main { flex: 1; display: flex; flex-direction: column; min-width: 0; overflow: hidden; }
+
+    .top-nav {
+      display: flex; align-items: stretch;
+      border-bottom: 1px solid var(--border);
+      background: #0f0f0f;
+      flex-shrink: 0;
+      position: sticky; top: 0; z-index: 50;
+      overflow-x: auto;
+    }
+
+    .nav-item {
+      font-family: var(--font-h); font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--muted); padding: .9rem 1.3rem; cursor: pointer;
+      border-bottom: 2px solid transparent; white-space: nowrap; flex-shrink: 0;
+      transition: color .2s;
+    }
+    .nav-item:hover  { color: var(--text); }
+    .nav-item.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ── Language toggle ── */
+    .nav-spacer { flex: 1; }
+
+    .lang-toggle {
+      display: flex; align-items: center; gap: 0;
+      margin: auto 1rem auto 0;
+      background: #1a1a1a;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .lang-btn {
+      font-family: var(--font-h); font-size: 9px; letter-spacing: .14em;
+      padding: .3rem .65rem; cursor: pointer; color: var(--muted);
+      transition: background .15s, color .15s;
+      border: none; background: transparent;
+    }
+    .lang-btn.active { background: var(--accent); color: #111; }
+    .lang-divider { width: 1px; height: 14px; background: var(--border); }
+
+    /* ── Pages ── */
+    .pages { flex: 1; overflow-y: auto; }
+    .page  { display: none; }
+    .page.active { display: block; }
+
+    /* ── Home ── */
+    .home-hero { padding: 3.5rem 3rem 2.5rem; border-bottom: 1px solid var(--border); }
+    .hero-hi   { font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); margin-bottom: .75rem; }
+    .hero-name { font-family: var(--font-h); font-size: 44px; font-weight: 300; color: #f0f0f0; line-height: 1.05; margin-bottom: .6rem; }
+    .hero-name b { font-weight: 700; }
+    .hero-typed { font-family: var(--font-h); font-size: 15px; font-weight: 300; color: var(--muted); margin-bottom: 1.25rem; min-height: 22px; }
+    .tw-text   { color: var(--accent); font-weight: 500; }
+    .tw-cursor { color: var(--accent); animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%,100%{opacity:1}50%{opacity:0} }
+    .hero-bio  { font-size: 13px; color: var(--muted); line-height: 1.75; max-width: 480px; margin-bottom: 2rem; }
+    .hero-btns { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .hero-btn  {
+      font-family: var(--font-h); font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+      padding: .6rem 1.5rem; border-radius: 2px; cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+    .hero-btn.primary   { background: var(--accent); color: #111; border: 1px solid var(--accent); }
+    .hero-btn.primary:hover { background: transparent; color: var(--accent); }
+    .hero-btn.secondary { background: transparent; color: var(--muted); border: 1px solid var(--border); }
+    .hero-btn.secondary:hover { border-color: var(--text); color: var(--text); }
+
+    .home-stats { display: grid; }
+    .stat { padding: 1.5rem 2rem; border-right: 1px solid var(--border); text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-n { font-family: var(--font-h); font-size: 30px; font-weight: 700; color: var(--accent); }
+    .stat-l { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-top: .3rem; }
+
+    /* ── Resume ── */
+    .resume-page { padding: 2rem 2.5rem; }
+    .res-section { margin-bottom: 2.5rem; }
+    .res-head {
+      font-family: var(--font-h); font-size: 10px; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: .75rem;
+    }
+    .res-head::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .tl-item { display: flex; gap: 1.25rem; margin-bottom: 1.5rem; }
+    .tl-left { display: flex; flex-direction: column; align-items: center; width: 10px; flex-shrink: 0; }
+    .tl-dot  { width: 8px; height: 8px; border-radius: 50%; border: 1px solid var(--accent); flex-shrink: 0; margin-top: 4px; }
+    .tl-line { width: 1px; background: var(--border); flex: 1; margin-top: 4px; }
+    .tl-body { flex: 1; padding-bottom: .5rem; }
+    .tl-aar    { font-size: 10px; letter-spacing: .08em; color: var(--muted); margin-bottom: .25rem; }
+    .tl-tittel { font-family: var(--font-h); font-size: 13px; font-weight: 600; color: #e0e0e0; margin-bottom: .15rem; }
+    .tl-sted   { font-size: 11px; color: var(--accent); margin-bottom: .4rem; }
+    .tl-tekst  { font-size: 11px; color: var(--muted); line-height: 1.65; }
+
+    /* ── Works ── */
+    .works-page { padding: 1.75rem 2rem; }
+    .works-filter { display: flex; gap: .5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .wf-btn {
+      font-family: var(--font-h); font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
+      padding: .35rem .9rem; border: 1px solid var(--border); color: var(--muted);
+      border-radius: 2px; cursor: pointer; transition: border-color .2s, color .2s;
+    }
+    .wf-btn:hover  { border-color: #333; color: var(--text); }
+    .wf-btn.active { border-color: var(--accent); color: var(--accent); }
+
+    .works-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+
+    .work-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 4px; overflow: hidden; cursor: pointer;
+      transition: border-color .2s, transform .2s;
+    }
+    .work-card:hover { border-color: #333; transform: translateY(-1px); }
+    .work-card.no-video { cursor: default; }
+    .work-card.no-video:hover { transform: none; }
+
+    .work-thumb { aspect-ratio: 16/9; background: #161616; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .work-thumb img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.6); transition: filter .3s; }
+    .work-card:hover .work-thumb img { filter: brightness(.4); }
+
+    .play-ico {
+      position: absolute; width: 40px; height: 40px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.25);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .2s, transform .2s;
+    }
+    .work-card:hover .play-ico { border-color: var(--accent); transform: scale(1.1); }
+
+    .work-info  { padding: .65rem .85rem; }
+    .work-title { font-family: var(--font-h); font-size: 11px; font-weight: 600; color: #ccc; }
+    .work-role  { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-top: .2rem; }
+    .work-badge { display: inline-block; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; padding: 2px 6px; border-radius: 2px; margin-top: .3rem; background: rgba(200,169,110,.1); color: var(--accent); }
+
+    /* ── Lightbox ── */
+    .lb { display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; }
+    .lb.open { display: flex; }
+    .lb-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.88); cursor: pointer; }
+    .lb-content { position: relative; width: min(90vw,1000px); aspect-ratio: 16/9; z-index: 1; }
+    .lb-content iframe { width: 100%; height: 100%; border: 0; }
+    .lb-close {
+      position: absolute; top: -42px; right: 0;
+      background: none; border: none; color: #fff;
+      font-family: var(--font-h); font-size: 11px; letter-spacing: .1em;
+      cursor: pointer; opacity: .6; transition: opacity .2s;
+    }
+    .lb-close:hover { opacity: 1; }
+
+    /* ── Contact ── */
+    .contact-page { padding: 2rem 2.5rem; }
+    .contact-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-bottom: 2rem; }
+    .contact-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1.25rem; text-align: center; }
+    .cc-icon  { width: 36px; height: 36px; background: #1a1a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto .75rem; }
+    .cc-label { font-size: 9px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
+    .cc-val   { font-size: 11px; color: #888; }
+    .cc-val a { color: #888; transition: color .2s; }
+    .cc-val a:hover { color: var(--accent); }
+
+    .form-section-title {
+      font-family: var(--font-h); font-size: 10px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.25rem;
+      display: flex; align-items: center; gap: .75rem;
+    }
+    .form-section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .form-row   { display: flex; gap: 10px; margin-bottom: 10px; }
+    .form-input {
+      flex: 1; background: #161616; border: 1px solid var(--border);
+      color: var(--text); padding: .65rem .9rem; border-radius: 2px;
+      font-size: 11px; font-family: var(--font-b); outline: none;
+      transition: border-color .2s;
+    }
+    .form-input:focus    { border-color: #333; }
+    textarea.form-input  { resize: none; height: 90px; width: 100%; margin-bottom: 10px; }
+    .form-submit {
+      font-family: var(--font-h); font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+      padding: .6rem 1.75rem; background: var(--accent); color: #111; border: 1px solid var(--accent);
+      border-radius: 2px; cursor: pointer; transition: background .2s, color .2s;
+    }
+    .form-submit:hover { background: transparent; color: var(--accent); }
+
+    /* ── Mobile ── */
+    @media (max-width: 700px) {
+      .sb { display: none; }
+      .home-hero { padding: 2rem 1.5rem 1.5rem; }
+      .hero-name { font-size: 30px; }
+      .resume-page, .works-page, .contact-page { padding: 1.5rem; }
+      .works-grid { grid-template-columns: 1fr; }
+      .contact-cards { grid-template-columns: 1fr; }
+    }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: #333; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Lightbox -->
+  <div class="lb" id="lightbox">
+    <div class="lb-backdrop" id="lbBackdrop"></div>
+    <div class="lb-content">
+      <button class="lb-close" id="lbClose"></button>
+      <iframe id="lbFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+    </div>
+  </div>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sb">
+      <div class="sb-top">
+        <div class="sb-avatar" id="sbAvatar"></div>
+        <div class="sb-name"   id="sbNavn"></div>
+        <div class="sb-role"   id="sbRolle"></div>
+        <a class="sb-download" id="sbCvLink"></a>
+      </div>
+      <div class="sb-body">
+        <div class="sb-section">
+          <div class="sb-section-title" id="sbKontaktTittel"></div>
+          <div id="sbKontakt"></div>
+        </div>
+        <div class="sb-section">
+          <div class="sb-section-title" id="sbFerdigheterTittel"></div>
+          <div id="sbFerdigheter"></div>
+        </div>
+        <div class="sb-section">
+          <div class="sb-section-title" id="sbSprakTittel"></div>
+          <div id="sbSprak"></div>
+        </div>
+        <div class="sb-section" id="sbSosialeSeksjon">
+          <div class="sb-section-title" id="sbFolgMeg"></div>
+          <div class="social-row" id="sbSosiale"></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="main">
+      <nav class="top-nav" id="topNav">
+        <!-- nav items injected by JS -->
+        <div class="nav-spacer"></div>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btnNo">NO</button>
+          <div class="lang-divider"></div>
+          <button class="lang-btn" id="btnEn">EN</button>
+        </div>
+      </nav>
+
+      <div class="pages">
+
+        <div class="page active" id="page-home">
+          <div class="home-hero">
+            <div class="hero-hi" id="heroHi"></div>
+            <div class="hero-name" id="heroNavn"></div>
+            <div class="hero-typed">
+              <span id="jegLager"></span> <span class="tw-text" id="twText"></span><span class="tw-cursor">|</span>
+            </div>
+            <p class="hero-bio" id="heroBio"></p>
+            <div class="hero-btns">
+              <div class="hero-btn primary"   id="btnSeProsjekter" onclick="goPage('works')"></div>
+              <div class="hero-btn secondary" id="btnKontaktMeg"   onclick="goPage('contact')"></div>
+            </div>
+          </div>
+          <div class="home-stats" id="homeStats"></div>
+        </div>
+
+        <div class="page" id="page-resume">
+          <div class="resume-page">
+            <div class="res-section">
+              <div class="res-head" id="resErfaring"></div>
+              <div id="erfaringListe"></div>
+            </div>
+            <div class="res-section">
+              <div class="res-head" id="resUtdanning"></div>
+              <div id="utdanningListe"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="page-works">
+          <div class="works-page">
+            <div class="works-filter" id="worksFilter"></div>
+            <div class="works-grid"   id="worksGrid"></div>
+          </div>
+        </div>
+
+        <div class="page" id="page-contact">
+          <div class="contact-page">
+            <div class="contact-cards"       id="contactCards"></div>
+            <div class="form-section-title"  id="formTittel"></div>
+            <div class="form-row">
+              <input class="form-input" id="fNavn"    type="text"  />
+              <input class="form-input" id="fEpost"   type="email" />
+            </div>
+            <input    class="form-input" id="fEmne"    type="text" style="width:100%;margin-bottom:10px;" />
+            <textarea class="form-input" id="fMelding"></textarea>
+            <button   class="form-submit" id="fSend"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function () {
+
+    /* ══════════════════════════════════════════════
+       SPRÅK-SYSTEM
+       t(felt) → returnerer riktig tekst basert på
+       gjeldende språk. Støtter både streng og {no,en}.
+    ══════════════════════════════════════════════ */
+    let lang = 'no';
+
+    function t(felt) {
+      if (!felt) return '';
+      if (typeof felt === 'string') return felt;
+      return felt[lang] || felt['no'] || '';
+    }
+
+    /* ══════════════════════════════════════════════
+       HELPERS
+    ══════════════════════════════════════════════ */
+    const $  = id => document.getElementById(id);
+    const mk = tag => document.createElement(tag);
+
+    function set(id, text)  { const el = $(id); if (el) el.textContent = text; }
+    function html(id, content) { const el = $(id); if (el) el.innerHTML = content; }
+
+    function initials(name) {
+      return name.split(' ').map(w => w[0]).slice(0,2).join('').toUpperCase();
+    }
+
+    /* ══════════════════════════════════════════════
+       INITIAL RENDER  (kjøres én gang)
+    ══════════════════════════════════════════════ */
+
+    // Aksent-farge
+    document.documentElement.style.setProperty('--accent', CV.aksent || '#c8a96e');
+
+    // Avatar (kjøres bare én gang)
+    const avatarEl = $('sbAvatar');
+    if (CV.bilde) {
+      const img = mk('img');
+      img.src = CV.bilde; img.alt = CV.navn;
+      img.onerror = () => { img.remove(); avatarEl.textContent = initials(CV.navn); };
+      avatarEl.appendChild(img);
+    } else {
+      avatarEl.textContent = initials(CV.navn);
+    }
+
+    set('sbNavn', CV.navn);
+
+    // CV-lenke
+    if (CV.cvPdf) {
+      $('sbCvLink').href = CV.cvPdf;
+    } else {
+      $('sbCvLink').style.display = 'none';
+    }
+
+    // Sosiale (statiske labels, ingen oversettelse)
+    const aktiveSosiale = (CV.sosiale || []).filter(s => s.url);
+    if (aktiveSosiale.length) {
+      aktiveSosiale.forEach(s => {
+        $('sbSosiale').insertAdjacentHTML('beforeend',
+          `<a class="social-btn" href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`);
+      });
+    } else {
+      $('sbSosialeSeksjon').style.display = 'none';
+    }
+
+    // Prosjektkort (struktur bygges én gang, tekst oppdateres ved språkbytte)
+    const prosjektKort = [];
+    (CV.prosjekter || []).forEach(p => {
+      const harVideo = p.type === 'youtube' || p.type === 'drive';
+      const card = mk('div');
+      card.className = 'work-card' + (harVideo ? '' : ' no-video');
+      card.dataset.filter = p.filter;
+
+      let thumbInnhold = '';
+      if (p.type === 'youtube') {
+        thumbInnhold = `
+          <img src="https://img.youtube.com/vi/${p.embed}/mqdefault.jpg" alt="${p.tittel}" />
+          <div class="play-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polygon points="3,1 11,6 3,11" fill="#ccc"/></svg></div>`;
+      } else if (harVideo) {
+        thumbInnhold = `<div class="play-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polygon points="3,1 11,6 3,11" fill="#ccc"/></svg></div>`;
+      }
+      if (p.thumbnail) thumbInnhold = `<img src="${p.thumbnail}" alt="${p.tittel}" />` + (harVideo ? `<div class="play-ico"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polygon points="3,1 11,6 3,11" fill="#ccc"/></svg></div>` : '');
+
+      card.innerHTML = `
+        <div class="work-thumb">${thumbInnhold}</div>
+        <div class="work-info">
+          <div class="work-title">${p.tittel}</div>
+          <div class="work-role" data-rolle></div>
+          ${!harVideo ? '<div class="work-badge" data-badge></div>' : ''}
+        </div>`;
+
+      if (harVideo) card.addEventListener('click', () => openLightbox(p));
+      $('worksGrid').appendChild(card);
+      prosjektKort.push({ el: card, data: p });
+    });
+
+    // Skill bars (struktur bygges én gang)
+    (CV.ferdigheter || []).forEach(f => {
+      $('sbFerdigheter').insertAdjacentHTML('beforeend', `
+        <div class="skill-item">
+          <div class="skill-top">
+            <span class="skill-name" data-skill-navn></span>
+            <span class="skill-pct">${f.prosent}%</span>
+          </div>
+          <div class="skill-track"><div class="skill-bar" style="width:${f.prosent}%"></div></div>
+        </div>`);
+    });
+
+    // Språk-prikker (struktur bygges én gang)
+    (CV.sprak || []).forEach(s => {
+      let dots = '';
+      for (let i = 1; i <= 5; i++)
+        dots += `<div class="lang-dot${i <= s.nivaa ? ' on' : ''}"></div>`;
+      $('sbSprak').insertAdjacentHTML('beforeend', `
+        <div class="lang-row">
+          <span class="lang-name" data-lang-navn></span>
+          <div class="lang-dots">${dots}</div>
+        </div>`);
+    });
+
+    // Filterkategorier (bygges én gang, labelen "Alle" oppdateres)
+    const alleKat = ['alle', ...new Set((CV.prosjekter || []).map(p => p.filter))];
+    alleKat.forEach(f => {
+      const btn = mk('div');
+      btn.className = 'wf-btn' + (f === 'alle' ? ' active' : '');
+      btn.dataset.filterVal = f;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.wf-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.work-card').forEach(card => {
+          card.style.display = (f === 'alle' || card.dataset.filter === f) ? '' : 'none';
+        });
+      });
+      $('worksFilter').appendChild(btn);
+    });
+
+    // Stats
+    const statsEl = $('homeStats');
+    statsEl.style.gridTemplateColumns = `repeat(${CV.stats.length}, 1fr)`;
+    CV.stats.forEach((s, i) => {
+      const div = mk('div');
+      div.className = 'stat';
+      if (i === CV.stats.length - 1) div.style.borderRight = 'none';
+      div.innerHTML = `<div class="stat-n">${s.tall}</div><div class="stat-l" data-stat-label></div>`;
+      statsEl.appendChild(div);
+    });
+
+    // Kontaktkort
+    const kortSvg = {
+      epost:    '<rect x="1" y="3" width="14" height="10" rx="1" stroke="#888" stroke-width="1.2"/><path d="M1 4l7 5 7-5" stroke="#888" stroke-width="1.2"/>',
+      telefon:  '<rect x="3" y="1" width="10" height="14" rx="2" stroke="#888" stroke-width="1.2"/><circle cx="8" cy="12" r="1" fill="#888"/>',
+      sted:     '<path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="#888" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="#888" stroke-width="1.2"/>',
+      nettside: '<circle cx="8" cy="8" r="6" stroke="#888" stroke-width="1.2"/><path d="M8 2c0 0-2 3-2 6s2 6 2 6M8 2c0 0 2 3 2 6s-2 6-2 6M2 8h12" stroke="#888" stroke-width="1.2"/>',
+    };
+    const kortData = [
+      { key: 'epost',    val: CV.epost,    href: 'mailto:' + CV.epost },
+      { key: 'telefon',  val: CV.telefon,  href: 'tel:' + (CV.telefon||'').replace(/\s/g,'') },
+      { key: 'sted',     val: CV.sted,     href: null },
+      { key: 'nettside', val: CV.nettside, href: 'https://' + CV.nettside },
+    ];
+    kortData.forEach(k => {
+      if (!k.val) return;
+      $('contactCards').insertAdjacentHTML('beforeend', `
+        <div class="contact-card">
+          <div class="cc-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none">${kortSvg[k.key]}</svg></div>
+          <div class="cc-label" data-kontakt-label="${k.key}"></div>
+          <div class="cc-val">${k.href ? `<a href="${k.href}">${k.val}</a>` : k.val}</div>
+        </div>`);
+    });
+
+    // Typewriter
+    let twPi = 0, twCi = 0, twDel = false;
+    let twFraser = [];
+    let twTimer = null;
+
+    function twStart(fraser) {
+      clearTimeout(twTimer);
+      twFraser = fraser;
+      // Reset til start av gjeldende fraser-sett
+      twPi = 0; twCi = 0; twDel = false;
+      $('twText').textContent = '';
+      twStep();
+    }
+
+    function twStep() {
+      const phrase = twFraser[twPi];
+      if (!twDel) {
+        $('twText').textContent = phrase.slice(0, ++twCi);
+        if (twCi === phrase.length) { twDel = true; twTimer = setTimeout(twStep, 2000); return; }
+      } else {
+        $('twText').textContent = phrase.slice(0, --twCi);
+        if (twCi === 0) { twDel = false; twPi = (twPi + 1) % twFraser.length; }
+      }
+      twTimer = setTimeout(twStep, twDel ? 40 : 80);
+    }
+
+    /* ══════════════════════════════════════════════
+       RENDER — oppdaterer all tekst ved språkbytte
+    ══════════════════════════════════════════════ */
+    function render() {
+      const u = CV.ui;
+
+      // <html lang>
+      document.documentElement.lang = lang;
+
+      // Sidetittel
+      document.title = 'CV – ' + CV.navn;
+
+      // Sidebar
+      set('sbRolle',              t(CV.tittel));
+      set('sbCvLink',             t(u.lastNedCV));
+      set('sbKontaktTittel',      t(u.kontaktTittel));
+      set('sbFerdigheterTittel',  t(u.ferdigheterTittel));
+      set('sbSprakTittel',        t(u.sprakTittel));
+      set('sbFolgMeg',            t(u.folgMeg));
+
+      // Kontaktinfo i sidebar
+      html('sbKontakt', '');
+      const kontaktSvg = [
+        { svg: '<rect x="1" y="3" width="14" height="10" rx="1" stroke="#aaa" stroke-width="1.2"/><path d="M1 4l7 5 7-5" stroke="#aaa" stroke-width="1.2"/>', val: CV.epost,   href: 'mailto:' + CV.epost },
+        { svg: '<rect x="3" y="1" width="10" height="14" rx="2" stroke="#aaa" stroke-width="1.2"/><circle cx="8" cy="12" r="1" fill="#aaa"/>',               val: CV.telefon, href: 'tel:' + (CV.telefon||'').replace(/\s/g,'') },
+        { svg: '<path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="#aaa" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="#aaa" stroke-width="1.2"/>', val: CV.sted, href: null },
+      ];
+      kontaktSvg.forEach(k => {
+        if (!k.val) return;
+        $('sbKontakt').insertAdjacentHTML('beforeend', `
+          <div class="sb-row">
+            <svg class="sb-icon" viewBox="0 0 16 16" fill="none">${k.svg}</svg>
+            <div class="sb-val">${k.href ? `<a href="${k.href}">${k.val}</a>` : k.val}</div>
+          </div>`);
+      });
+
+      // Ferdigheter – oppdater bare navn
+      const skillNavnEls = document.querySelectorAll('[data-skill-navn]');
+      (CV.ferdigheter || []).forEach((f, i) => {
+        if (skillNavnEls[i]) skillNavnEls[i].textContent = t(f.navn);
+      });
+
+      // Språk – oppdater navn
+      const langNavnEls = document.querySelectorAll('[data-lang-navn]');
+      (CV.sprak || []).forEach((s, i) => {
+        if (langNavnEls[i]) langNavnEls[i].textContent = t(s.namn || s.navn);
+      });
+
+      // Nav-tabs
+      const navEl = $('topNav');
+      navEl.querySelectorAll('.nav-item').forEach(el => el.remove());
+      const spacer = navEl.querySelector('.nav-spacer');
+      const aktivSide = document.querySelector('.page.active')?.id?.replace('page-', '') || 'home';
+      (CV.nav || []).forEach(side => {
+        const btn = mk('div');
+        btn.className = 'nav-item' + (side.id === aktivSide ? ' active' : '');
+        btn.textContent = t(side.label);
+        btn.dataset.page = side.id;
+        btn.addEventListener('click', () => goPage(side.id));
+        navEl.insertBefore(btn, spacer);
+      });
+
+      // Hero
+      set('heroHi',          t(u.heiJegEr));
+      const deler = CV.navn.split(' ');
+      const etternavn = deler.pop();
+      $('heroNavn').innerHTML = deler.join(' ') + ' <b>' + etternavn + '</b>';
+      set('jegLager',        t(u.jegLager));
+      set('heroBio',         t(CV.bio));
+      set('btnSeProsjekter', t(u.seProsjekter));
+      set('btnKontaktMeg',   t(u.kontaktMeg));
+
+      // Stats
+      document.querySelectorAll('[data-stat-label]').forEach((el, i) => {
+        if (CV.stats[i]) el.textContent = t(CV.stats[i].label);
+      });
+
+      // CV-seksjon overskrifter
+      set('resErfaring',  t(u.erfaring));
+      set('resUtdanning', t(u.utdanning));
+
+      // Timeline — erfaring
+      html('erfaringListe', '');
+      (CV.erfaring || []).forEach((item, i) => {
+        const siste = i === CV.erfaring.length - 1;
+        $('erfaringListe').insertAdjacentHTML('beforeend', `
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-dot"></div>${siste ? '' : '<div class="tl-line"></div>'}
+            </div>
+            <div class="tl-body">
+              <div class="tl-aar">${item.aar}</div>
+              <div class="tl-tittel">${t(item.tittel)}</div>
+              <div class="tl-sted">${item.sted}</div>
+              <div class="tl-tekst">${t(item.tekst)}</div>
+            </div>
+          </div>`);
+      });
+
+      // Timeline — utdanning
+      html('utdanningListe', '');
+      (CV.utdanning || []).forEach((item, i) => {
+        const siste = i === CV.utdanning.length - 1;
+        $('utdanningListe').insertAdjacentHTML('beforeend', `
+          <div class="tl-item">
+            <div class="tl-left">
+              <div class="tl-dot"></div>${siste ? '' : '<div class="tl-line"></div>'}
+            </div>
+            <div class="tl-body">
+              <div class="tl-aar">${item.aar}</div>
+              <div class="tl-tittel">${t(item.tittel)}</div>
+              <div class="tl-sted">${item.sted}</div>
+              <div class="tl-tekst">${t(item.tekst)}</div>
+            </div>
+          </div>`);
+      });
+
+      // Prosjektkort — oppdater tekst
+      prosjektKort.forEach(({ el, data }) => {
+        const rolleEl = el.querySelector('[data-rolle]');
+        const badgeEl = el.querySelector('[data-badge]');
+        if (rolleEl) rolleEl.textContent = t(data.rolle);
+        if (badgeEl) badgeEl.textContent = t(u.kommerSnart);
+      });
+
+      // Filterkategorier
+      document.querySelectorAll('.wf-btn').forEach(btn => {
+        const f = btn.dataset.filterVal;
+        btn.textContent = f === 'alle'
+          ? t(u.alle)
+          : f.charAt(0).toUpperCase() + f.slice(1);
+      });
+
+      // Kontaktkort labels
+      document.querySelectorAll('[data-kontakt-label]').forEach(el => {
+        const key = el.dataset.kontaktLabel;
+        el.textContent = t(u.kortLabels[key]);
+      });
+
+      // Kontaktside skjema
+      set('formTittel',      t(u.kontaktSideTittel));
+      $('fNavn').placeholder    = t(u.navnPlaceholder);
+      $('fEpost').placeholder   = t(u.epostPlaceholder);
+      $('fEmne').placeholder    = t(u.emnePlaceholder);
+      $('fMelding').placeholder = t(u.meldingPlaceholder);
+      set('fSend',           t(u.sendKnapp));
+
+      // Lightbox lukk
+      set('lbClose', t(u.lukk));
+
+      // Typewriter — restart med riktige fraser
+      twStart(CV.fraser[lang] || CV.fraser['no'] || []);
+    }
+
+    /* ══════════════════════════════════════════════
+       NAVIGASJON
+    ══════════════════════════════════════════════ */
+    function goPage(name) {
+      document.querySelectorAll('.nav-item').forEach(n =>
+        n.classList.toggle('active', n.dataset.page === name));
+      document.querySelectorAll('.page').forEach(p =>
+        p.classList.toggle('active', p.id === 'page-' + name));
+      document.querySelector('.pages').scrollTop = 0;
+    }
+    window.goPage = goPage;
+
+    /* ══════════════════════════════════════════════
+       SPRÅK TOGGLE
+    ══════════════════════════════════════════════ */
+    $('btnNo').addEventListener('click', () => {
+      if (lang === 'no') return;
+      lang = 'no';
+      $('btnNo').classList.add('active');
+      $('btnEn').classList.remove('active');
+      render();
+    });
+    $('btnEn').addEventListener('click', () => {
+      if (lang === 'en') return;
+      lang = 'en';
+      $('btnEn').classList.add('active');
+      $('btnNo').classList.remove('active');
+      render();
+    });
+
+    /* ══════════════════════════════════════════════
+       LIGHTBOX
+    ══════════════════════════════════════════════ */
+    function openLightbox(p) {
+      let src = '';
+      if (p.type === 'youtube') src = `https://www.youtube.com/embed/${p.embed}?autoplay=1`;
+      if (p.type === 'drive')   src = `https://drive.google.com/file/d/${p.embed}/preview`;
+      $('lbFrame').src = src;
+      $('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      $('lightbox').classList.remove('open');
+      $('lbFrame').src = '';
+      document.body.style.overflow = '';
+    }
+    $('lbBackdrop').addEventListener('click', closeLightbox);
+    $('lbClose').addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+    /* ══════════════════════════════════════════════
+       START
+    ══════════════════════════════════════════════ */
+    render();
+
+  })();
+  </script>
+
+</body>
+</html>
