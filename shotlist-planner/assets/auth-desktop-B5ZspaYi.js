@@ -1,1 +1,0 @@
-import"./event-CCX6AFym.js";import"./firebase-KTpxnNsv.js";import"./index-CjxSsSzZ.js";import"./vendor-B1vapGUn.js";import"./dnd-BIThFSda.js";async function p(){throw new Error("VITE_GOOGLE_DESKTOP_CLIENT_ID is not set")}export{p as signInWithGoogleDesktop};
