@@ -1,404 +1,1182 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephan Teig — Film & Creative Tech</title>
-    
-    <!-- Design Assets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stephan Teig</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <script>
-        /* ============================================================
-           ✏️  SINGLE SOURCE OF TRUTH (Content & Config)
-           ============================================================ */
-        const CV = {
-            lang: 'no',
-            name: "Stephan Teig",
-            avatar: "Media/IMG_3340.JPG",
-            cvPdf: "Media/StephanTeigCV.pdf",
-            formspreeId: "mwvrraez",
+  <!-- ============================================================
+       ✏️  REDIGER ALT HER — ingen annen fil trenger å endres
+       ============================================================ -->
+  <script>
+  const CV = {
 
-            bio: {
-                no: "Filmskaper og verktøybygger. Fyller 18 år den 9. juni 2026. VG2-student ved Glemmen og lærling hos Studio Wallin gjennom sommeren 2028. Jeg forener visuell historiefortelling med moderne teknologi — fra Resolve til Next.js.",
-                en: "Filmmaker and tool builder. Turning 18 on June 9, 2026. VG2 student and apprentice at Studio Wallin through summer 2028. I bridge the gap between storytelling and technology — from Resolve to Next.js."
-            },
+    // ── PERSONLIG INFO ──────────────────────────────────────────
+    navn:     "Stephan Teig",
+    tittel:   { no: "Film & Medieproduksjon",  en: "Film & Media Production" },
+    sted:     "Sarpsborg / Fredrikstad, Norge",
+    epost:    "teig.stephan@gmail.com",
+    telefon:  "+47 921 24 207",
+    nettside: "stephanteig.github.io",
 
-            stats: [
-                { val: "15+", label: { no: "Prosjekter", en: "Projects" } },
-                { val: "90%", label: { no: "Resolve Mastery", en: "Resolve Mastery" } },
-                { val: "1. Dan", label: { no: "Ju-Jitsu", en: "Ju-Jitsu" } }
-            ],
+    bilde: "Media/IMG_3340.JPG",
+    cvPdf: "Media/StephanTeigCV.pdf",
 
-            // Project 0 is the "Featured" Hero Project
-            projects: [
-                {
-                    id: "echo",
-                    title: "Et ekko av henne",
-                    cat: "Short Film",
-                    type: "drive",
-                    embed: "1MJ8R-8zVDB3qmyHoAP__SnrmKLm5354Q",
-                    img: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200",
-                    desc: { no: "Regi og color grading.", en: "Direction and color grading." }
-                },
-                {
-                    id: "trace",
-                    title: "Trace",
-                    cat: "Tech / Tool",
-                    type: "link",
-                    link: "https://stephanteig.github.io/logo-animator/",
-                    img: "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800",
-                    desc: { no: "SVG logo animator bygget med Next.js 15.", en: "SVG logo animator built with Next.js 15." }
-                },
-                {
-                    id: "shotlist",
-                    title: "Shotlist Planner",
-                    cat: "Production Tool",
-                    type: "none",
-                    img: "https://images.unsplash.com/photo-1497015289639-54688650d173?auto=format&fit=crop&q=80&w=800",
-                    desc: { no: "Planleggingsverktøy under aktiv utvikling.", en: "Production planning tool in development." },
-                    badge: "Coming Soon"
-                },
-                {
-                    id: "reshoot",
-                    title: "Reshoot",
-                    cat: "Film",
-                    type: "youtube",
-                    embed: "akvZh0yoCF4",
-                    img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800",
-                    desc: { no: "Interaktiv kortfilm. Regi og klipp.", en: "Interactive short film. Direction and edit." }
-                },
-                {
-                    id: "tedx",
-                    title: "TEDx Fredrikstad",
-                    cat: "Event",
-                    type: "youtube",
-                    embed: "sfBt5tgo5a8",
-                    img: "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=800",
-                    desc: { no: "Flerkameraproduksjon og klipp.", en: "Multi-camera production and editing." }
-                },
-                {
-                    id: "color-preview",
-                    title: "Color Preview",
-                    cat: "Software",
-                    type: "link",
-                    link: "https://github.com/stephanteig/color-preview",
-                    img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
-                    desc: { no: "Publisert Obsidian-plugin.", en: "Published Obsidian plugin." }
-                }
-            ],
+    formspreeId: "mwvrraez",
 
-            skills: ["DaVinci Resolve", "Color Grading", "Sound Design", "Content Production", "Next.js / TypeScript"],
+    bio: {
+      no: "Fyller 18 den 9. juni 2026. VG2 Medieproduksjon på Glemmen VGS og lærling hos Studio Wallin i Fredrikstad — der jeg jobber med foto, video, brand og podkast frem til sommeren 2028. Lager kortfilmer, fargekorrigerer, designer verktøy og instruerer Ju-Jitsu. Trives best når kamera, kode og historiefortelling overlapper.",
+      en: "Turning 18 on June 9, 2026. VG2 Media Production at Glemmen VGS and apprentice at Studio Wallin in Fredrikstad — working across photo, video, brand and podcast through summer 2028. I make short films, grade colour, build tools, and teach Ju-Jitsu. Best when camera, code and storytelling overlap.",
+    },
 
-            experience: [
-                {
-                    year: "2024 — 2028",
-                    title: { no: "Lærling, Studio Wallin", en: "Apprentice, Studio Wallin" },
-                    desc: { no: "Ansvarlig for foto, video og podcast-workflow for kunder som HYSJ og Purply.", en: "Responsible for photo, video, and podcast workflow for clients like HYSJ and Purply." }
-                },
-                {
-                    year: "2025 — Nå",
-                    title: { no: "Styreleder, Sarpsborg Ju-Jitsu", en: "Board Chair, Sarpsborg Ju-Jitsu" },
-                    desc: { no: "Leder drift og strategi for klubben.", en: "Leading operations and strategy for the club." }
-                }
-            ],
+    fraser: {
+      no: [ "kortfilmer.", "fargegradering.", "innhold som engasjerer.", "verktøy som hjelper." ],
+      en: [ "short films.", "colour grades.", "engaging content.", "tools that help." ],
+    },
 
-            ui: {
-                no: { works: "Prosjekter", resume: "CV", contact: "Kontakt", scroll: "Scroll ned", view: "Se prosjekt", download: "Last ned CV", send: "Send melding", studio: "La oss skape noe kinomatisk." },
-                en: { works: "Works", resume: "Resume", contact: "Contact", scroll: "Scroll down", view: "View project", download: "Download CV", send: "Send Message", studio: "Let's build something cinematic." }
-            }
-        };
-    </script>
+    stats: [
+      { tall: "7+",    label: { no: "Års jobberfaring", en: "Years experience" } },
+      { tall: "15+",   label: { no: "Prosjekter",       en: "Projects"         } },
+      { tall: "1.dan", label: { no: "Jiu-Jitsu",        en: "Jiu-Jitsu"       } },
+    ],
 
-    <style>
-        :root {
-            --bg: #040406;
-            --surface: #0c0c10;
-            --accent: #a78bfa;
-            --text: #ffffff;
-            --text-dim: rgba(255, 255, 255, 0.4);
-            --border: rgba(255, 255, 255, 0.08);
-            --font-serif: 'Instrument Serif', serif;
-            --font-mono: 'JetBrains Mono', monospace;
-            --scroll-pct: 0; /* Fallback for Non-Chrome browsers */
-        }
+    // ── NAVIGASJON ───────────────────────────────────────────────
+    nav: [
+      { id: "home",    label: { no: "Hjem",      en: "Home"     } },
+      { id: "resume",  label: { no: "CV",         en: "Resume"   } },
+      { id: "works",   label: { no: "Prosjekter", en: "Projects" } },
+      { id: "contact", label: { no: "Kontakt",    en: "Contact"  } },
+    ],
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; background: var(--bg); }
-        body { color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
+    // ── FERDIGHETER ──────────────────────────────────────────────
+    ferdigheter: [
+      { navn: { no: "Kamera & filming",   en: "Camera & filming"   }, prosent: 90 },
+      { navn: { no: "Videoredigering",    en: "Video editing"      }, prosent: 88 },
+      { navn: "DaVinci Resolve",                                      prosent: 90 },
+      { navn: { no: "Fargegradering",     en: "Colour grading"     }, prosent: 85 },
+      { navn: { no: "Lyddesign",          en: "Sound design"       }, prosent: 75 },
+      { navn: { no: "Innholdsproduksjon", en: "Content production" }, prosent: 85 },
+      { navn: { no: "Fotografi",          en: "Photography"        }, prosent: 70 },
+    ],
 
-        .grain { position: fixed; inset: 0; opacity: 0.03; pointer-events: none; z-index: 9999; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.8'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
-        .glow { position: fixed; width: 60vw; height: 60vh; filter: blur(120px); opacity: 0.15; pointer-events: none; z-index: -1; border-radius: 50%; }
+    // ── SPRÅK ────────────────────────────────────────────────────
+    sprak: [
+      { namn: { no: "Norsk",   en: "Norwegian" }, nivaa: 5 },
+      { namn: { no: "Engelsk", en: "English"   }, nivaa: 4 },
+    ],
 
-        /* GLASS HEADER */
-        header {
-            position: fixed; top: 0; width: 100%; height: 80px;
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 0 50px; z-index: 1000;
-            background: rgba(4, 4, 6, 0.4);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-        }
-        .logo { font-family: var(--font-serif); font-style: italic; font-size: 26px; cursor: pointer; }
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a { text-decoration: none; color: white; font-family: var(--font-mono); font-size: 10px; opacity: 0.5; transition: 0.3s; }
-        .nav-links a:hover { opacity: 1; color: var(--accent); }
+    // ── SOSIALE ──────────────────────────────────────────────────
+    sosiale: [
+      { label: "YouTube",   url: "https://www.youtube.com/@StephanTeig"                },
+      { label: "Instagram", url: "https://www.instagram.com/stephanteig"               },
+      { label: "TikTok",    url: "https://www.tiktok.com/@stephan.teig"                },
+      { label: "LinkedIn",  url: "https://www.linkedin.com/in/stephan-teig-727a8428b/" },
+    ],
 
-        /* HERO SCROLL ENGINE */
-        .hero-scroll-track { height: 200vh; view-timeline-name: --hero-track; }
-        .hero-sticky {
-            position: sticky; top: 0; height: 100vh;
-            display: grid; place-items: center;
-            overflow: hidden;
-        }
-        
-        .hero-content {
-            grid-area: 1/1; z-index: 1;
-            animation: hero-fade linear forwards;
-            animation-timeline: --hero-track;
-            animation-range: exit 0% exit 80%;
-        }
+    // ── ERFARING ─────────────────────────────────────────────────
+    erfaring: [
+      {
+        aar:    "2025 –",
+        tittel: { no: "Lærling — foto, video & brand", en: "Apprentice — photo, video & brand" },
+        sted:   "Studio Wallin AS · Fredrikstad",
+        tekst:  {
+          no: "Foto, videoproduksjon, brand-arbeid og podkast-workflow for kunder inkl. HYSJ, Purply og Installatøren. Formelt lærling innen 31. august 2026, i praksis allerede aktiv.",
+          en: "Photo, video production, brand work and podcast workflow for clients incl. HYSJ, Purply and Installatøren. Formally apprentice by 31 August 2026, already active in practice.",
+        },
+      },
+      {
+        aar:    "2024 –",
+        tittel: { no: "Ungdomstrener nivå B", en: "Youth coach level B" },
+        sted:   "Sentrum Kampsport",
+        tekst:  { no: "Fast trener 2 ganger per uke.", en: "Regular coach twice a week." },
+      },
+      {
+        aar:    "2026",
+        tittel: { no: "Ballfotograf", en: "Prom photographer" },
+        sted:   "Hvaler Ungdomsskole",
+        tekst:  { no: "Fotograferte under ballbildearrangementet.", en: "Photographed during the prom photo event." },
+      },
+      {
+        aar:    "2025–2026",
+        tittel: { no: "Deltidsansatt", en: "Part-time employee" },
+        sted:   "McDonald's Sarpsborg",
+        tekst:  { no: "Deltidsjobb ved siden av skole og andre aktiviteter.", en: "Part-time work alongside school and other activities." },
+      },
+      {
+        aar:    "2024–2025",
+        tittel: { no: "Tilkalingsvikar, butikkansatt", en: "On-call retail assistant" },
+        sted:   "Scrappiness AS",
+        tekst:  { no: "Tilkalingsvikar i butikk.", en: "On-call retail position." },
+      },
+      {
+        aar:    "2021–2024",
+        tittel: { no: "Ungdomstrener nivå C", en: "Youth coach level C" },
+        sted:   "Sentrum Kampsport",
+        tekst:  { no: "Fast trener 2 ganger per uke.", en: "Regular coach twice a week." },
+      },
+      {
+        aar:    "2022",
+        tittel: { no: "Kiosk og salg", en: "Kiosk & sales" },
+        sted:   "Greåker Marked",
+        tekst:  { no: "Kiosk og salgsarbeid under arrangement.", en: "Kiosk and sales work at event." },
+      },
+      {
+        aar:    "2019–2022",
+        tittel: { no: "Assistent og kioskarbeider", en: "Assistant & kiosk worker" },
+        sted:   "Øisteins Juleverksted",
+        tekst:  { no: "Sesongarbeid som assistent og i kiosk.", en: "Seasonal work as assistant and in kiosk." },
+      },
+      {
+        aar:    "Vår/Sommer 2019",
+        tittel: { no: "Produksjonsassistent og statist", en: "Production assistant & extra" },
+        sted:   "TV-produksjon: Øisteins Juleblyant",
+        tekst:  { no: "Produksjonsassistent og statist på TV-produksjon.", en: "Production assistant and extra on TV production." },
+      },
+    ],
 
-        .featured-card {
-            grid-area: 1/1; z-index: 2;
-            width: min(85vw, 1100px); aspect-ratio: 16/9;
-            background: var(--surface); border-radius: 20px; border: 1px solid var(--border);
-            overflow: hidden; box-shadow: 0 50px 100px rgba(0,0,0,0.8);
-            transform: translateY(100vh);
-            animation: featured-rise linear forwards;
-            animation-timeline: --hero-track;
-            animation-range: exit 0% exit 100%;
-        }
+    // ── VERV ─────────────────────────────────────────────────────
+    verv: [
+      {
+        aar:    "2025 –",
+        tittel: { no: "Styreleder", en: "Board chair" },
+        sted:   { no: "Ungdomsstyret, Sentrum Kampsport (SKS)", en: "Youth board, Sentrum Kampsport (SKS)" },
+        tekst:  { no: "Leder ungdomsstyret ved Sentrum Kampsport.", en: "Leading the youth board at Sentrum Kampsport." },
+      },
+      {
+        aar:    "2023",
+        tittel: { no: "Styremedlem", en: "Board member" },
+        sted:   { no: "Rå (ungdomsforening)", en: "Rå (youth association)" },
+        tekst:  { no: "Tilrettelegger økonomisk assistanse for ungdom.", en: "Facilitating financial assistance for youth." },
+      },
+      {
+        aar:    "2022–2024",
+        tittel: { no: "Styremedlem", en: "Board member" },
+        sted:   { no: "Ungdomsstyret, Sentrum Kampsport", en: "Youth board, Sentrum Kampsport" },
+        tekst:  { no: "Styremedlem i ungdomsstyret.", en: "Board member of the youth board." },
+      },
+      {
+        aar:    "2019–2024",
+        tittel: { no: "Elevrådsleder og nestleder", en: "Student council president & deputy" },
+        sted:   "Elevråd, CIS Sarpsborg",
+        tekst:  { no: "Ledet og representerte elevene ved skolen.", en: "Led and represented the students at school." },
+      },
+      {
+        aar:    "2018–2021",
+        tittel: { no: "Assisterende ungdomstrener", en: "Assistant youth coach" },
+        sted:   "Sentrum Kampsport",
+        tekst:  { no: "Assisterte ungdomstrening 2 ganger per uke.", en: "Assisted youth training twice a week." },
+      },
+    ],
 
-        /* ZEN / FIREFOX FALLBACKS */
-        @supports not (animation-timeline: view()) {
-            .hero-content {
-                opacity: calc(1 - var(--scroll-pct) * 1.5);
-                transform: scale(calc(1 - var(--scroll-pct) * 0.3)) translateY(calc(var(--scroll-pct) * -100px));
-                filter: blur(calc(var(--scroll-pct) * 20px));
-            }
-            .featured-card {
-                transform: translateY(calc(100vh - var(--scroll-pct) * 100vh));
-            }
-        }
+    // ── UTDANNING ────────────────────────────────────────────────
+    utdanning: [
+      {
+        aar:    "2024 – 2026",
+        tittel: { no: "Informasjonsteknologi og medieproduksjon", en: "IT and Media Production" },
+        sted:   "Glemmen videregående skole",
+        tekst:  { no: "VG1 med høyt snitt. Nå VG2 med fokus på film, redigering og produksjon.", en: "VG1 with high GPA. Now VG2 focusing on film, editing and production." },
+      },
+      {
+        aar:    "2019 – 2024",
+        tittel: { no: "Grunnskole", en: "Primary school" },
+        sted:   "Children's International School Sarpsborg",
+        tekst:  { no: "Internasjonal skole med undervisning på engelsk.", en: "International school with instruction in English." },
+      },
+      {
+        aar:    "2014 – 2019",
+        tittel: { no: "Grunnskole", en: "Primary school" },
+        sted:   "Lande barneskole",
+        tekst:  { no: "", en: "" },
+      },
+    ],
 
-        .hero-content h1 { font-size: clamp(60px, 15vw, 240px); font-family: var(--font-serif); font-style: italic; line-height: 0.8; margin: 20px 0; }
-        .hero-bio { max-width: 500px; color: var(--text-dim); font-size: 17px; margin: 20px auto 0; }
-        .featured-card img { width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
-        .featured-info { position: absolute; bottom: 40px; left: 40px; text-align: left; }
+    // ── PROSJEKTER ───────────────────────────────────────────────
+    // type: "youtube" | "drive" | "ingen"
+    // badge: true  → vis "// in development"-chip
+    // lenke / github: eksterne lenker for tech-prosjekter
+    prosjekter: [
+      {
+        tittel: "Et ekko av henne",
+        rolle:  { no: "Film", en: "Film" },
+        type:   "drive",
+        embed:  "1MJ8R-8zVDB3qmyHoAP__SnrmKLm5354Q",
+        filter: "film",
+      },
+      {
+        tittel: "Reshoot",
+        rolle:  { no: "Film · Regi", en: "Film · Director" },
+        type:   "youtube",
+        embed:  "akvZh0yoCF4",
+        filter: "film",
+      },
+      {
+        tittel: "Reshoot Del 2 — Valg 1",
+        rolle:  { no: "Film · Klipp", en: "Film · Edit" },
+        type:   "youtube",
+        embed:  "5nsWRqXzUyY",
+        filter: "film",
+      },
+      {
+        tittel: "Reshoot Del 2 — Valg 2",
+        rolle:  { no: "Film · Klipp", en: "Film · Edit" },
+        type:   "youtube",
+        embed:  "sajH28yctrw",
+        filter: "film",
+      },
+      {
+        tittel: "TEDx Fredrikstad",
+        rolle:  { no: "Foto · Kamera", en: "Photo · Camera" },
+        tekst:  { no: "En av videoene fra TEDx Fredrikstad", en: "One of the videos from TEDx Fredrikstad" },
+        type:   "youtube",
+        embed:  "sfBt5tgo5a8",
+        filter: "foto",
+      },
+      {
+        tittel: "MÆD Musikkvideo",
+        rolle:  { no: "Produsent", en: "Producer" },
+        type:   "youtube",
+        embed:  "y0vjikf5EI8",
+        filter: "film",
+      },
+      {
+        tittel: "Trace",
+        rolle:  { no: "SVG logo-animatør", en: "SVG logo animator" },
+        tekst:  { no: "Next.js 15 + TypeScript. Animer logoer fra SVG-filer med justerbar hastighet og stil.", en: "Next.js 15 + TypeScript. Animate logos from SVG files with adjustable speed and style." },
+        type:   "ingen",
+        filter: "tech",
+        lenke:  "https://stephanteig.github.io/logo-animator/",
+        github: "https://github.com/stephanteig/logo-animator",
+      },
+      {
+        tittel: "Shotlist Planner",
+        rolle:  { no: "Produksjonsverktøy", en: "Production tool" },
+        tekst:  { no: "Planleggingsverktøy for filmopptak. Under aktiv utvikling — migrerer til Azure.", en: "Shot planning tool for film productions. Under active development — migrating to Azure." },
+        type:   "ingen",
+        filter: "tech",
+        badge:  true,
+      },
+      {
+        tittel: "Color Preview",
+        rolle:  { no: "Obsidian-plugin", en: "Obsidian plugin" },
+        tekst:  { no: "Publisert Obsidian-plugin for forhåndsvisning av farger i notater. PR #12013.", en: "Published Obsidian plugin for colour preview in notes. PR #12013." },
+        type:   "ingen",
+        filter: "tech",
+      },
+    ],
 
-        @keyframes hero-fade { to { opacity: 0; transform: scale(0.7) translateY(-50px); filter: blur(20px); } }
-        @keyframes featured-rise { to { transform: translateY(0); } }
+    // ── UI-TEKSTER ───────────────────────────────────────────────
+    ui: {
+      lastNedCV:           { no: "Last ned CV",             en: "Download CV"                  },
+      kontaktTittel:       { no: "Kontakt",                  en: "Contact"                      },
+      ferdigheterTittel:   { no: "Ferdigheter",              en: "Skills"                       },
+      sprakTittel:         { no: "Språk",                    en: "Languages"                    },
+      folgMeg:             { no: "Følg meg",                 en: "Follow me"                    },
+      heroLabel:           { no: "// film + code",           en: "// film + code"               },
+      jegLager:            { no: "Jeg lager",                en: "I create"                     },
+      seProsjekter:        { no: "Se prosjekter",            en: "View projects"                },
+      kontaktMeg:          { no: "Kontakt meg",              en: "Contact me"                   },
+      erfaring:            { no: "Erfaring",                 en: "Experience"                   },
+      verv:                { no: "Verv & engasjement",       en: "Roles & engagement"           },
+      utdanning:           { no: "Utdanning",                en: "Education"                    },
+      alle:                { no: "alle",                     en: "all"                          },
+      kommerSnart:         { no: "// in development",        en: "// in development"            },
+      contactHeadline:     { no: "Direkte linje.",           en: "Reach the studio."            },
+      contactSub:          { no: "Stephan Teig · Fredrikstad, Norge", en: "Stephan Teig · Fredrikstad, Norway" },
+      kontaktSideTittel:   { no: "Send en melding",          en: "Send a message"               },
+      navnPlaceholder:     { no: "Navn",                     en: "Name"                         },
+      epostPlaceholder:    { no: "E-post",                   en: "Email"                        },
+      emnePlaceholder:     { no: "Emne",                     en: "Subject"                      },
+      meldingPlaceholder:  { no: "Melding...",               en: "Message..."                   },
+      sendKnapp:           { no: "Send melding",             en: "Send message"                 },
+      senderMelding:       { no: "Sender...",                en: "Sending..."                   },
+      meldingSendt:        { no: "Melding sendt! Takk.",     en: "Message sent! Thanks."        },
+      meldingFeil:         { no: "Noe gikk galt. Prøv igjen.", en: "Something went wrong. Please try again." },
+      skjemaMangler:       { no: "Fyll inn alle feltene.",   en: "Please fill in all fields."   },
+      ingenFormspree:      { no: "Kontaktskjema ikke satt opp ennå.", en: "Contact form not set up yet." },
+      kortLabels: {
+        epost:    { no: "E-post",   en: "Email"    },
+        telefon:  { no: "Telefon",  en: "Phone"    },
+        sted:     { no: "Sted",     en: "Location" },
+        nettside: { no: "Nettside", en: "Website"  },
+      },
+      lukk: { no: "✕ LUKK", en: "✕ CLOSE" },
+    },
 
-        /* Container & Grid */
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; position: relative; }
-        .section-spacer { padding-bottom: 120px; }
-        .label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    // ── DESIGN ───────────────────────────────────────────────────
+    aksent: "#7c5cfc",
+  };
+  </script>
 
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 100px; }
-        .stat-item { padding: 40px; text-align: center; border-right: 1px solid var(--border); }
-        .stat-item:last-child { border-right: none; }
-        .stat-val { font-family: var(--font-serif); font-size: 42px; font-style: italic; color: var(--accent); display: block; }
+  <style>
+    :root {
+      --bg:    #0b0b0f;
+      --bg-r:  #111118;
+      --bg-s:  #16161f;
+      --bd:    #1e1e2a;
+      --bd-ui: #2a2a3a;
+      --text:  #f0f0f5;
+      --muted: #8888a8;
+      --dim:   #52526a;
+      --av:    #7c5cfc;
+      --ap:    #d44fa8;
+      --ac:    #4ae3d1;
+      --ag:    rgba(124,92,252,.14);
+      --sb:    280px;
+      --nav-h: 44px;
+      --fd:    'Instrument Serif', serif;
+      --fb:    'Inter', sans-serif;
+      --fm:    'JetBrains Mono', monospace;
+    }
 
-        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 4px; background: var(--border); border: 1px solid var(--border); }
-        .work-card { background: var(--bg); padding: 40px; aspect-ratio: 1/1; display: flex; flex-direction: column; justify-content: flex-end; text-decoration: none; color: inherit; position: relative; overflow: hidden; transition: 0.4s ease; }
-        .work-card:hover { background: var(--surface); }
-        .work-bg { position: absolute; inset: 0; opacity: 0.1; background-size: cover; background-position: center; transition: 0.8s ease; }
-        .work-card:hover .work-bg { opacity: 0.3; transform: scale(1.1); }
-        .work-card h3 { font-family: var(--font-serif); font-size: 32px; font-style: italic; position: relative; margin-bottom: 8px; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { height: 100%; }
+    body {
+      font-family: var(--fb);
+      background: var(--bg);
+      color: var(--text);
+      height: 100%;
+      overflow: hidden;
+    }
+    /* Grain texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.035;
+      mix-blend-mode: overlay;
+    }
+    a { color: inherit; text-decoration: none; }
+    .app { display: flex; height: 100vh; width: 100vw; overflow: hidden; position: relative; z-index: 1; }
 
-        .resume-row { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; padding: 50px 0; border-bottom: 1px solid var(--border); }
-        .res-year { font-family: var(--font-mono); color: var(--accent); }
-        .res-title { font-family: var(--font-serif); font-size: 32px; font-style: italic; margin-bottom: 12px; }
+    /* ── Sidebar ── */
+    .sb {
+      width: var(--sb); min-width: var(--sb);
+      background: var(--bg-r); border-right: 1px solid var(--bd);
+      display: flex; flex-direction: column;
+      height: 100vh; overflow-y: auto; overflow-x: hidden; flex-shrink: 0;
+    }
+    .sb-top {
+      padding: 2rem 1.5rem 1.5rem; text-align: center;
+      border-bottom: 1px solid var(--bd); flex-shrink: 0;
+      background: linear-gradient(180deg, rgba(124,92,252,.08) 0%, transparent 100%);
+    }
+    .sb-avatar {
+      width: 96px; height: 96px; border-radius: 50%;
+      background: var(--bg-s);
+      border: 2px solid var(--av);
+      box-shadow: 0 0 0 5px var(--ag);
+      margin: 0 auto 1rem;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--fb); font-size: 28px; font-weight: 700; color: var(--dim);
+      overflow: hidden; flex-shrink: 0;
+    }
+    .sb-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+    .sb-name { font-family: var(--fb); font-size: 15px; font-weight: 700; color: var(--text); letter-spacing: .01em; margin-bottom: .25rem; }
+    .sb-role { font-family: var(--fm); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .sb-download {
+      display: inline-block;
+      font-family: var(--fm); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+      padding: .45rem 1.1rem; border: 1px solid var(--av); color: var(--av);
+      border-radius: 4px; cursor: pointer; transition: background .2s, color .2s;
+    }
+    .sb-download:hover { background: var(--av); color: #fff; }
+    .sb-body { padding: 1.5rem 1.25rem; flex: 1; overflow-y: auto; }
+    .sb-sec { margin-bottom: 1.75rem; }
+    .sb-sec-title {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--av); margin-bottom: .85rem; padding-bottom: .4rem; border-bottom: 1px solid var(--bd);
+    }
+    .sb-row { display: flex; align-items: flex-start; gap: .6rem; margin-bottom: .55rem; }
+    .sb-ico { width: 13px; height: 13px; flex-shrink: 0; margin-top: 2px; opacity: .4; }
+    .sb-val { font-size: 11px; color: var(--muted); line-height: 1.5; }
+    .sb-val a { color: var(--muted); transition: color .2s; }
+    .sb-val a:hover { color: var(--ac); }
+    .skill-item { margin-bottom: .85rem; }
+    .skill-top { display: flex; justify-content: space-between; margin-bottom: .35rem; }
+    .skill-name { font-size: 11px; color: var(--muted); }
+    .skill-pct { font-family: var(--fm); font-size: 9px; color: var(--ac); }
+    .skill-track { height: 3px; background: var(--bd); border-radius: 2px; }
+    .skill-bar { height: 100%; background: linear-gradient(90deg, var(--ac) 0%, var(--av) 100%); border-radius: 2px; }
+    .lang-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: .5rem; }
+    .lang-name { font-size: 11px; color: var(--muted); }
+    .lang-dots { display: flex; gap: 5px; }
+    .lang-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bd); }
+    .lang-dot.on { background: var(--av); box-shadow: 0 0 5px rgba(124,92,252,.5); }
+    .social-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .social-btn {
+      font-family: var(--fm); font-size: 8px; letter-spacing: .1em; text-transform: uppercase;
+      padding: .3rem .65rem; border: 1px solid var(--bd-ui); color: var(--dim);
+      border-radius: 999px; transition: border-color .2s, color .2s;
+    }
+    .social-btn:hover { border-color: var(--av); color: var(--av); }
 
-        .contact-box { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; }
-        .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .contact-form input, .contact-form textarea { background: var(--surface); border: 1px solid var(--border); padding: 20px; color: white; border-radius: 8px; font-family: inherit; outline: none; transition: 0.3s; }
-        .contact-form input:focus { border-color: var(--accent); }
-        .contact-form .full { grid-column: span 2; }
-        .btn { display: inline-flex; align-items: center; gap: 12px; background: white; color: black; padding: 16px 32px; border-radius: 100px; font-family: var(--font-mono); font-size: 11px; text-decoration: none; border: none; cursor: pointer; transition: 0.3s; }
-        .btn:hover { background: var(--accent); transform: translateY(-3px); }
+    /* ── Main area ── */
+    .main { flex: 1; display: flex; flex-direction: column; min-width: 0; height: 100vh; overflow: hidden; }
+    .top-nav {
+      display: flex; align-items: stretch;
+      border-bottom: 1px solid var(--bd);
+      background: rgba(11,11,15,.88);
+      backdrop-filter: blur(10px);
+      flex-shrink: 0; height: var(--nav-h);
+      overflow-x: auto; overflow-y: hidden;
+    }
+    .top-nav::-webkit-scrollbar { display: none; }
+    .nav-item {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--dim); padding: 0 1.25rem; cursor: pointer;
+      border-bottom: 2px solid transparent; white-space: nowrap; flex-shrink: 0;
+      display: flex; align-items: center; transition: color .2s;
+    }
+    .nav-item:hover { color: var(--muted); }
+    .nav-item.active { color: var(--av); border-bottom-color: var(--av); }
+    .nav-spacer { flex: 1; min-width: 8px; }
+    .lang-toggle {
+      display: flex; align-items: center;
+      margin: 8px 12px 8px 0;
+      background: var(--bg-s); border: 1px solid var(--bd-ui); border-radius: 4px;
+      overflow: hidden; flex-shrink: 0;
+    }
+    .lang-btn {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .1em;
+      padding: .28rem .6rem; cursor: pointer; color: var(--dim);
+      background: transparent; border: none; transition: background .15s, color .15s;
+    }
+    .lang-btn.active { background: var(--av); color: #fff; }
+    .lang-div { width: 1px; height: 12px; background: var(--bd-ui); }
+    .pages { flex: 1; overflow-y: auto; overflow-x: hidden; }
+    .page { display: none; }
+    .page.active { display: block; }
 
-        .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 2000; display: none; align-items: center; justify-content: center; padding: 40px; }
-        .lightbox.active { display: flex; }
-        .lb-content { width: 100%; max-width: 1000px; aspect-ratio: 16/9; position: relative; }
-        .lb-close { position: absolute; top: -50px; right: 0; color: white; cursor: pointer; }
+    /* ── Fade-up animation ── */
+    .fade-up { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s ease; }
+    .fade-up.vis { opacity: 1; transform: none; }
 
-        @media (max-width: 768px) {
-            header { padding: 0 20px; height: 60px; } .nav-links { display: none; }
-            .stats-grid, .resume-row, .contact-box { grid-template-columns: 1fr; }
-            .hero-content h1 { font-size: 70px; }
-            .featured-card { aspect-ratio: 4/3; }
-        }
-    </style>
+    /* ── Home ── */
+    .home-hero {
+      padding: 4rem 3rem 3rem; border-bottom: 1px solid var(--bd);
+      position: relative; overflow: hidden;
+    }
+    .home-hero::before {
+      content: '';
+      position: absolute; top: -140px; left: -140px;
+      width: 560px; height: 560px;
+      background: radial-gradient(circle, rgba(124,92,252,.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-label {
+      font-family: var(--fm); font-size: 10px; letter-spacing: .2em; text-transform: lowercase;
+      color: var(--ac); margin-bottom: .9rem;
+    }
+    .hero-name {
+      font-size: 58px; line-height: 1.0; margin-bottom: .65rem;
+      display: flex; flex-wrap: wrap; align-items: baseline; gap: .2em;
+    }
+    .hero-first { font-family: var(--fb); font-weight: 300; color: var(--text); letter-spacing: -.01em; }
+    .hero-last {
+      font-family: var(--fd); font-style: italic; color: var(--av);
+      text-shadow: 0 0 36px rgba(124,92,252,.45); letter-spacing: -.01em;
+    }
+    .hero-typed { font-family: var(--fb); font-size: 15px; font-weight: 300; color: var(--muted); margin-bottom: 1.5rem; min-height: 22px; }
+    .tw-text { color: var(--ap); font-weight: 500; }
+    .tw-cursor { color: var(--av); animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%,100%{opacity:1}50%{opacity:0} }
+    .hero-bio { font-size: 13.5px; color: var(--muted); line-height: 1.8; max-width: 520px; margin-bottom: 2rem; }
+    .hero-btns { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .hero-btn {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
+      padding: .65rem 1.5rem; border-radius: 4px; cursor: pointer; transition: opacity .2s, box-shadow .2s;
+    }
+    .hero-btn.primary {
+      background: linear-gradient(135deg, var(--av) 0%, var(--ap) 100%);
+      color: #fff; border: none; box-shadow: 0 2px 18px rgba(124,92,252,.28);
+    }
+    .hero-btn.primary:hover { opacity: .85; box-shadow: 0 4px 28px rgba(124,92,252,.45); }
+    .hero-btn.secondary { background: transparent; color: var(--muted); border: 1px solid var(--bd-ui); }
+    .hero-btn.secondary:hover { border-color: var(--muted); color: var(--text); }
+    .home-stats { display: grid; border-top: 1px solid var(--bd); }
+    .stat { padding: 1.5rem 2rem; border-right: 1px solid var(--bd); text-align: center; }
+    .stat:last-child { border-right: none; }
+    .stat-n {
+      font-family: var(--fm); font-size: 28px; font-weight: 500; color: var(--ac);
+      text-shadow: 0 0 18px rgba(74,227,209,.28); margin-bottom: .3rem;
+    }
+    .stat-l { font-family: var(--fm); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); }
+
+    /* ── Resume ── */
+    .resume-page { padding: 2.5rem 3rem; }
+    .res-section { margin-bottom: 2.5rem; }
+    .res-head {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--av); margin-bottom: 1.5rem; display: flex; align-items: center; gap: .65rem;
+    }
+    .res-head::before { content: '//'; color: var(--av); opacity: .45; margin-right: -.1rem; }
+    .res-head::after { content: ''; flex: 1; height: 1px; background: var(--bd); }
+    .tl-item { display: flex; gap: 1.25rem; margin-bottom: 1.5rem; }
+    .tl-left { display: flex; flex-direction: column; align-items: center; width: 12px; flex-shrink: 0; }
+    .tl-dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--av); flex-shrink: 0; margin-top: 3px; background: transparent; }
+    .tl-item:first-child .tl-dot { background: var(--av); box-shadow: 0 0 8px rgba(124,92,252,.55); }
+    .tl-line { width: 1px; background: var(--bd); flex: 1; margin-top: 4px; }
+    .tl-body { flex: 1; padding-bottom: .5rem; }
+    .tl-aar { font-family: var(--fm); font-size: 9.5px; letter-spacing: .05em; color: var(--dim); margin-bottom: .3rem; }
+    .tl-tittel { font-family: var(--fb); font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: .15rem; }
+    .tl-sted { font-size: 11px; color: var(--av); margin-bottom: .35rem; opacity: .8; }
+    .tl-tekst { font-size: 11.5px; color: var(--muted); line-height: 1.65; }
+
+    /* ── Works ── */
+    .works-page { padding: 2rem 2.5rem; }
+    .works-filter { display: flex; gap: .5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .wf-btn {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .1em; text-transform: lowercase;
+      padding: .35rem .9rem; border: 1px solid var(--bd-ui); color: var(--dim);
+      border-radius: 999px; cursor: pointer; transition: border-color .2s, color .2s, background .2s;
+    }
+    .wf-btn:hover { border-color: var(--muted); color: var(--muted); }
+    .wf-btn.active { border-color: var(--av); color: var(--av); background: var(--ag); }
+    .works-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+    .work-card {
+      background: var(--bg-r); border: 1px solid var(--bd);
+      border-radius: 12px; overflow: hidden; cursor: pointer;
+      transition: border-color .25s, box-shadow .25s, transform .25s;
+    }
+    .work-card:hover {
+      border-color: rgba(124,92,252,.5);
+      box-shadow: 0 0 0 1px var(--ag), 0 8px 32px rgba(0,0,0,.5);
+      transform: translateY(-2px);
+    }
+    .work-card.no-click { cursor: default; }
+    .work-card.no-click:hover { transform: none; border-color: var(--bd); box-shadow: none; }
+    .work-thumb {
+      aspect-ratio: 16/9; background: var(--bg-s);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .work-thumb img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.65); transition: filter .3s; }
+    .work-card:hover .work-thumb img { filter: brightness(.4); }
+    .thumb-grad {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(124,92,252,.25) 0%, rgba(212,79,168,.18) 100%);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .thumb-grad-tech { background: linear-gradient(135deg, rgba(74,227,209,.12) 0%, rgba(124,92,252,.18) 100%); }
+    .play-ico {
+      position: absolute; width: 42px; height: 42px; border-radius: 50%;
+      border: 1.5px solid rgba(255,255,255,.28);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color .2s, transform .2s, background .2s;
+    }
+    .work-card:hover .play-ico { border-color: var(--av); background: var(--ag); transform: scale(1.1); }
+    .work-info { padding: .75rem 1rem; }
+    .work-title { font-family: var(--fb); font-size: 12px; font-weight: 600; color: var(--text); margin-bottom: .2rem; }
+    .work-role { font-family: var(--fm); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; color: var(--dim); }
+    .work-tekst { font-size: 10.5px; color: var(--muted); line-height: 1.5; margin-top: .3rem; }
+    .work-badge {
+      display: inline-block; font-family: var(--fm); font-size: 8px; letter-spacing: .06em;
+      padding: 2px 8px; border-radius: 4px; margin-top: .4rem;
+      background: rgba(74,227,209,.07); color: var(--ac); border: 1px solid rgba(74,227,209,.2);
+    }
+    .work-link-row { display: flex; gap: .4rem; margin-top: .5rem; flex-wrap: wrap; }
+    .work-link {
+      font-family: var(--fm); font-size: 8px; letter-spacing: .07em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 4px; border: 1px solid var(--bd-ui); color: var(--dim);
+      transition: border-color .2s, color .2s; display: inline-block;
+    }
+    .work-link:hover { border-color: var(--av); color: var(--av); }
+
+    /* ── Lightbox ── */
+    .lb { display: none; position: fixed; inset: 0; z-index: 1000; align-items: center; justify-content: center; }
+    .lb.open { display: flex; }
+    .lb-bd { position: absolute; inset: 0; background: rgba(0,0,0,.92); cursor: pointer; }
+    .lb-box { position: relative; width: min(92vw,1000px); aspect-ratio: 16/9; z-index: 1; }
+    .lb-box iframe { width: 100%; height: 100%; border: 0; border-radius: 8px; }
+    .lb-close {
+      position: absolute; top: -42px; right: 0;
+      background: none; border: none; color: var(--muted);
+      font-family: var(--fm); font-size: 9px; letter-spacing: .12em;
+      cursor: pointer; opacity: .7; transition: opacity .2s, color .2s;
+    }
+    .lb-close:hover { opacity: 1; color: var(--text); }
+
+    /* ── Contact ── */
+    .contact-page { padding: 2.5rem 3rem; }
+    .contact-headline { font-family: var(--fd); font-style: italic; font-size: 38px; color: var(--text); margin-bottom: .35rem; line-height: 1.1; }
+    .contact-sub { font-family: var(--fm); font-size: 9.5px; letter-spacing: .14em; color: var(--dim); text-transform: uppercase; margin-bottom: 2rem; }
+    .contact-cards { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 2rem; }
+    .cc { background: var(--bg-r); border: 1px solid var(--bd); border-radius: 12px; padding: 1.1rem; display: flex; align-items: center; gap: .85rem; }
+    .cc-ico { width: 36px; height: 36px; border-radius: 8px; background: var(--bg-s); border: 1px solid var(--bd-ui); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .cc-label { font-family: var(--fm); font-size: 8.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); margin-bottom: .18rem; }
+    .cc-val { font-size: 11px; color: var(--muted); }
+    .cc-val a { color: var(--muted); transition: color .2s; }
+    .cc-val a:hover { color: var(--ac); }
+    .form-sec-head {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--av); margin-bottom: 1rem; display: flex; align-items: center; gap: .65rem;
+    }
+    .form-sec-head::before { content: '//'; opacity: .45; }
+    .form-sec-head::after { content: ''; flex: 1; height: 1px; background: var(--bd); }
+    .form-row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .form-in {
+      flex: 1; background: var(--bg-r); border: 1px solid var(--bd-ui);
+      color: var(--text); padding: .65rem .9rem; border-radius: 8px;
+      font-size: 12px; font-family: var(--fb); outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .form-in::placeholder { color: var(--dim); }
+    .form-in:focus { border-color: var(--av); box-shadow: 0 0 0 3px var(--ag); }
+    textarea.form-in { resize: none; height: 100px; width: 100%; margin-bottom: 8px; }
+    .form-submit {
+      font-family: var(--fm); font-size: 9px; letter-spacing: .14em; text-transform: uppercase;
+      padding: .65rem 1.75rem;
+      background: linear-gradient(135deg, var(--av) 0%, var(--ap) 100%);
+      color: #fff; border: none; border-radius: 8px; cursor: pointer;
+      box-shadow: 0 2px 16px rgba(124,92,252,.22);
+      transition: opacity .2s, box-shadow .2s;
+    }
+    .form-submit:hover { opacity: .85; box-shadow: 0 4px 24px rgba(124,92,252,.4); }
+    .form-submit:disabled { opacity: .4; cursor: not-allowed; }
+    .form-msg { margin-top: .75rem; font-size: 11.5px; padding: .6rem .85rem; border-radius: 8px; display: none; }
+    .form-msg.ok  { display: block; background: rgba(74,227,209,.07); color: var(--ac); border: 1px solid rgba(74,227,209,.2); }
+    .form-msg.err { display: block; background: rgba(200,80,80,.07); color: #e07878; border: 1px solid rgba(200,80,80,.2); }
+
+    /* ── Mobile nav ── */
+    .mob-nav {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: rgba(11,11,15,.94); backdrop-filter: blur(12px);
+      border-top: 1px solid var(--bd); z-index: 200; height: 58px;
+    }
+    .mob-nav-inner { display: flex; height: 100%; }
+    .mob-nav-item {
+      flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 3px; cursor: pointer; color: var(--dim);
+      font-family: var(--fm); font-size: 8px; letter-spacing: .1em; text-transform: uppercase;
+      transition: color .2s;
+    }
+    .mob-nav-item.active { color: var(--av); }
+    .mob-nav-item svg { width: 18px; height: 18px; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--bd-ui); border-radius: 2px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--av); }
+
+    /* ── Responsive ── */
+    @media (max-width: 1100px) { .works-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 900px)  { :root { --sb: 240px; } }
+
+    @media (max-width: 680px) {
+      body { overflow: auto; }
+      .app { flex-direction: column; height: auto; min-height: 100vh; overflow: visible; }
+      .sb { display: none; }
+      .main { height: auto; overflow: visible; }
+      .top-nav { display: none; }
+      .mob-nav { display: block; }
+      .pages { overflow: visible; padding-bottom: 66px; }
+      .home-hero { padding: 2.5rem 1.5rem 2rem; }
+      .hero-name { font-size: 44px; }
+      .home-stats .stat { padding: 1.25rem 1rem; }
+      .stat-n { font-size: 24px; }
+      .resume-page  { padding: 1.75rem 1.5rem; }
+      .works-page   { padding: 1.5rem; }
+      .works-grid   { grid-template-columns: repeat(2,1fr); gap: 10px; }
+      .contact-page { padding: 1.75rem 1.5rem; }
+      .contact-cards { grid-template-columns: 1fr 1fr; }
+      .tl-tittel { font-size: 12.5px; }
+    }
+    @media (max-width: 420px) {
+      .works-grid    { grid-template-columns: 1fr; }
+      .contact-cards { grid-template-columns: 1fr; }
+      .hero-name     { font-size: 36px; }
+      .contact-headline { font-size: 28px; }
+    }
+    @media (max-width: 680px) and (orientation: landscape) {
+      .mob-nav { display: none; }
+      .top-nav { display: flex; }
+      .pages { padding-bottom: 0; }
+      .home-hero { padding: 1.5rem; }
+      .hero-name { font-size: 34px; }
+      .hero-bio { display: none; }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="grain"></div>
-    <div class="glow" style="top: -10%; left: -10%; background: var(--accent);"></div>
-    <div class="glow" style="bottom: -10%; right: -10%; background: #ec4899;"></div>
-
-    <header>
-        <div class="logo" onclick="window.scrollTo(0,0)">teig</div>
-        <nav class="nav-links">
-            <a href="#works" id="nav-works">WORKS</a>
-            <a href="#resume" id="nav-resume">RESUME</a>
-            <a href="#contact" id="nav-contact">CONTACT</a>
-            <a href="javascript:void(0)" onclick="toggleLang()" style="opacity: 1;">NO/EN</a>
-        </nav>
-    </header>
-
-    <div class="hero-scroll-track" id="hero-track">
-        <section class="hero-sticky">
-            <div class="hero-content">
-                <div class="label" id="hero-tag">// PORTFOLIO_2026</div>
-                <h1>Stephan<br><em>Teig</em></h1>
-                <p class="hero-bio" id="hero-bio"></p>
-                <div class="label" style="margin-top: 40px; opacity: 0.3;"><span id="ui-scroll"></span> ↓</div>
-            </div>
-            <div class="featured-card" id="featured-card"></div>
-        </section>
+  <div class="lb" id="lightbox">
+    <div class="lb-bd" id="lbBd"></div>
+    <div class="lb-box">
+      <button class="lb-close" id="lbClose"></button>
+      <iframe id="lbFrame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
     </div>
+  </div>
 
-    <main class="container">
-        <div class="stats-grid" id="stats-grid"></div>
-        <section id="works" class="section-spacer">
-            <div class="label" style="margin-bottom: 30px;">// SELECTED_WORKS</div>
-            <div class="projects-grid" id="projects-grid"></div>
-        </section>
-        <section id="resume" class="section-spacer">
-            <div class="label" style="margin-bottom: 30px;">// EXPERIENCE</div>
-            <div id="resume-list"></div>
-            <div style="margin-top: 60px;"><a href="#" id="pdf-link" target="_blank" class="btn"><i data-lucide="download"></i><span id="ui-download"></span></a></div>
-        </section>
-        <section id="contact" class="section-spacer">
-            <div class="label" style="margin-bottom: 30px;">// CONTACT_STUDIO</div>
-            <h2 class="serif" style="font-size: clamp(40px, 7vw, 90px); line-height: 1.1;" id="ui-studio"></h2>
-            <div class="contact-box">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 40px;">
-                        <div id="avatar-img" style="width: 80px; height: 80px; border-radius: 50%; background-size: cover; background-position: center 20%; border: 1px solid var(--accent);"></div>
-                        <div><div class="serif" style="font-size: 24px;">Stephan Teig</div><div class="label" style="color: var(--text-dim);">Fredrikstad, Norway</div></div>
-                    </div>
-                    <div class="label" style="color: white; margin-bottom: 10px;">teig.stephan@gmail.com</div>
-                    <div class="label" style="color: white;">+47 921 24 207</div>
-                </div>
-                <form class="contact-form" action="https://formspree.io/f/mwvrraez" method="POST">
-                    <input type="text" name="name" id="f-name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <textarea name="message" id="f-msg" class="full" rows="5" required></textarea>
-                    <button type="submit" class="btn" id="ui-send"></button>
-                </form>
-            </div>
-        </section>
-    </main>
+  <div class="app">
 
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <div class="lb-content" id="lb-content" onclick="event.stopPropagation()">
-            <div class="lb-close" onclick="closeLightbox()"><i data-lucide="x"></i></div>
+    <aside class="sb">
+      <div class="sb-top">
+        <div class="sb-avatar" id="sbAvatar"></div>
+        <div class="sb-name"   id="sbNavn"></div>
+        <div class="sb-role"   id="sbRolle"></div>
+        <a class="sb-download" id="sbCvLink"></a>
+      </div>
+      <div class="sb-body">
+        <div class="sb-sec"><div class="sb-sec-title" id="sbKontaktTittel"></div><div id="sbKontakt"></div></div>
+        <div class="sb-sec"><div class="sb-sec-title" id="sbFerdigheterTittel"></div><div id="sbFerdigheter"></div></div>
+        <div class="sb-sec"><div class="sb-sec-title" id="sbSprakTittel"></div><div id="sbSprak"></div></div>
+        <div class="sb-sec" id="sbSosialeSek"><div class="sb-sec-title" id="sbFolgMeg"></div><div class="social-row" id="sbSosiale"></div></div>
+      </div>
+    </aside>
+
+    <div class="main">
+      <nav class="top-nav" id="topNav">
+        <div class="nav-spacer"></div>
+        <div class="lang-toggle">
+          <button class="lang-btn active" id="btnNo">NO</button>
+          <div class="lang-div"></div>
+          <button class="lang-btn" id="btnEn">EN</button>
         </div>
+      </nav>
+
+      <div class="pages">
+
+        <!-- HOME -->
+        <div class="page active" id="page-home">
+          <div class="home-hero">
+            <div class="hero-label" id="heroLabel"></div>
+            <div class="hero-name" id="heroNavn"></div>
+            <div class="hero-typed">
+              <span id="jegLager"></span>&nbsp;<span class="tw-text" id="twText"></span><span class="tw-cursor">|</span>
+            </div>
+            <p class="hero-bio" id="heroBio"></p>
+            <div class="hero-btns">
+              <div class="hero-btn primary"   id="btnSeProsj" onclick="goPage('works')"></div>
+              <div class="hero-btn secondary" id="btnKontakt" onclick="goPage('contact')"></div>
+            </div>
+          </div>
+          <div class="home-stats" id="homeStats"></div>
+        </div>
+
+        <!-- RESUME -->
+        <div class="page" id="page-resume">
+          <div class="resume-page">
+            <div class="res-section"><div class="res-head" id="resErfaring"></div><div id="erfaringListe"></div></div>
+            <div class="res-section"><div class="res-head" id="resVerv"></div><div id="vervListe"></div></div>
+            <div class="res-section"><div class="res-head" id="resUtdanning"></div><div id="utdanningListe"></div></div>
+          </div>
+        </div>
+
+        <!-- WORKS -->
+        <div class="page" id="page-works">
+          <div class="works-page">
+            <div class="works-filter" id="worksFilter"></div>
+            <div class="works-grid"   id="worksGrid"></div>
+          </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="page" id="page-contact">
+          <div class="contact-page">
+            <div class="contact-headline" id="contactHeadline"></div>
+            <div class="contact-sub"      id="contactSub"></div>
+            <div class="contact-cards"    id="contactCards"></div>
+            <div class="form-sec-head"    id="formTittel"></div>
+            <div id="formWrap">
+              <div class="form-row">
+                <input class="form-in" id="fNavn"  type="text" />
+                <input class="form-in" id="fEpost" type="email" />
+              </div>
+              <input    class="form-in" id="fEmne"    type="text"  style="width:100%;margin-bottom:8px;" />
+              <textarea class="form-in" id="fMelding"></textarea>
+              <button   class="form-submit" id="fSend"></button>
+              <div class="form-msg" id="formMsg"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <script>
-        function render() {
-            const l = CV.lang;
-            const ui = CV.ui[l];
+    <nav class="mob-nav"><div class="mob-nav-inner" id="mobNavInner"></div></nav>
+  </div>
 
-            document.getElementById('nav-works').innerText = ui.works;
-            document.getElementById('nav-resume').innerText = ui.resume;
-            document.getElementById('nav-contact').innerText = ui.contact;
-            document.getElementById('hero-bio').innerText = CV.bio[l];
-            document.getElementById('ui-scroll').innerText = ui.scroll;
-            document.getElementById('ui-studio').innerText = ui.studio;
-            document.getElementById('ui-download').innerText = ui.download;
-            document.getElementById('ui-send').innerText = ui.send;
-            document.getElementById('f-name').placeholder = ui.name;
-            document.getElementById('f-msg').placeholder = ui.message;
-            document.getElementById('pdf-link').href = CV.cvPdf;
-            document.getElementById('avatar-img').style.backgroundImage = `url(${CV.avatar})`;
+  <script>
+  (function () {
+    let lang = 'no';
+    function t(v) { if (!v) return ''; if (typeof v === 'string') return v; return v[lang] || v['no'] || ''; }
+    const $ = id => document.getElementById(id);
+    const mk = tag => document.createElement(tag);
+    function set(id, txt) { const e=$(id); if(e) e.textContent=txt; }
+    function htm(id, h)   { const e=$(id); if(e) e.innerHTML=h; }
+    function initials(n)  { return n.split(' ').map(w=>w[0]).slice(0,2).join('').toUpperCase(); }
 
-            const featured = CV.projects[0];
-            document.getElementById('featured-card').innerHTML = `
-                <img src="${featured.img}" alt="">
-                <div class="featured-info">
-                    <div class="label" style="color: white; margin-bottom: 10px;">// Featured Project</div>
-                    <h2 class="serif" style="font-size: clamp(32px, 5vw, 56px);">${featured.title}</h2>
-                    <button class="btn" style="margin-top: 30px;" onclick="openProject('${featured.id}')">${ui.view}</button>
-                </div>
-            `;
+    document.documentElement.style.setProperty('--av', CV.aksent || '#7c5cfc');
 
-            document.getElementById('stats-grid').innerHTML = CV.stats.map(s => `
-                <div class="stat-item">
-                    <span class="stat-val">${s.val}</span>
-                    <span class="label" style="color: var(--text-dim);">${s.label[l]}</span>
-                </div>
-            `).join('');
+    // Avatar
+    const avEl = $('sbAvatar');
+    if (CV.bilde) {
+      const img = mk('img'); img.src = CV.bilde; img.alt = CV.navn;
+      img.onerror = () => { img.remove(); avEl.textContent = initials(CV.navn); };
+      avEl.appendChild(img);
+    } else { avEl.textContent = initials(CV.navn); }
 
-            document.getElementById('projects-grid').innerHTML = CV.projects.map(p => `
-                <a href="javascript:void(0)" onclick="openProject('${p.id}')" class="work-card">
-                    <div class="work-bg" style="background-image: url('${p.img}')"></div>
-                    ${p.badge ? `<span class="badge" style="position:absolute;top:30px;right:30px;border:1px solid var(--accent);padding:4px 8px;border-radius:4px;font-size:9px;color:var(--accent);font-family:var(--font-mono);">${p.badge}</span>` : ''}
-                    <div class="label" style="font-size: 10px; margin-bottom: 10px;">${p.cat}</div>
-                    <h3>${p.title}</h3>
-                    <p style="font-size: 13px; color: var(--text-dim);">${p.desc[l]}</p>
-                </a>
-            `).join('');
+    set('sbNavn', CV.navn);
+    if (CV.cvPdf) $('sbCvLink').href = CV.cvPdf;
+    else $('sbCvLink').style.display = 'none';
 
-            document.getElementById('resume-list').innerHTML = CV.experience.map(e => `
-                <div class="resume-row">
-                    <div class="res-year">${e.year}</div>
-                    <div><h3 class="res-title">${e.title[l]}</h3><p style="color: var(--text-dim); font-size: 15px;">${e.desc[l]}</p></div>
-                </div>
-            `).join('');
+    // Sosiale
+    const aktSos = (CV.sosiale || []).filter(s => s.url);
+    if (aktSos.length) {
+      aktSos.forEach(s => {
+        $('sbSosiale').insertAdjacentHTML('beforeend',
+          `<a class="social-btn" href="${s.url}" target="_blank" rel="noopener">${s.label}</a>`);
+      });
+    } else { $('sbSosialeSek').style.display = 'none'; }
 
-            lucide.createIcons();
-        }
+    // Skill bars
+    (CV.ferdigheter || []).forEach(f => {
+      $('sbFerdigheter').insertAdjacentHTML('beforeend', `
+        <div class="skill-item">
+          <div class="skill-top"><span class="skill-name" data-sk></span><span class="skill-pct">${f.prosent}%</span></div>
+          <div class="skill-track"><div class="skill-bar" style="width:${f.prosent}%"></div></div>
+        </div>`);
+    });
 
-        // --- CROSS-BROWSER SCROLL FALLBACK ---
-        function initScrollFallback() {
-            if (!CSS.supports('animation-timeline', 'view()')) {
-                const track = document.getElementById('hero-track');
-                window.addEventListener('scroll', () => {
-                    const rect = track.getBoundingClientRect();
-                    const trackHeight = track.offsetHeight;
-                    const stickyHeight = window.innerHeight;
-                    let progress = (Math.abs(rect.top) / (trackHeight - stickyHeight));
-                    progress = Math.max(0, Math.min(1, progress));
-                    document.documentElement.style.setProperty('--scroll-pct', progress);
-                });
-            }
-        }
+    // Lang dots
+    (CV.sprak || []).forEach(s => {
+      let dots = '';
+      for (let i = 1; i <= 5; i++) dots += `<div class="lang-dot${i <= s.nivaa ? ' on' : ''}"></div>`;
+      $('sbSprak').insertAdjacentHTML('beforeend', `
+        <div class="lang-row"><span class="lang-name" data-ln></span><div class="lang-dots">${dots}</div></div>`);
+    });
 
-        function toggleLang() {
-            CV.lang = CV.lang === 'no' ? 'en' : 'no';
-            render();
-        }
+    // Stats
+    const sEl = $('homeStats');
+    sEl.style.gridTemplateColumns = `repeat(${CV.stats.length},1fr)`;
+    CV.stats.forEach((s, i) => {
+      const d = mk('div'); d.className = 'stat fade-up';
+      d.style.transitionDelay = `${i * 80}ms`;
+      if (i === CV.stats.length - 1) d.style.borderRight = 'none';
+      d.innerHTML = `<div class="stat-n">${s.tall}</div><div class="stat-l" data-stl></div>`;
+      sEl.appendChild(d);
+    });
 
-        function openProject(id) {
-            const p = CV.projects.find(x => x.id === id);
-            if (p.type === 'none') return;
-            if (p.type === 'link') { window.open(p.link, '_blank'); return; }
-            const lb = document.getElementById('lightbox');
-            const target = document.getElementById('lb-content');
-            lb.classList.add('active');
-            if (p.type === 'drive') {
-                target.innerHTML += `<iframe src="https://drive.google.com/file/d/${p.embed}/preview" width="100%" height="100%" allow="autoplay"></iframe>`;
-            } else if (p.type === 'youtube') {
-                target.innerHTML += `<iframe src="https://www.youtube.com/embed/${p.embed}?autoplay=1" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>`;
-            }
-        }
+    // Intersection observer for fade-up animations
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+    }, { threshold: 0.08, rootMargin: '0px 0px -24px 0px' });
 
-        function closeLightbox() {
-            document.getElementById('lightbox').classList.remove('active');
-            document.getElementById('lb-content').innerHTML = '<div class="lb-close" onclick="closeLightbox()"><i data-lucide="x"></i></div>';
-            lucide.createIcons();
-        }
+    // Project cards
+    const kortRefs = [];
+    const alleKat = ['alle', ...new Set((CV.prosjekter || []).map(p => p.filter))];
+    alleKat.forEach(f => {
+      const btn = mk('div');
+      btn.className = 'wf-btn' + (f === 'alle' ? ' active' : '');
+      btn.dataset.fv = f;
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.wf-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.work-card').forEach(c => {
+          c.style.display = (f === 'alle' || c.dataset.filter === f) ? '' : 'none';
+        });
+      });
+      $('worksFilter').appendChild(btn);
+    });
 
-        render();
-        initScrollFallback();
-    </script>
+    (CV.prosjekter || []).forEach(p => {
+      const hasVideo = p.type === 'youtube' || p.type === 'drive';
+      const hasLink  = !hasVideo && !!p.lenke;
+      const card = mk('div');
+      card.className = 'work-card' + (!hasVideo && !hasLink ? ' no-click' : '');
+      card.dataset.filter = p.filter;
+
+      let th = '';
+      if (p.type === 'youtube') {
+        th = `<img src="https://img.youtube.com/vi/${p.embed}/mqdefault.jpg" alt="${p.tittel}"/>
+              <div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#fff"/></svg></div>`;
+      } else if (p.type === 'drive') {
+        th = `<div class="thumb-grad" style="width:100%;height:100%">
+                <div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#fff"/></svg></div>
+              </div>`;
+      } else {
+        th = `<div class="thumb-grad thumb-grad-tech" style="width:100%;height:100%">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(74,227,209,.45)" stroke-width="1.5">
+                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>`;
+      }
+      if (p.thumbnail) {
+        th = `<img src="${p.thumbnail}" alt="${p.tittel}"/>` +
+             (hasVideo ? `<div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#fff"/></svg></div>` : '');
+      }
+
+      const linksHtml = (p.lenke || p.github)
+        ? `<div class="work-link-row">
+            ${p.lenke  ? `<a class="work-link" href="${p.lenke}"  target="_blank" rel="noopener">Live ↗</a>` : ''}
+            ${p.github ? `<a class="work-link" href="${p.github}" target="_blank" rel="noopener">GitHub ↗</a>` : ''}
+           </div>`
+        : '';
+
+      card.innerHTML = `<div class="work-thumb">${th}</div>
+        <div class="work-info">
+          <div class="work-title">${p.tittel}</div>
+          <div class="work-role" data-wr></div>
+          ${p.tekst  ? '<div class="work-tekst" data-wtekst></div>' : ''}
+          ${p.badge  ? '<div class="work-badge" data-wb></div>'     : ''}
+          ${linksHtml}
+        </div>`;
+
+      if (hasVideo) card.addEventListener('click', () => openLb(p));
+      if (hasLink)  card.addEventListener('click', e => {
+        if (!e.target.closest('.work-link')) window.open(p.lenke, '_blank', 'noopener');
+      });
+      $('worksGrid').appendChild(card);
+      kortRefs.push({ el: card, data: p });
+    });
+
+    // Contact info cards
+    const ccSvg = {
+      epost:   '<rect x="1" y="3" width="14" height="10" rx="1" stroke="rgba(136,136,168,.65)" stroke-width="1.2"/><path d="M1 4l7 5 7-5" stroke="rgba(136,136,168,.65)" stroke-width="1.2"/>',
+      telefon: '<rect x="3" y="1" width="10" height="14" rx="2" stroke="rgba(136,136,168,.65)" stroke-width="1.2"/><circle cx="8" cy="12" r="1" fill="rgba(136,136,168,.65)"/>',
+      sted:    '<path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="rgba(136,136,168,.65)" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="rgba(136,136,168,.65)" stroke-width="1.2"/>',
+      nettside:'<circle cx="8" cy="8" r="6" stroke="rgba(136,136,168,.65)" stroke-width="1.2"/><path d="M8 2c0 0-2 3-2 6s2 6 2 6M8 2c0 0 2 3 2 6s-2 6-2 6M2 8h12" stroke="rgba(136,136,168,.65)" stroke-width="1.2"/>',
+    };
+    [
+      { key: 'epost',    val: CV.epost,    href: 'mailto:' + CV.epost },
+      { key: 'telefon',  val: CV.telefon,  href: 'tel:' + (CV.telefon || '').replace(/\s/g, '') },
+      { key: 'sted',     val: CV.sted,     href: null },
+      { key: 'nettside', val: CV.nettside, href: 'https://' + CV.nettside },
+    ].forEach(k => {
+      if (!k.val) return;
+      $('contactCards').insertAdjacentHTML('beforeend', `
+        <div class="cc">
+          <div class="cc-ico"><svg width="15" height="15" viewBox="0 0 16 16" fill="none">${ccSvg[k.key]}</svg></div>
+          <div>
+            <div class="cc-label" data-ccl="${k.key}"></div>
+            <div class="cc-val">${k.href ? `<a href="${k.href}">${k.val}</a>` : k.val}</div>
+          </div>
+        </div>`);
+    });
+
+    // Typewriter
+    let twPi = 0, twCi = 0, twDel = false, twTimer = null, twFr = [];
+    function twStart(fr) { clearTimeout(twTimer); twFr = fr; twPi = 0; twCi = 0; twDel = false; $('twText').textContent = ''; twStep(); }
+    function twStep() {
+      const ph = twFr[twPi];
+      if (!twDel) {
+        $('twText').textContent = ph.slice(0, ++twCi);
+        if (twCi === ph.length) { twDel = true; twTimer = setTimeout(twStep, 2000); return; }
+      } else {
+        $('twText').textContent = ph.slice(0, --twCi);
+        if (twCi === 0) { twDel = false; twPi = (twPi + 1) % twFr.length; }
+      }
+      twTimer = setTimeout(twStep, twDel ? 40 : 80);
+    }
+
+    // Contact form (Formspree)
+    $('fSend').addEventListener('click', async () => {
+      const u = CV.ui;
+      const navn    = $('fNavn').value.trim();
+      const epost   = $('fEpost').value.trim();
+      const emne    = $('fEmne').value.trim();
+      const melding = $('fMelding').value.trim();
+      const msg     = $('formMsg');
+
+      if (!CV.formspreeId) { msg.className = 'form-msg err'; msg.textContent = t(u.ingenFormspree); return; }
+      if (!navn || !epost || !emne || !melding) { msg.className = 'form-msg err'; msg.textContent = t(u.skjemaMangler); return; }
+
+      $('fSend').disabled = true;
+      $('fSend').textContent = t(u.senderMelding);
+      msg.className = 'form-msg';
+
+      try {
+        const res = await fetch(`https://formspree.io/f/${CV.formspreeId}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({ name: navn, email: epost, subject: emne, message: melding }),
+        });
+        if (res.ok) {
+          msg.className = 'form-msg ok'; msg.textContent = t(u.meldingSendt);
+          $('fNavn').value = ''; $('fEpost').value = ''; $('fEmne').value = ''; $('fMelding').value = '';
+        } else { throw new Error(); }
+      } catch {
+        msg.className = 'form-msg err'; msg.textContent = t(u.meldingFeil);
+      }
+      $('fSend').disabled = false;
+      set('fSend', t(u.sendKnapp));
+    });
+
+    /* ── RENDER ── */
+    function render() {
+      document.documentElement.lang = lang;
+      document.title = 'Stephan Teig — Film & Code';
+      const u = CV.ui;
+
+      set('sbRolle',             t(CV.tittel));
+      set('sbCvLink',            t(u.lastNedCV));
+      set('sbKontaktTittel',     t(u.kontaktTittel));
+      set('sbFerdigheterTittel', t(u.ferdigheterTittel));
+      set('sbSprakTittel',       t(u.sprakTittel));
+      set('sbFolgMeg',           t(u.folgMeg));
+
+      htm('sbKontakt', '');
+      [
+        { svg: '<rect x="1" y="3" width="14" height="10" rx="1" stroke="rgba(136,136,168,.5)" stroke-width="1.2"/><path d="M1 4l7 5 7-5" stroke="rgba(136,136,168,.5)" stroke-width="1.2"/>',
+          val: CV.epost, href: 'mailto:' + CV.epost },
+        { svg: '<rect x="3" y="1" width="10" height="14" rx="2" stroke="rgba(136,136,168,.5)" stroke-width="1.2"/><circle cx="8" cy="12" r="1" fill="rgba(136,136,168,.5)"/>',
+          val: CV.telefon, href: 'tel:' + (CV.telefon || '').replace(/\s/g, '') },
+        { svg: '<path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5S12.5 9.5 12.5 6c0-2.5-2-4.5-4.5-4.5z" stroke="rgba(136,136,168,.5)" stroke-width="1.2"/><circle cx="8" cy="6" r="1.5" stroke="rgba(136,136,168,.5)" stroke-width="1.2"/>',
+          val: CV.sted, href: null },
+      ].forEach(k => {
+        if (!k.val) return;
+        $('sbKontakt').insertAdjacentHTML('beforeend', `
+          <div class="sb-row">
+            <svg class="sb-ico" viewBox="0 0 16 16" fill="none">${k.svg}</svg>
+            <div class="sb-val">${k.href ? `<a href="${k.href}">${k.val}</a>` : k.val}</div>
+          </div>`);
+      });
+
+      document.querySelectorAll('[data-sk]').forEach((el, i) => { if (CV.ferdigheter[i]) el.textContent = t(CV.ferdigheter[i].navn); });
+      document.querySelectorAll('[data-ln]').forEach((el, i) => { const s = CV.sprak[i]; if (s) el.textContent = t(s.namn || s.navn); });
+      document.querySelectorAll('[data-stl]').forEach((el, i) => { if (CV.stats[i]) el.textContent = t(CV.stats[i].label); });
+
+      // Top nav
+      const nav = $('topNav');
+      nav.querySelectorAll('.nav-item').forEach(e => e.remove());
+      const spacer = nav.querySelector('.nav-spacer');
+      const cur = document.querySelector('.page.active')?.id?.replace('page-', '') || 'home';
+      (CV.nav || []).forEach(side => {
+        const btn = mk('div');
+        btn.className = 'nav-item' + (side.id === cur ? ' active' : '');
+        btn.textContent = t(side.label); btn.dataset.page = side.id;
+        btn.addEventListener('click', () => goPage(side.id));
+        nav.insertBefore(btn, spacer);
+      });
+
+      // Mobile nav
+      htm('mobNavInner', '');
+      const mobIcons = {
+        home:    '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9.5L10 3l7 6.5V17a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M7 18v-6h6v6"/></svg>',
+        resume:  '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="12" height="16" rx="1"/><path d="M7 7h6M7 10h6M7 13h4"/></svg>',
+        works:   '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="16" height="12" rx="1"/><path d="M8 9l5 3-5 3V9z" fill="currentColor" stroke="none"/></svg>',
+        contact: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h16v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"/><path d="M2 4l8 8 8-8"/></svg>',
+      };
+      (CV.nav || []).forEach(side => {
+        const btn = mk('div');
+        btn.className = 'mob-nav-item' + (side.id === cur ? ' active' : '');
+        btn.innerHTML = (mobIcons[side.id] || '') + `<span>${t(side.label)}</span>`;
+        btn.dataset.page = side.id;
+        btn.addEventListener('click', () => goPage(side.id));
+        $('mobNavInner').appendChild(btn);
+      });
+
+      // Hero
+      set('heroLabel', t(u.heroLabel));
+      const parts = CV.navn.split(' '); const lastName = parts.pop(); const firstName = parts.join(' ');
+      $('heroNavn').innerHTML = `<span class="hero-first">${firstName}</span> <em class="hero-last">${lastName}</em>`;
+      set('jegLager',   t(u.jegLager));
+      set('heroBio',    t(CV.bio));
+      set('btnSeProsj', t(u.seProsjekter));
+      set('btnKontakt', t(u.kontaktMeg));
+
+      set('resErfaring',  t(u.erfaring));
+      set('resVerv',      t(u.verv));
+      set('resUtdanning', t(u.utdanning));
+
+      set('contactHeadline', t(u.contactHeadline));
+      set('contactSub',      t(u.contactSub));
+
+      // Timeline builder
+      function buildTl(items, cid) {
+        htm(cid, '');
+        items.forEach((item, i) => {
+          const last  = i === items.length - 1;
+          const tekst = t(item.tekst);
+          const sted  = t(item.sted);
+          const el = mk('div'); el.className = 'tl-item fade-up';
+          el.style.transitionDelay = `${i * 55}ms`;
+          el.innerHTML = `
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              ${last ? '' : '<div class="tl-line"></div>'}
+            </div>
+            <div class="tl-body">
+              <div class="tl-aar">${item.aar}</div>
+              <div class="tl-tittel">${t(item.tittel)}</div>
+              ${sted  ? `<div class="tl-sted">${sted}</div>`   : ''}
+              ${tekst ? `<div class="tl-tekst">${tekst}</div>` : ''}
+            </div>`;
+          $(cid).appendChild(el);
+          io.observe(el);
+        });
+      }
+      buildTl(CV.erfaring,  'erfaringListe');
+      buildTl(CV.verv,      'vervListe');
+      buildTl(CV.utdanning, 'utdanningListe');
+
+      // Work card texts
+      kortRefs.forEach(({ el, data: p }) => {
+        const rEl = el.querySelector('[data-wr]');     if (rEl) rEl.textContent = t(p.rolle);
+        const tEl = el.querySelector('[data-wtekst]'); if (tEl) tEl.textContent = t(p.tekst);
+        const bEl = el.querySelector('[data-wb]');     if (bEl) bEl.textContent = t(u.kommerSnart);
+      });
+      document.querySelectorAll('.wf-btn').forEach(btn => {
+        const f = btn.dataset.fv;
+        btn.textContent = f === 'alle' ? t(u.alle) : f;
+      });
+
+      document.querySelectorAll('[data-ccl]').forEach(el => { el.textContent = t(u.kortLabels[el.dataset.ccl]); });
+
+      set('formTittel',         t(u.kontaktSideTittel));
+      $('fNavn').placeholder    = t(u.navnPlaceholder);
+      $('fEpost').placeholder   = t(u.epostPlaceholder);
+      $('fEmne').placeholder    = t(u.emnePlaceholder);
+      $('fMelding').placeholder = t(u.meldingPlaceholder);
+      set('fSend',              t(u.sendKnapp));
+      set('lbClose',            t(u.lukk));
+
+      twStart(CV.fraser[lang] || CV.fraser['no'] || []);
+
+      // Observe stat blocks
+      document.querySelectorAll('.stat.fade-up').forEach(el => io.observe(el));
+    }
+
+    function goPage(name) {
+      document.querySelectorAll('.nav-item,.mob-nav-item').forEach(n =>
+        n.classList.toggle('active', n.dataset.page === name));
+      document.querySelectorAll('.page').forEach(p =>
+        p.classList.toggle('active', p.id === 'page-' + name));
+      const pe = document.querySelector('.pages'); if (pe) pe.scrollTop = 0;
+      window.scrollTo(0, 0);
+    }
+    window.goPage = goPage;
+
+    $('btnNo').addEventListener('click', () => {
+      if (lang === 'no') return; lang = 'no';
+      $('btnNo').classList.add('active'); $('btnEn').classList.remove('active'); render();
+    });
+    $('btnEn').addEventListener('click', () => {
+      if (lang === 'en') return; lang = 'en';
+      $('btnEn').classList.add('active'); $('btnNo').classList.remove('active'); render();
+    });
+
+    function openLb(p) {
+      let src = '';
+      if (p.type === 'youtube') src = `https://www.youtube.com/embed/${p.embed}?autoplay=1`;
+      if (p.type === 'drive')   src = `https://drive.google.com/file/d/${p.embed}/preview`;
+      $('lbFrame').src = src; $('lightbox').classList.add('open'); document.body.style.overflow = 'hidden';
+    }
+    function closeLb() { $('lightbox').classList.remove('open'); $('lbFrame').src = ''; document.body.style.overflow = ''; }
+    $('lbBd').addEventListener('click', closeLb);
+    $('lbClose').addEventListener('click', closeLb);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+    render();
+  })();
+  </script>
+
 </body>
 </html>
