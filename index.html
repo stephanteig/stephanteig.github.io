@@ -933,17 +933,18 @@
     });
 
     (CV.prosjekter || []).forEach(p => {
-      const hasVideo = p.type === 'youtube' || p.type === 'drive';
+      const embedOk  = p.embed && !String(p.embed).startsWith('TODO');
+      const hasVideo = (p.type === 'youtube' || p.type === 'drive') && embedOk;
       const hasLink  = !hasVideo && !!p.lenke;
       const card = mk('div');
       card.className = 'work-card' + (!hasVideo && !hasLink ? ' no-click' : '');
       card.dataset.filter = p.filter;
 
       let th = '';
-      if (p.type === 'youtube') {
+      if (hasVideo && p.type === 'youtube') {
         th = `<img src="https://img.youtube.com/vi/${p.embed}/mqdefault.jpg" alt="${p.tittel}"/>
               <div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#fff"/></svg></div>`;
-      } else if (p.type === 'drive') {
+      } else if (hasVideo && p.type === 'drive') {
         th = `<div class="thumb-grad" style="width:100%;height:100%">
                 <div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#fff"/></svg></div>
               </div>`;
