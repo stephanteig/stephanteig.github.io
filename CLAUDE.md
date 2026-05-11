@@ -160,8 +160,11 @@ CV-/portfolio-nettside for **Stephan Teig**, hostet på GitHub Pages.
 | Reshoot Del 2 — Valg 2 | youtube | film | — |
 | TEDx Fredrikstad | youtube | foto | — |
 | MÆD Musikkvideo | youtube | film | — |
+| Red Bull Reklame | ingen | film | Ingen demo-lenke ennå |
+| Like Him — Kolberg Volleyball | youtube | film | **TODO: embed-ID mangler** |
+| Hvordan er det å gå på CIS Sarpsborg | youtube | film | **TODO: embed-ID mangler** |
 | Trace | ingen | tech | Har lenke + github |
-| Shotlist Planner | ingen | tech | badge: true, mangler github-lenke |
+| Shotlist Planner | ingen | tech | badge: true, har github-lenke |
 | Color Preview | ingen | tech | Obsidian-plugin, PR #12013 |
 
 ### Ferdigheter (sidebar)
@@ -188,17 +191,17 @@ CV-/portfolio-nettside for **Stephan Teig**, hostet på GitHub Pages.
 ### Stats (hero)
 
 - "7+" — Års jobberfaring
-- "15+" — Prosjekter *(oppdater når nye prosjekter legges til)*
+- "12" — Prosjekter *(oppdater når nye prosjekter legges til)*
 - "1.dan" — Jiu-Jitsu
 
 ---
 
 ## 8. Gjenstående oppgaver
 
-Se `cv-oppdateringer.md` i repo-roten for aktiv sjekkliste. Når en oppgave er fullført:
-1. Fjern haken-linjen fra `cv-oppdateringer.md` (eller hele oppgaven hvis seksjonen er ferdig).
-2. Oppdater relevant tabell/seksjon i denne CLAUDE.md hvis innholdsbildet endret seg.
-3. Når **alle** oppgaver i `cv-oppdateringer.md` er fullført, slett filen i samme PR.
+- **Like Him — Kolberg Volleyball**: erstatt `embed: "TODO_LEGG_INN_YOUTUBE_ID"` med riktig YouTube-ID.
+- **Hvordan er det å gå på CIS Sarpsborg**: erstatt `embed: "TODO_LEGG_INN_YOUTUBE_ID"` med riktig YouTube-ID.
+
+Når begge YouTube-ID-ene er lagt inn, oppdater prosjekttabellen i seksjon 7 til å fjerne **TODO**-notaten.
 
 ---
 
@@ -246,4 +249,4 @@ Ikke la denne filen råtne. En utdatert CLAUDE.md er verre enn ingen CLAUDE.md, 
 
 ---
 
-*Sist oppdatert: ved opprettelse. Husk å oppdatere dato eller fjerne denne linjen ved neste meningsfulle endring.*
+*Sist oppdatert: 2026-05-11 — beregnAlder(), 3 nye prosjekter, Shotlist Planner github-lenke, stats 12.*

@@ -12,6 +12,14 @@
        ✏️  REDIGER ALT HER — ingen annen fil trenger å endres
        ============================================================ -->
   <script>
+  function beregnAlder() {
+    const fodt = new Date(2008, 5, 9); // 9. juni 2008
+    const iDag = new Date();
+    let alder = iDag.getFullYear() - fodt.getFullYear();
+    if (iDag < new Date(iDag.getFullYear(), 5, 9)) alder--;
+    return alder;
+  }
+
   const CV = {
 
     // ── PERSONLIG INFO ──────────────────────────────────────────
@@ -28,8 +36,8 @@
     formspreeId: "mwvrraez",
 
     bio: {
-      no: "Fyller 18 den 9. juni 2026. VG2 Medieproduksjon på Glemmen VGS og lærling hos Studio Wallin i Fredrikstad — der jeg jobber med foto, video, brand og podkast frem til sommeren 2028. Lager kortfilmer, fargekorrigerer, designer verktøy og instruerer Ju-Jitsu. Trives best når kamera, kode og historiefortelling overlapper.",
-      en: "Turning 18 on June 9, 2026. VG2 Media Production at Glemmen VGS and apprentice at Studio Wallin in Fredrikstad — working across photo, video, brand and podcast through summer 2028. I make short films, grade colour, build tools, and teach Ju-Jitsu. Best when camera, code and storytelling overlap.",
+      no: `${beregnAlder()} år. VG2 Medieproduksjon på Glemmen VGS og lærling hos Studio Wallin i Fredrikstad — der jeg jobber med foto, video, brand og podkast frem til sommeren 2028. Lager kortfilmer, fargekorrigerer, designer verktøy og instruerer Ju-Jitsu. Trives best når kamera, kode og historiefortelling overlapper.`,
+      en: `${beregnAlder()} years old. VG2 Media Production at Glemmen VGS and apprentice at Studio Wallin in Fredrikstad — working across photo, video, brand and podcast through summer 2028. I make short films, grade colour, build tools, and teach Ju-Jitsu. Best when camera, code and storytelling overlap.`,
     },
 
     fraser: {
@@ -39,7 +47,7 @@
 
     stats: [
       { tall: "7+",    label: { no: "Års jobberfaring", en: "Years experience" } },
-      { tall: "15+",   label: { no: "Prosjekter",       en: "Projects"         } },
+      { tall: "12",    label: { no: "Prosjekter",       en: "Projects"         } },
       { tall: "1.dan", label: { no: "Jiu-Jitsu",        en: "Jiu-Jitsu"       } },
     ],
 
@@ -242,6 +250,28 @@
         filter: "film",
       },
       {
+        tittel: "Red Bull Reklame",
+        rolle:  { no: "Film", en: "Film" },
+        type:   "ingen",
+        filter: "film",
+      },
+      // TODO: erstatt embed-ID når YouTube-video er lastet opp
+      {
+        tittel: "Like Him — Kolberg Volleyball",
+        rolle:  { no: "Film", en: "Film" },
+        type:   "youtube",
+        embed:  "TODO_LEGG_INN_YOUTUBE_ID",
+        filter: "film",
+      },
+      // TODO: erstatt embed-ID når YouTube-video er lastet opp
+      {
+        tittel: "Hvordan er det å gå på CIS Sarpsborg",
+        rolle:  { no: "Film", en: "Film" },
+        type:   "youtube",
+        embed:  "TODO_LEGG_INN_YOUTUBE_ID",
+        filter: "film",
+      },
+      {
         tittel: "Trace",
         rolle:  { no: "SVG logo-animatør", en: "SVG logo animator" },
         tekst:  { no: "Next.js 15 + TypeScript. Animer logoer fra SVG-filer med justerbar hastighet og stil.", en: "Next.js 15 + TypeScript. Animate logos from SVG files with adjustable speed and style." },
@@ -257,6 +287,7 @@
         type:   "ingen",
         filter: "tech",
         badge:  true,
+        github: "https://github.com/stephanteig/shotlist-planner",
       },
       {
         tittel: "Color Preview",
