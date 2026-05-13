@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stephan Teig</title>
+  <title>Stephan Teig — Film & Code</title>
+  <meta name="description" content="Stephan Teig — film, medieproduksjon og webutvikling fra Fredrikstad. Se prosjekter, CV og ta kontakt." />
+  <link rel="canonical" href="https://stephanteig.github.io" />
+  <link rel="icon" href="Media/favicon.png" />
+
+  <!-- Open Graph / sosial deling -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://stephanteig.github.io" />
+  <meta property="og:title"       content="Stephan Teig — Film & Code" />
+  <meta property="og:description" content="Film, medieproduksjon og webutvikling fra Fredrikstad. Se prosjekter, CV og ta kontakt." />
+  <meta property="og:image"       content="https://stephanteig.github.io/Media/IMG_3340.JPG" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Stephan Teig — Film & Code" />
+  <meta name="twitter:description" content="Film, medieproduksjon og webutvikling fra Fredrikstad." />
+  <meta name="twitter:image"       content="https://stephanteig.github.io/Media/IMG_3340.JPG" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -36,8 +51,8 @@
     formspreeId: "mwvrraez",
 
     bio: {
-      no: `${beregnAlder()} år. VG2 Medieproduksjon på Glemmen VGS og lærling hos Studio Wallin i Fredrikstad — der jeg jobber med foto, video, brand og podkast frem til sommeren 2028. Lager kortfilmer, fargekorrigerer, designer verktøy og instruerer Ju-Jitsu. Trives best når kamera, kode og historiefortelling overlapper.`,
-      en: `${beregnAlder()} years old. VG2 Media Production at Glemmen VGS and apprentice at Studio Wallin in Fredrikstad — working across photo, video, brand and podcast through summer 2028. I make short films, grade colour, build tools, and teach Ju-Jitsu. Best when camera, code and storytelling overlap.`,
+      no: `${beregnAlder()} år gammel, VG2-elev på Glemmen VGS og lærling hos Studio Wallin i Fredrikstad — jobber med foto, video, brand og podkast frem til sommeren 2028. Lager kortfilmer, fargekorrigerer, designer verktøy og instruerer Ju-Jitsu. Trives best når kamera, kode og historiefortelling møtes.`,
+      en: `${beregnAlder()} years old, VG2 student at Glemmen VGS and apprentice at Studio Wallin in Fredrikstad — working across photo, video, brand and podcast through summer 2028. I make short films, grade colour, build tools, and teach Ju-Jitsu. Best when camera, code and storytelling meet.`,
     },
 
     fraser: {
@@ -46,7 +61,7 @@
     },
 
     stats: [
-      { tall: "7+",    label: { no: "Års jobberfaring", en: "Years experience" } },
+      { tall: "7+",    label: { no: "År i bransjen",   en: "Years in the field" } },
       { tall: "12",    label: { no: "Prosjekter",       en: "Projects"         } },
       { tall: "1.dan", label: { no: "Jiu-Jitsu",        en: "Jiu-Jitsu"       } },
     ],
@@ -216,6 +231,7 @@
       {
         tittel: "Reshoot",
         rolle:  { no: "Film · Regi", en: "Film · Director" },
+        tekst:  { no: "Kortfilm regissert og produsert fra manus til ferdig klipp. Del 2 ble laget i to parallelle versjoner.", en: "Short film directed and produced from script to final cut. Part 2 was made as two parallel versions." },
         type:   "youtube",
         embed:  "akvZh0yoCF4",
         filter: "film",
@@ -245,13 +261,15 @@
       {
         tittel: "MÆD Musikkvideo",
         rolle:  { no: "Produsent", en: "Producer" },
+        tekst:  { no: "Musikkvideo produsert og klippet for det lokale musikkprosjektet MÆD.", en: "Music video produced and edited for local music project MÆD." },
         type:   "youtube",
         embed:  "y0vjikf5EI8",
         filter: "film",
       },
       {
         tittel: "Red Bull Reklame",
-        rolle:  { no: "Film", en: "Film" },
+        rolle:  { no: "Film · Regi", en: "Film · Director" },
+        tekst:  { no: "Reklamekonsept i Red Bull sin stil — opptak, klipp og fargegradering.", en: "Advertisement concept in Red Bull's style — footage, editing and colour grading." },
         type:   "ingen",
         filter: "film",
       },
@@ -918,17 +936,18 @@
     });
 
     (CV.prosjekter || []).forEach(p => {
-      const hasVideo = p.type === 'youtube' || p.type === 'drive';
+      const embedOk  = p.embed && !String(p.embed).startsWith('TODO');
+      const hasVideo = (p.type === 'youtube' || p.type === 'drive') && embedOk;
       const hasLink  = !hasVideo && !!p.lenke;
       const card = mk('div');
       card.className = 'work-card' + (!hasVideo && !hasLink ? ' no-click' : '');
       card.dataset.filter = p.filter;
 
       let th = '';
-      if (p.type === 'youtube') {
+      if (hasVideo && p.type === 'youtube') {
         th = `<img src="https://img.youtube.com/vi/${p.embed}/mqdefault.jpg" alt="${p.tittel}"/>
               <div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#fff"/></svg></div>`;
-      } else if (p.type === 'drive') {
+      } else if (hasVideo && p.type === 'drive') {
         th = `<div class="thumb-grad" style="width:100%;height:100%">
                 <div class="play-ico"><svg viewBox="0 0 12 12" fill="none" width="12" height="12"><polygon points="3,1 11,6 3,11" fill="#fff"/></svg></div>
               </div>`;
