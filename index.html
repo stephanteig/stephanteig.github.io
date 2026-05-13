@@ -6,6 +6,7 @@
   <title>Stephan Teig — Film & Code</title>
   <meta name="description" content="Stephan Teig — film, medieproduksjon og webutvikling fra Fredrikstad. Se prosjekter, CV og ta kontakt." />
   <link rel="canonical" href="https://stephanteig.github.io" />
+  <link rel="icon" href="Media/StephanteigCVLogo/v5-farger-mørk-emblem.svg" type="image/svg+xml" />
   <link rel="icon" href="Media/favicon.png" />
 
   <!-- Open Graph / sosial deling -->
@@ -51,8 +52,8 @@
     formspreeId: "mwvrraez",
 
     bio: {
-      no: `${beregnAlder()} år gammel, VG2-elev på Glemmen VGS og lærling hos Studio Wallin i Fredrikstad — jobber med foto, video, brand og podkast frem til sommeren 2028. Lager kortfilmer, fargekorrigerer, designer verktøy og instruerer Ju-Jitsu. Trives best når kamera, kode og historiefortelling møtes.`,
-      en: `${beregnAlder()} years old, VG2 student at Glemmen VGS and apprentice at Studio Wallin in Fredrikstad — working across photo, video, brand and podcast through summer 2028. I make short films, grade colour, build tools, and teach Ju-Jitsu. Best when camera, code and storytelling meet.`,
+      no: `${beregnAlder()} år gammel, VG2-elev på Glemmen VGS og lærling hos Studio Wallin i Fredrikstad — jobber med foto, video, brand og podkast. Lager kortfilmer, fargekorrigerer, designer verktøy og instruerer Ju-Jitsu. Trives best når kamera, kode og historiefortelling møtes.`,
+      en: `${beregnAlder()} years old, VG2 student at Glemmen VGS and apprentice at Studio Wallin in Fredrikstad — working across photo, video, brand and podcast. I make short films, grade colour, build tools, and teach Ju-Jitsu. Best when camera, code and storytelling meet.`,
     },
 
     fraser: {
@@ -357,6 +358,7 @@
     // ── DESIGN ───────────────────────────────────────────────────
     aksent: "#7c5cfc",
   };
+  CV.stats[1].tall = String(CV.prosjekter.length);
   </script>
 
   <style>
@@ -415,6 +417,7 @@
       border-bottom: 1px solid var(--bd); flex-shrink: 0;
       background: linear-gradient(180deg, rgba(124,92,252,.08) 0%, transparent 100%);
     }
+    .sb-logo { width: 75%; max-width: 160px; display: block; margin: 0 auto 1.25rem; border-radius: 10px; }
     .sb-avatar {
       width: 96px; height: 96px; border-radius: 50%;
       background: var(--bg-s);
@@ -767,6 +770,7 @@
 
     <aside class="sb">
       <div class="sb-top">
+        <img class="sb-logo" src="Media/StephanteigCVLogo/v5-farger-mørk.svg" alt="Stephan Teig logo" />
         <div class="sb-avatar" id="sbAvatar"></div>
         <div class="sb-name"   id="sbNavn"></div>
         <div class="sb-role"   id="sbRolle"></div>

@@ -191,7 +191,7 @@ CV-/portfolio-nettside for **Stephan Teig**, hostet på GitHub Pages.
 ### Stats (hero)
 
 - "7+" — År i bransjen *(siden 2019, produksjonsassistent på TV)*
-- "12" — Prosjekter *(oppdater når nye prosjekter legges til)*
+- Auto-beregnet — Prosjekter *(`CV.stats[1].tall = String(CV.prosjekter.length)` kjøres etter CV-objektet — oppdateres automatisk)*
 - "1.dan" — Jiu-Jitsu
 
 ---
@@ -249,4 +249,4 @@ Ikke la denne filen råtne. En utdatert CLAUDE.md er verre enn ingen CLAUDE.md, 
 
 ---
 
-*Sist oppdatert: 2026-05-11 — favicon, meta/OG-tags, TODO-vakt for embed, prosjektbeskrivelser, bio-polish, stats-label.*
+*Sist oppdatert: 2026-05-13 — bio-frase fjernet, auto prosjektantall, favicon-ideer.md, design-brief.md.*
