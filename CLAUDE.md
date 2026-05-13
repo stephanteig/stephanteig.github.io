@@ -50,11 +50,17 @@ CV-/portfolio-nettside for **Stephan Teig**, hostet på GitHub Pages.
 
 `index.html` består av tre deler:
 
-1. **`<head>`** — fonter, `CV`-objekt (linje ~15–200), inline CSS.
-2. **`<body>`** — HTML-skjelett: sidebar, top-nav, fire `.page`-seksjoner (home, resume, works, contact), lightbox, mobile nav.
+1. **`<head>`** — fonter, `CV`-objekt (linje ~15–200), inline CSS. Favicon: SVG-emblem primær (`Media/StephanteigCVLogo/v5-farger-mørk-emblem.svg`), PNG-fallback (`Media/favicon.png`).
+2. **`<body>`** — HTML-skjelett: sidebar (inkl. `.sb-logo` øverst), top-nav, fire `.page`-seksjoner (home, resume, works, contact), lightbox, mobile nav.
 3. **`<script>` (bunn)** — render-logikk som tar `CV`-objektet og bygger DOM. Inneholder typewriter, språkbytter, prosjektfilter, kontaktskjema-handler, lightbox.
 
 **All innholdsredigering skjer i `CV`-objektet.** Render-laget er deklarativt: gi det data, så bygger det UI.
+
+Rett etter `CV`-objektets avsluttende `};` kjøres:
+```js
+CV.stats[1].tall = String(CV.prosjekter.length);
+```
+Dette holder prosjektantallet i hero-stats automatisk synkronisert med `CV.prosjekter`-arrayet.
 
 ### Seksjoner i `CV`-objektet
 
@@ -80,6 +86,19 @@ CV-/portfolio-nettside for **Stephan Teig**, hostet på GitHub Pages.
 ### Toppnivå-funksjoner utenfor `CV`
 
 - **`beregnAlder()`** — defineres **før** `const CV = {`. Returnerer alder basert på fødselsdato 09.06.2008. Må være definert før `CV` siden template literals i objektet evalueres ved parse-tid.
+
+### Logo-assets
+
+Mappen `Media/StephanteigCVLogo/` inneholder offisielle logo-varianter:
+
+| Fil | Bakgrunn | Bruk |
+|---|---|---|
+| `v5-farger-mørk-emblem.svg/.png` | Hvit | Favicon (SVG er primær) |
+| `v5-farger-mørk.svg/.png/.jpg` | Mørk | Sidebar-logo (`.sb-logo`) |
+| `v5-farger-lys-emblem.svg/.png` | Transparent/lys | Lys bakgrunn |
+| `v5-farger-lys.svg/.png/.jpg` | Lys | Lys bakgrunn |
+
+Sidebar bruker `v5-farger-mørk.svg` via `.sb-logo`-klassen (CSS: `width: 75%; max-width: 160px; border-radius: 10px`).
 
 ---
 
@@ -249,4 +268,4 @@ Ikke la denne filen råtne. En utdatert CLAUDE.md er verre enn ingen CLAUDE.md, 
 
 ---
 
-*Sist oppdatert: 2026-05-13 — bio-frase fjernet, auto prosjektantall, favicon-ideer.md, design-brief.md.*
+*Sist oppdatert: 2026-05-13 — bio-frase fjernet, auto prosjektantall, logo i sidebar + favicon, favicon-ideer.md, design-brief.md, logo-asset-tabell.*
