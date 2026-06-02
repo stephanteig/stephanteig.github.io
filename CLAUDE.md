@@ -173,7 +173,7 @@ Sidebar bruker `v5-farger-mørk.svg` via `.sb-logo`-klassen (CSS: `width: 75%; m
 
 | Tittel | Type | Filter | Notater |
 |---|---|---|---|
-| Respawn Østfold | ingen | esport | Lenke til turneringsside, kode-ikon thumbnail |
+| Respawn Østfold | ingen | esport | Lenke til turneringsside, custom thumbnail `Media/respawn-ostfold-banner.svg` |
 | Et ekko av henne | drive | film | — |
 | Reshoot | youtube | film | — |
 | Reshoot Del 2 — Valg 1 | youtube | film | — |
