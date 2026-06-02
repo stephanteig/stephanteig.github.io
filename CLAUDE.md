@@ -150,7 +150,7 @@ Sidebar bruker `v5-farger-mørk.svg` via `.sb-logo`-klassen (CSS: `width: 75%; m
   tekst:  { no: "string", en: "string" },    // valgfri beskrivelse under tittel
   type:   "youtube" | "drive" | "ingen",     // bestemmer thumbnail og klikk-oppførsel
   embed:  "youtube-id | drive-fil-id",       // påkrevd hvis type !== "ingen"
-  filter: "film" | "foto" | "tech",          // bestemmer hvilken filter-chip kortet vises under
+  filter: "film" | "foto" | "tech" | "esport", // bestemmer hvilken filter-chip kortet vises under
   badge:  true,                              // valgfri — viser "// in development"-chip
   lenke:  "https://...",                     // ekstern lenke (gjør hele kortet klikkbart hvis ikke type=youtube/drive)
   github: "https://github.com/...",          // valgfri GitHub-lenke-knapp under tekst
@@ -173,6 +173,7 @@ Sidebar bruker `v5-farger-mørk.svg` via `.sb-logo`-klassen (CSS: `width: 75%; m
 
 | Tittel | Type | Filter | Notater |
 |---|---|---|---|
+| Respawn Østfold | ingen | esport | Lenke til turneringsside, kode-ikon thumbnail |
 | Et ekko av henne | drive | film | — |
 | Reshoot | youtube | film | — |
 | Reshoot Del 2 — Valg 1 | youtube | film | — |
@@ -197,6 +198,8 @@ Sidebar bruker `v5-farger-mørk.svg` via `.sb-logo`-klassen (CSS: `width: 75%; m
 | Lyddesign | 75 |
 | Innholdsproduksjon | 85 |
 | Fotografi | 70 |
+| OBS Studio | 85 |
+| Live produksjon | 80 |
 
 *(Premiere Pro er fjernet fra denne listen.)*
 
@@ -249,7 +252,7 @@ Når begge YouTube-ID-ene er lagt inn, oppdater prosjekttabellen i seksjon 7 til
 - **`type: "ingen"` + ingen `lenke`** = ikke-klikkbart kort (`.no-click`-klasse legges til automatisk i render). Det er OK for prosjekter som ennå ikke har en synlig demo.
 - **YouTube-ID er kun ID-en**, ikke hele URL-en (ikke `https://youtube.com/watch?v=abc`, kun `abc`).
 - **Drive-fil-ID** er strengen mellom `/d/` og `/view` i en Google Drive-URL.
-- **`filter`-feltet** må matche en av de eksisterende kategoriene (`film`, `foto`, `tech`) — eller ny kategori vil legges til som chip automatisk.
+- **`filter`-feltet** må matche en av de eksisterende kategoriene (`film`, `foto`, `tech`, `esport`) — eller ny kategori vil legges til som chip automatisk.
 - **Render-funksjonen kalles én gang per språkbytte**, så alle DOM-elementer regenereres. Ikke bind state til DOM-noder utenfor `CV`-objektet.
 - **`document.title`** er hardkodet til "Stephan Teig — Film & Code" i render-funksjonen. Endring av navn/tittel krever endring der.
 
@@ -268,4 +271,4 @@ Ikke la denne filen råtne. En utdatert CLAUDE.md er verre enn ingen CLAUDE.md, 
 
 ---
 
-*Sist oppdatert: 2026-05-13 — bio-frase fjernet, auto prosjektantall, logo i sidebar + favicon, favicon-ideer.md, design-brief.md, logo-asset-tabell.*
+*Sist oppdatert: 2026-06-02 — lagt til Respawn Østfold (prosjekt + verv), ny `esport`-filterkategori, OBS Studio + Live produksjon i ferdigheter, esport-frase i typewriter.*

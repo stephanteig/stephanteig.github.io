@@ -57,8 +57,8 @@
     },
 
     fraser: {
-      no: [ "kortfilmer.", "fargegradering.", "innhold som engasjerer.", "verktøy som hjelper." ],
-      en: [ "short films.", "colour grades.", "engaging content.", "tools that help." ],
+      no: [ "kortfilmer.", "fargegradering.", "innhold som engasjerer.", "verktøy som hjelper.", "esport-turneringer." ],
+      en: [ "short films.", "colour grades.", "engaging content.", "tools that help.", "esports tournaments." ],
     },
 
     stats: [
@@ -84,6 +84,8 @@
       { navn: { no: "Lyddesign",          en: "Sound design"       }, prosent: 75 },
       { navn: { no: "Innholdsproduksjon", en: "Content production" }, prosent: 85 },
       { navn: { no: "Fotografi",          en: "Photography"        }, prosent: 70 },
+      { navn: "OBS Studio",                                           prosent: 85 },
+      { navn: { no: "Live produksjon",    en: "Live production"    }, prosent: 80 },
     ],
 
     // ── SPRÅK ────────────────────────────────────────────────────
@@ -164,6 +166,15 @@
     // ── VERV ─────────────────────────────────────────────────────
     verv: [
       {
+        aar:    "2026",
+        tittel: { no: "Arrangør og kommentator", en: "Organizer and Commentator" },
+        sted:   "Respawn Østfold · Glemmen VGS, Fredrikstad",
+        tekst:  {
+          no: "Arrangerte MCSR Ranked Minecraft speedrun-turnering med cash prize og live stream. Ansvar for produksjon, promotering, sponsorarbeid og kommentator på Twitch.",
+          en: "Organized MCSR Ranked Minecraft speedrun tournament with cash prize and live stream. Handled production, promotion, sponsor outreach and commentating on Twitch.",
+        },
+      },
+      {
         aar:    "2025 –",
         tittel: { no: "Styreleder", en: "Board chair" },
         sted:   { no: "Ungdomsstyret, Sentrum Kampsport (SKS)", en: "Youth board, Sentrum Kampsport (SKS)" },
@@ -222,6 +233,20 @@
     // badge: true  → vis "// in development"-chip
     // lenke / github: eksterne lenker for tech-prosjekter
     prosjekter: [
+      // Respawn Østfold — added 2026
+      // Turneringsside: stephanteig.github.io/respawn-ostfold
+      // Twitch: twitch.tv/stephanteig
+      {
+        tittel: "Respawn Østfold",
+        rolle:  { no: "Esport-arrangør · Kommentator", en: "Esports Organizer · Commentator" },
+        tekst:  {
+          no: "MCSR Ranked Minecraft speedrun-turnering med cash prize, streamet live fra Glemmen VGS i Fredrikstad. Bracket-format, 1v1 online, kommentert på Twitch.",
+          en: "MCSR Ranked Minecraft speedrun tournament with cash prize, streamed live from Glemmen VGS in Fredrikstad. Bracket format, 1v1 online, commented on Twitch.",
+        },
+        type:   "ingen",
+        filter: "esport",
+        lenke:  "https://stephanteig.github.io/respawn-ostfold/",
+      },
       {
         tittel: "Et ekko av henne",
         rolle:  { no: "Film", en: "Film" },
