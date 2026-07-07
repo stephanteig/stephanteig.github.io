@@ -180,9 +180,9 @@ Sidebar bruker `v5-farger-mørk.svg` via `.sb-logo`-klassen (CSS: `width: 75%; m
 | Reshoot Del 2 — Valg 2 | youtube | film | — |
 | TEDx Fredrikstad | youtube | foto | — |
 | MÆD Musikkvideo | youtube | film | — |
-| Red Bull Reklame | ingen | film | Ingen demo-lenke ennå |
-| Like Him — Kolberg Volleyball | youtube | film | **TODO: embed-ID mangler** |
-| Hvordan er det å gå på CIS Sarpsborg | youtube | film | **TODO: embed-ID mangler** |
+| Red Bull Reklame | drive | film | — |
+| Like Him — Kolberg Volleyball | drive | film | — |
+| Hvordan er det å gå på CIS Sarpsborg | drive | film | — |
 | Trace | ingen | tech | Har lenke + github |
 | Shotlist Planner | ingen | tech | badge: true, har github-lenke |
 | Color Preview | ingen | tech | Obsidian-plugin, PR #12013 |
@@ -220,10 +220,7 @@ Sidebar bruker `v5-farger-mørk.svg` via `.sb-logo`-klassen (CSS: `width: 75%; m
 
 ## 8. Gjenstående oppgaver
 
-- **Like Him — Kolberg Volleyball**: erstatt `embed: "TODO_LEGG_INN_YOUTUBE_ID"` med riktig YouTube-ID.
-- **Hvordan er det å gå på CIS Sarpsborg**: erstatt `embed: "TODO_LEGG_INN_YOUTUBE_ID"` med riktig YouTube-ID.
-
-Når begge YouTube-ID-ene er lagt inn, oppdater prosjekttabellen i seksjon 7 til å fjerne **TODO**-notaten.
+Ingen kjente gjenstående oppgaver.
 
 ---
 
@@ -271,4 +268,4 @@ Ikke la denne filen råtne. En utdatert CLAUDE.md er verre enn ingen CLAUDE.md, 
 
 ---
 
-*Sist oppdatert: 2026-06-02 — lagt til Respawn Østfold (prosjekt + verv), ny `esport`-filterkategori, OBS Studio + Live produksjon i ferdigheter, esport-frase i typewriter.*
+*Sist oppdatert: 2026-07-07 — Google Drive-embeds lagt inn for Kolberg Volleyball, CIS Sarpsborg og Red Bull Reklame; begge TODO-embed-IDer fjernet, ingen gjenstående oppgaver.*
