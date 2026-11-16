@@ -34,7 +34,7 @@ Display: Alte Haas Grotesk Bold. Body: Inter. Labels: IBM Plex Mono.
 
 Videos are never committed. `assets/videos.json` maps a key to a Drive file:
 
-1. Upload the file named in `videos.json` to Drive (`02_Film & Media/STAF Films/Nettside/Video`).
+1. Upload the file named in `videos.json` to Drive (`02_Film & Media/STAF Films/Nettside-video` (https://drive.google.com/drive/folders/1sZTA21bOHk2YW24mdL1dC34_xc0kKd9w)).
 2. Share it as "Anyone with the link can view".
 3. Copy the ID from the share link (`https://drive.google.com/file/d/<ID>/view`) into `drive_id`.
 
