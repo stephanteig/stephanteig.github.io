@@ -266,6 +266,7 @@ Testversjon av nettsiden til **STAF Films** (Stephan og Arons filmstudio), publi
 - **Video ligger ALDRI i GitHub.** Alle videoer hentes fra Google Drive via `staf/assets/videos.json` (nøkkel → `drive_id`). Tom `drive_id` = posterbilde vises. Video-elementer bruker `data-video="nøkkel"`.
 - **Merkevare:** Ink `#111310`, Snow `#F4F3ED`, Paper `#E6E4DA`, King Yellow `#C8A83E` (kun for The King in Yellow). Alte Haas Grotesk Bold / Inter / IBM Plex Mono.
 - **Hero på forsiden** (`staf.js` → `initHero`): spiller alle fire innslag etter hverandre, går til et sluttkort, og klikk på et innslag i sluttkortet spiller kun det ene før det går tilbake.
+- **Mobilmeny** (`staf.js` → `initMenu`, under 860px): headeren viser kun logo + MENU-knapp; knappen åpner en fullskjermsmeny bygget fra headerens `nav` + Contact-lenken. Ikke legg til egen mobilmeny i HTML-en.
 - `noindex,nofollow` er satt på alle sider til siden går live.
 
 ---
@@ -283,4 +284,4 @@ Ikke la denne filen råtne. En utdatert CLAUDE.md er verre enn ingen CLAUDE.md, 
 
 ---
 
-*Sist oppdatert: 2026-11-16 — STAF Films-subside lagt til under `/staf/` (seksjon 12).*
+*Sist oppdatert: 2026-11-16 — STAF Films: mobilmeny lagt til (seksjon 12).*

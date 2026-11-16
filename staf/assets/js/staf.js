@@ -52,8 +52,70 @@
     } else {
       videoReady.then(function () { pageVideos.forEach(loadVideo); });
     }
+    initMenu();
     initHero(reduce);
   });
+
+  // ---------- Phone menu ----------
+  // On small screens the header shows only the logo and a MENU button that opens a full-screen menu.
+  function initMenu() {
+    var header = document.querySelector("header");
+    var nav = header && header.querySelector('nav[aria-label="Main"]');
+    if (!nav) return;
+    var logo = header.querySelector("a");
+    var contact = header.querySelector('a[href="/staf/contact/"]');
+    var here = location.pathname;
+
+    var toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "menu-toggle";
+    toggle.textContent = "MENU";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", "staf-menu");
+    if (logo && !header.classList.contains("hero-header")) toggle.style.color = getComputedStyle(logo).color;
+    header.appendChild(toggle);
+
+    var panel = document.createElement("div");
+    panel.className = "menu-panel";
+    panel.id = "staf-menu";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-modal", "true");
+    panel.setAttribute("aria-label", "Menu");
+    var top = document.createElement("div");
+    top.className = "menu-top";
+    var home = document.createElement("a");
+    home.href = "/staf/"; home.className = "menu-logo"; home.textContent = "STAF. FILMS";
+    var close = document.createElement("button");
+    close.type = "button"; close.className = "menu-close"; close.textContent = "CLOSE";
+    top.appendChild(home); top.appendChild(close);
+    var list = document.createElement("nav");
+    list.className = "menu-links";
+    list.setAttribute("aria-label", "Main");
+    [].slice.call(nav.querySelectorAll("a")).concat(contact ? [contact] : []).forEach(function (a) {
+      var link = document.createElement("a");
+      var path = a.getAttribute("href");
+      link.href = path;
+      link.textContent = a.textContent.replace("↗", "").trim();
+      if (here.indexOf(path) === 0 || /border-bottom/.test(a.getAttribute("style") || "")) link.setAttribute("aria-current", "page");
+      list.appendChild(link);
+    });
+    panel.appendChild(top); panel.appendChild(list);
+    document.body.appendChild(panel);
+
+    function set(open) {
+      document.body.classList.toggle("menu-open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      (open ? close : toggle).focus();
+    }
+    toggle.addEventListener("click", function () { set(true); });
+    close.addEventListener("click", function () { set(false); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && document.body.classList.contains("menu-open")) set(false);
+    });
+    window.matchMedia("(min-width: 861px)").addEventListener("change", function (m) {
+      if (m.matches && document.body.classList.contains("menu-open")) set(false);
+    });
+  }
 
   // ---------- Home hero ----------
   function initHero(reduce) {
