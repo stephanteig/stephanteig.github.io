@@ -255,6 +255,21 @@ Ingen kjente gjenstående oppgaver.
 
 ---
 
+## 12. STAF Films-subside (`/staf/`)
+
+Testversjon av nettsiden til **STAF Films** (Stephan og Arons filmstudio), publisert som underside slik at hele nettstedet kan testes som om det hadde eget domene: https://stephanteig.github.io/staf/
+
+- **Uavhengig av CV-siden.** Egen CSS/JS i `staf/assets/`, egne fonter og farger. Ikke bruk CV-tokens her, og ikke rør `index.html` i roten for STAF-endringer.
+- **Struktur:** én mappe per side med `index.html` (home, work, films/the-king-in-yellow, films/et-ekko-av-henne, films/cut, journal, journal/00-introduction, about, about/stephan, about/aron, contact, press, privacy). Full oversikt i `staf/README.md`.
+- **Lenker:** absolutte og starter med `/staf/`. Ved flytting til eget domene: bytt `/staf/` → `/`.
+- **Bilder, logoer og fonter** ligger i `staf/assets/img` og `staf/assets/fonts` (webp der det går).
+- **Video ligger ALDRI i GitHub.** Alle videoer hentes fra Google Drive via `staf/assets/videos.json` (nøkkel → `drive_id`). Tom `drive_id` = posterbilde vises. Video-elementer bruker `data-video="nøkkel"`.
+- **Merkevare:** Ink `#111310`, Snow `#F4F3ED`, Paper `#E6E4DA`, King Yellow `#C8A83E` (kun for The King in Yellow). Alte Haas Grotesk Bold / Inter / IBM Plex Mono.
+- **Hero på forsiden** (`staf.js` → `initHero`): spiller alle fire innslag etter hverandre, går til et sluttkort, og klikk på et innslag i sluttkortet spiller kun det ene før det går tilbake.
+- `noindex,nofollow` er satt på alle sider til siden går live.
+
+---
+
 ## 11. Vedlikehold av denne filen
 
 **Hver gang du som Claude gjør en endring i repoet:**
@@ -268,4 +283,4 @@ Ikke la denne filen råtne. En utdatert CLAUDE.md er verre enn ingen CLAUDE.md, 
 
 ---
 
-*Sist oppdatert: 2026-07-07 — Google Drive-embeds lagt inn for Kolberg Volleyball, CIS Sarpsborg og Red Bull Reklame; begge TODO-embed-IDer fjernet, ingen gjenstående oppgaver.*
+*Sist oppdatert: 2026-11-16 — STAF Films-subside lagt til under `/staf/` (seksjon 12).*
