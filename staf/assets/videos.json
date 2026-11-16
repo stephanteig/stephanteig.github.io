@@ -1,0 +1,33 @@
+{
+  "_readme": "Videos are hosted on Google Drive (folder: 02_Film & Media/STAF Films/Nettside-video), not in GitHub. For each key, upload the matching file, set sharing to 'Anyone with the link can view', and paste the file ID (the part between /d/ and /view in the share link) into drive_id. A key with an empty drive_id shows its poster image instead.",
+  "intro": {
+    "file": "staf-intro.mp4",
+    "used_on": "Home hero, slide 01",
+    "drive_id": ""
+  },
+  "ekko_reel": {
+    "file": "ekko-av-henne-reel.mp4",
+    "used_on": "Home hero slide 02, Et ekko av henne page header",
+    "drive_id": ""
+  },
+  "cut_radio_spot": {
+    "file": "cut-radio-spot.mp4",
+    "used_on": "Home hero slide 03, CUT! page",
+    "drive_id": ""
+  },
+  "cut_radio_clip_1": {
+    "file": "cut-radio-clip-1.mp4",
+    "used_on": "Home hero slide 03, CUT! page",
+    "drive_id": ""
+  },
+  "cut_radio_clip_2": {
+    "file": "cut-radio-clip-2.mp4",
+    "used_on": "Home hero slide 03, CUT! page",
+    "drive_id": ""
+  },
+  "cut_radio_clip_3": {
+    "file": "cut-radio-clip-3.mp4",
+    "used_on": "Spare clip",
+    "drive_id": ""
+  }
+}
