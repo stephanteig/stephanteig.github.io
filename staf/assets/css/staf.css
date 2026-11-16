@@ -115,15 +115,33 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero.is-ended .hero-play, .hero.is-ended .hero-stage { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
+  .menu-panel, .menu-open .menu-panel { transition: none; }
   .hero-slide, .hero-end, .hero.is-single .hero-stage { transition: none; animation: none; }
   html { scroll-behavior: auto; }
 }
+
+
+/* ============ PHONE MENU (built by staf.js → initMenu) ============ */
+.menu-toggle, .menu-panel { display: none; }
 
 /* ============ SMALL SCREENS ============ */
 @media (max-width: 860px) {
   header, section, footer, #main > a[href] { padding-left: 20px !important; padding-right: 20px !important; }
   header:not(.hero-header) { height: auto !important; min-height: 64px; padding-top: 12px !important; padding-bottom: 12px !important; row-gap: 8px !important; }
-  header:not(.hero-header) nav { gap: 20px !important; }
+  header:not(.hero-header) { height: 64px !important; min-height: 0; padding-top: 0 !important; padding-bottom: 0 !important; flex-wrap: nowrap !important; }
+  header nav[aria-label="Main"], header > a[href="/staf/contact/"] { display: none !important; }
+  .menu-toggle { display: inline-flex; align-items: center; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; line-height: 1; padding: 11px 14px; border: 1px solid currentColor; background: none; cursor: pointer; }
+  .hero.on-yellow .menu-toggle { color: var(--ink); }
+  .menu-panel { display: flex; flex-direction: column; position: fixed; inset: 0; z-index: 50; background: var(--ink); color: var(--snow); padding: 0 20px 32px; visibility: hidden; opacity: 0; transition: opacity .25s ease, visibility 0s .25s; overflow-y: auto; }
+  .menu-open .menu-panel { visibility: visible; opacity: 1; transition: opacity .25s ease; }
+  .menu-open { overflow: hidden; }
+  .menu-top { display: flex; align-items: center; justify-content: space-between; height: 64px; border-bottom: 1px solid rgba(244,243,237,.16); flex: none; }
+  .menu-logo { font-family: var(--display); font-weight: 700; font-size: 22px; letter-spacing: -0.01em; color: var(--snow); }
+  .menu-close { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; line-height: 1; padding: 11px 14px; border: 1px solid rgba(244,243,237,.5); background: none; color: var(--snow); cursor: pointer; }
+  .menu-links { display: flex; flex-direction: column; gap: 4px; margin-top: auto; padding-top: 48px; }
+  .menu-links a { font-family: var(--display); font-weight: 700; font-size: 48px; line-height: 1.05; letter-spacing: -0.03em; color: var(--snow); padding: 6px 0; }
+  .menu-links a[aria-current="page"] { color: rgba(244,243,237,.45); }
+  .menu-links a:last-child { margin-top: 24px; font-family: var(--mono); font-weight: 400; font-size: 13px; letter-spacing: .12em; border: 1px solid rgba(244,243,237,.5); align-self: flex-start; padding: 14px 18px; }
   [style*="minmax(420px"], [style*="minmax(520px"], [style*="minmax(380px"] { grid-template-columns: 1fr !important; }
   [style*="repeat(5, minmax(0, 1fr))"] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   [style*="repeat(5, minmax(0, 1fr))"] > * { grid-column: span 1 !important; aspect-ratio: 3 / 4 !important; }
@@ -153,7 +171,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
   .hero { height: 100svh; min-height: 680px; }
   .hero-header { padding: 0 20px; }
-  .hero-header nav { display: none; }
   .hero-play { left: 20px; right: 20px; bottom: 20px; gap: 18px; }
   .hero-titlerow { flex-direction: column; align-items: flex-start; gap: 4px; }
   .hero-rail { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
